@@ -67,12 +67,12 @@
 </footer>
 
 <script>
-let titles = ["Dune 2","Squid 2"," Barbie","GTA 6"," Wednesday","Oppenheimer","Stranger Things","TikTok Trend","AI Video","Football"," 【entity-Free Fire¦canonical_name=Free Fire】"," 【entity-Fortnite¦canonical_name=Fortnite】","One Piece","Naruto","Music Trend","Gaming","Sport","News","Film","Serie"];
+let titles = ["Dune 2","Squid 2"," 【entity-Barbie¦canonical_name=Barbie】","GTA 6"," Wednesday","Oppenheimer","Stranger Things","TikTok Trend","AI Video","Football"," 【entity-Free Fire¦canonical_name=Free Fire】"," 【entity-Fortnite¦canonical_name=Fortnite】","One Piece","Naruto","Music Trend","Gaming","Sport","News","Film","Serie"];
 let shown = 0;
 function loadMore(){
   let list = document.getElementById('list');
   for(let k=0;k<20 && shown<5000;k++){ shown++;
-    let t = titles[shown % titles.length] + " #" + shown;
+    let t = titles[shown % titles.length] + " - Histoire " + shown + " - Partie " + shown;
     let div = document.createElement('div');
     div.className='card';
     div.innerHTML='<h3>'+t+'</h3><img loading="lazy" src="https://picsum.photos/800/400?random='+shown+'"><br><span class="tag">ARTICLE '+shown+'</span><p>Article numero '+shown+' - '+t+'</p>';
@@ -83,14 +83,14 @@ loadMore();
 
 let vshown=0;
 let ids=["Way9Dexny3w","oqxAJKy0ii4","VQRLujxTm3c","pBk4NYhWNMM","1pHDWnXmK7Y","dQw4w9WgXcQ","LXb3EKWsInQ","eKFTSSKCzWA","hTWKbfoikeg","9bZkp7q19f0"];
-let vnames=["Dune 2","Squid 2","GTA 6"," Barbie"," Wednesday","Music","Gaming","Sport","News","Film"];
+let vnames=["Dune 2","Squid 2","GTA 6"," 【entity-Barbie¦canonical_name=Barbie】"," Wednesday","Music","Gaming","Sport","News","Film"];
 function loadMoreV(){
   let vids=document.getElementById('videos');
   for(let k=0;k<10 && vshown<200;k++){ vshown++;
     let idx=vshown % ids.length;
     let d=document.createElement('div');
     d.className='video-box';
-    d.innerHTML='<a href="https://www.youtube.com/watch?v='+ids[idx]+'"><img src="https://i.ytimg.com/vi/'+ids[idx]+'/hqdefault.jpg"><p>▶️ Video '+vshown+' - '+vnames[idx]+'</p></a>';
+    d.innerHTML='<a href="https://www.youtube.com/watch?v='+ids[idx]+'"><img src="https://i.ytimg.com/vi/'+ids[idx]+'/hqdefault.jpg"><p>▶️ '+vnames[idx]+' - Partie '+vshown+' - Episode '+vshown+'</p></a>';
     vids.appendChild(d);
   }
 }
