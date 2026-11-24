@@ -13,12 +13,17 @@
   .langs button.active { background:#111827; color:white; }
   input { width:calc(100% - 30px); margin:15px; padding:14px; border-radius:12px; border:none; font-size:16px; }
   h2 { padding:0 15px; }
-  .card { background:white; color:#111; margin:0 15px 12px; padding:15px; border-radius:15px; cursor:pointer; }
+  .card { background:white; color:#111; margin:0 15px 12px; padding:0 0 15px; border-radius:15px; cursor:pointer; overflow:hidden; }
+  .card img { width:100%; height:180px; object-fit:cover; display:block; }
+  .card-in { padding:0 15px; }
   .tag { padding:3px 8px; border-radius:20px; font-size:12px; font-weight:bold; background:#dcfce7; color:#166534; }
   .small { color:#666; font-size:13px; margin:5px 0; }
   .more { display:none; margin-top:10px; background:#f1f5f9; padding:10px; border-radius:10px; font-size:13px; line-height:1.6; }
   .more.open { display:block; }
   .click { color:#db2777; font-size:12px; font-weight:bold; }
+  .video-box { background:white; margin:0 15px 12px; padding:10px; border-radius:15px; }
+  .video-box iframe { width:100%; height:200px; border:none; border-radius:10px; }
+  .video-box p { color:#111; font-weight:bold; margin:8px 5px 2px; }
   footer { text-align:center; padding:20px; }
   footer a { color:#FF69B4; font-weight:bold; font-size:18px; }
 </style>
@@ -44,14 +49,17 @@
 <div id="list">
 
   <div class="card" onclick="this.querySelector('.more').classList.toggle('open')">
-    <h3>AI Video Trend</h3>
-    <span class="tag">TRENDING</span>
-    <p class="small">Tout le monde cree des videos avec l IA !</p>
-    <span class="click">Cliquez pour infos</span>
-    <div class="more">
-      <b>Infos :</b><br>
-      Tout le monde cree des videos avec l IA en 2026 ! Plus de 500M vues sur TikTok.<br>
-      Note : 9.5 / 10
+    <img src="https://images.unsplash.com/photo-1536240478700-b869070f9279?w=800">
+    <div class="card-in">
+      <h3>AI Video Trend</h3>
+      <span class="tag">TRENDING</span>
+      <p class="small">Tout le monde cree des videos avec l IA !</p>
+      <span class="click">Cliquez pour infos</span>
+      <div class="more">
+        <b>Infos :</b><br>
+        Tout le monde cree des videos avec l IA en 2026 ! Plus de 500M vues sur TikTok.<br>
+        Note : 9.5 / 10
+      </div>
     </div>
   </div>
 
@@ -59,26 +67,32 @@
   <h2 id="t2">Top Films</h2>
 
   <div class="card" onclick="this.querySelector('.more').classList.toggle('open')">
-    <h3>Dune 2</h3>
-    <span class="tag">FILM - 9.2 / 10</span>
-    <p class="small">Le meilleur film science-fiction</p>
-    <span class="click">Cliquez pour infos</span>
-    <div class="more">
-      <b>Histoire :</b> Paul continue son voyage sur Arrakis. Il doit choisir entre l amour et le destin de l univers.<br><br>
-      Acteurs : Timothee C. 
-      Duree : 2h46 | 2024 | Science-Fiction
+    <img src="https://images.unsplash.com/photo-1446776653964-20c1d3a81b06?w=800">
+    <div class="card-in">
+      <h3>Dune 2</h3>
+      <span class="tag">FILM - 9.2 / 10</span>
+      <p class="small">Le meilleur film science-fiction</p>
+      <span class="click">Cliquez pour infos</span>
+      <div class="more">
+        <b>Histoire :</b> Paul continue son voyage sur Arrakis. Il doit choisir entre l amour et le destin de l univers.<br><br>
+        Acteurs : Timothee C.<br>
+        Duree : 2h46 | 2024 | Science-Fiction
+      </div>
     </div>
   </div>
 
   <div class="card" onclick="this.querySelector('.more').classList.toggle('open')">
-    <h3>Inside Out 2</h3>
-    <span class="tag">FILM - 8.8 / 10</span>
-    <p class="small">Film familial drole et emouvant</p>
-    <span class="click">Cliquez pour infos</span>
-    <div class="more">
-      <b>Histoire :</b> Riley est devenue adolescente ! De nouvelles emotions arrivent : Anxiete, Ennui, Envie...<br><br>
-      Acteurs : Amy P.<br>
-      Duree : 1h37 | 2024 | Familial
+    <img src="https://images.unsplash.com/photo-1518709268805-4e9042af9f23?w=800">
+    <div class="card-in">
+      <h3>Inside Out 2</h3>
+      <span class="tag">FILM - 8.8 / 10</span>
+      <p class="small">Film familial drole et emouvant</p>
+      <span class="click">Cliquez pour infos</span>
+      <div class="more">
+        <b>Histoire :</b> Riley est devenue adolescente ! De nouvelles emotions arrivent : Anxiete, Ennui, Envie...<br><br>
+        Acteurs : Amy P.<br>
+        Duree : 1h37 | 2024 | Familial
+      </div>
     </div>
   </div>
 
@@ -86,14 +100,30 @@
   <h2 id="t3">Top Series</h2>
 
   <div class="card" onclick="this.querySelector('.more').classList.toggle('open')">
-    <h3>Squid Game 2</h3>
-    <span class="tag">SERIE - 9.0 / 10</span>
-    <p class="small">Le retour de la serie la plus forte</p>
-    <span class="click">Cliquez pour infos</span>
-    <div class="more">
-      <b>Histoire :</b> Gi-hun retourne dans le jeu pour detruire l organisation. Nouveaux jeux, encore plus dangereux !<br><br>
-      Saison 2 | 7 Episodes 
+    <img src="https://images.unsplash.com/photo-1511512578047-dfb367046420?w=800">
+    <div class="card-in">
+      <h3>Squid Game 2</h3>
+      <span class="tag">SERIE - 9.0 / 10</span>
+      <p class="small">Le retour de la serie la plus forte</p>
+      <span class="click">Cliquez pour infos</span>
+      <div class="more">
+        <b>Histoire :</b> Gi-hun retourne dans le jeu pour detruire l organisation. Nouveaux jeux, encore plus dangereux !<br><br>
+        Saison 2 | 7 Episodes
+      </div>
     </div>
+  </div>
+
+  <!-- ===== VIDEOS ===== -->
+  <h2 id="t4">Videos</h2>
+
+  <div class="video-box">
+    <iframe src="https://www.youtube.com/embed/Way9Dexny3w" allowfullscreen></iframe>
+    <p>Dune 2 - Bande Annonce</p>
+  </div>
+
+  <div class="video-box">
+    <iframe src="https://www.youtube.com/embed/oqxAJKy0ii4" allowfullscreen></iframe>
+    <p>Squid Game 2 - Bande Annonce</p>
   </div>
 
 </div>
@@ -117,21 +147,23 @@ function setLang(l) {
     document.getElementById('t1').innerText = 'World Trends';
     document.getElementById('t2').innerText = 'Top Movies';
     document.getElementById('t3').innerText = 'Top Series';
+    document.getElementById('t4').innerText = 'Videos';
   }
   if (l == 'fr') {
     document.getElementById('subtitle').innerText = 'Tendances Mondiales + Films et Series';
     document.getElementById('t1').innerText = 'Tendances du Monde';
     document.getElementById('t2').innerText = 'Top Films';
     document.getElementById('t3').innerText = 'Top Series';
+    document.getElementById('t4').innerText = 'Videos';
   }
   if (l == 'ar') {
     document.getElementById('subtitle').innerText = 'ترندات العالم + أفلام و مسلسلات';
     document.getElementById('t1').innerText = 'ترندات العالم';
     document.getElementById('t2').innerText = 'أفضل الأفلام';
     document.getElementById('t3').innerText = 'أفضل المسلسلات';
+    document.getElementById('t4').innerText = 'فيديوهات';
   }
 }
-
 function filter() {
   let v = document.getElementById('search').value.toLowerCase();
   document.querySelectorAll('.card').forEach(c => {
