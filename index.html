@@ -3,45 +3,51 @@
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>Tunisiabet206 - Live Scores</title>
+<title>Tunisiabet206 - World Trends</title>
 <style>
-body{margin:0;font-family:sans-serif;background:#111827;color:white}
-header{background:#16a34a;padding:20px;text-align:center}
-h1{margin:0;font-size:28px}
+body{margin:0;font-family:sans-serif;background:#0f172a;color:white}
+header{background:linear-gradient(90deg,#7c3aed,#db2777);padding:25px;text-align:center}
+h1{margin:0;font-size:30px}
 .search-box{padding:15px}
-input{width:100%;padding:14px;border-radius:10px;border:none;font-size:16px;box-sizing:border-box}
-.live{color:#ef4444;font-weight:bold;font-size:13px}
-.match{background:white;color:#111;margin:0 15px 12px;padding:15px;border-radius:12px}
-.row{display:flex;justify-content:space-between;align-items:center}
-.team{font-size:17px}
-.score{font-weight:bold;font-size:20px;background:#111827;color:white;padding:5px 12px;border-radius:8px}
-.minute{font-size:12px;color:#666}
+input{width:100%;padding:14px;border-radius:12px;border:none;font-size:16px;box-sizing:border-box}
+h2{padding:0 15px}
+.card{background:white;color:#111;margin:0 15px 15px;padding:15px;border-radius:15px;display:flex;gap:12px;align-items:center}
+.num{font-size:28px;font-weight:bold;color:#db2777}
+.card img{width:70px;height:90px;object-fit:cover;border-radius:10px;background:#ddd}
+.tag{background:#fef3c7;color:#92400e;padding:3px 8px;border-radius:20px;font-size:12px}
+.tag2{background:#dcfce7;color:#166534;padding:3px 8px;border-radius:20px;font-size:12px}
 </style>
 </head>
 <body>
 <header>
-<h1>Tunisiabet206 🇹🇳</h1>
-<p>Live Scores - Koura Tounsiya</p>
+<h1>Tunisiabet206 🌍</h1>
+<p>World Trends + Movies & Series</p>
 </header>
-
 <div class="search-box">
-<input id="search" onkeyup="filter()" placeholder="🔍 Lawj 3la jam3iya... EST, CA, ESS...">
+<input id="search" onkeyup="filter()" placeholder="Lawj... film, serie, trend...">
 </div>
 
+<h2>🔥 Trending Fel 3alem El Youm</h2>
 <div id="list">
-<div class="match"><span class="live">● LIVE 67'</span><div class="row"><span class="team">EST - Esperance</span><span class="score">2 - 1</span><span class="team">CA - Club Africain</span></div><div class="minute">Stade Rades - Derby</div></div>
-<div class="match"><span class="live">● LIVE 34'</span><div class="row"><span class="team">ESS - Etoile Sahel</span><span class="score">0 - 0</span><span class="team">CSS - Sfaxien</span></div><div class="minute">Stade Sousse</div></div>
-<div class="match"><span>⏰ 16:00</span><div class="row"><span class="team">CAB - Bizertin</span><span class="score">VS</span><span class="team">ST - Stade Tunisien</span></div><div class="minute">Samedi</div></div>
-<div class="match"><span>✅ Terminé</span><div class="row"><span class="team">USM - Monastir</span><span class="score">1 - 0</span><span class="team">OB - Beja</span></div><div class="minute">Hier</div></div>
+<div class="card"><span class="num">1</span><div><b>AI Video Trend</b><br><span class="tag">TRENDING</span><p style="margin:5px 0">Ennes el kol 9a3da ta3mel video bel AI taw!</p></div></div>
+<div class="card"><span class="num">2</span><div><b>New Song Viral TikTok</b><br><span class="tag">MUSIQUE</span><p style="margin:5px 0">El ghneya hethi kasret TikTok ejom3a hedhi</p></div></div>
+
+<h2>🎬 Top Films Ejom3a Hedhi</h2>
+<div class="card"><span class="num">1</span><div><b>Dune 2</b><br><span class="tag2">FILM - 9.2/10</span><p style="margin:5px 0">A9wa film science-fiction esna</p></div></div>
+<div class="card"><span class="num">2</span><div><b>Inside Out 2</b><br><span class="tag2">FILM - 8.8/10</span><p style="margin:5px 0">Film 3a2ili ydha7ek w ybaki</p></div></div>
+
+<h2>📺 Top Series</h2>
+<div class="card"><span class="num">1</span><div><b>Squid Game 2</b><br><span class="tag2">SERIE - 9.0/10</span><p style="margin:5px 0">Rja3et a9wa serie fel 3alem</p></div></div>
+<div class="card"><span class="num">2</span><div><b>【entity-Wednesday¦canonical_name=Wednesday】 2</b><br><span class="tag2">SERIE - 8.7/10</span><p style="margin:5px 0">【entity-Wednesday¦canonical_name=Wednesday】 rja3et b 9owa</p></div></div>
 </div>
 
 <p style="text-align:center;color:#9ca3af">© 2026 Tunisiabet206</p>
 <script>
 function filter(){
 let v=document.getElementById('search').value.toLowerCase();
-let matchs=document.querySelectorAll('.match');
-matchs.forEach(m=>{
-if(m.innerText.toLowerCase().includes(v)){m.style.display='block'}else{m.style.display='none'}
+let cards=document.querySelectorAll('.card');
+cards.forEach(c=>{
+if(c.innerText.toLowerCase().includes(v)){c.style.display='flex'}else{c.style.display='none'}
 });
 }
 </script>
