@@ -15,75 +15,51 @@ h1{margin:0;font-size:32px}
 .search-box{padding:15px}
 input{width:100%;padding:14px;border-radius:12px;border:none;font-size:16px}
 h2{padding:0 15px;margin-top:25px}
-.card{background:white;color:#111;margin:0 15px 12px;padding:15px;border-radius:15px;display:flex;gap:12px;align-items:center}
+.card{background:white;color:#111;margin:0 15px 12px;padding:15px;border-radius:15px;display:flex;gap:12px;align-items:center;cursor:pointer}
 .num{font-size:28px;font-weight:bold;color:#db2777;min-width:30px}
 .poster{width:60px;height:85px;border-radius:10px;display:flex;align-items:center;justify-content:center;font-size:30px;flex-shrink:0}
 .p1{background:#ddd6fe}.p2{background:#fecdd3}.p3{background:#bfdbfe}.p4{background:#fde68a}.p5{background:#bbf7d0}.p6{background:#fed7aa}
 .tag{padding:3px 8px;border-radius:20px;font-size:12px;font-weight:bold}
 .t-red{background:#fee2e2;color:#991b1b}.t-green{background:#dcfce7;color:#166534}.t-yellow{background:#fef3c7;color:#92400e}.t-blue{background:#dbeafe;color:#1e40af}
 .small{color:#666;font-size:13px;margin:4px 0}
-.btn{margin:15px;display:block;text-align:center;background:#db2777;color:white;padding:14px;border-radius:12px;text-decoration:none;font-weight:bold}
+.click{color:#db2777;font-size:12px;font-weight:bold}
+.modal{display:none;position:fixed;top:0;left:0;width:100%;height:100%;background:rgba(0,0,0,0.8);z-index:99;align-items:center;justify-content:center;padding:20px}
+.modal-box{background:white;color:#111;width:100%;max-width:400px;border-radius:20px;padding:20px;position:relative}
+.close{position:absolute;top:10px;right:15px;font-size:24px;cursor:pointer}
+.modal-box h3{margin-top:0}
+.modal-box p{line-height:1.6}
+.btn2{background:#db2777;color:white;border:none;padding:12px;width:100%;border-radius:10px;font-weight:bold;margin-top:10px}
 footer{text-align:center;color:#9ca3af;padding:20px;font-size:13px}
 </style>
 </head>
 <body>
 <header>
 <h1>Tunisiabet206 🌍</h1>
-<p id="subtitle">Tendances Mondiales + Films & Séries</p>
+<p>Tendances Mondiales + Films & Séries</p>
 <div class="langs">
 <button onclick="setLang('fr')" id="btn-fr" class="active">FR 🇫🇷</button>
 <button onclick="setLang('en')" id="btn-en">EN 🇺🇸</button>
 <button onclick="setLang('ar')" id="btn-ar">AR 🇹🇳</button>
 </div>
 </header>
-
 <div class="search-box">
-<input id="search" onkeyup="filter()" placeholder="Rechercher... film, serie, trend...">
+<input id="search" onkeyup="filter()" placeholder="Rechercher...">
 </div>
 
-<h2 id="t1">🔥 Tendances du Monde</h2>
+<h2>🔥 Tendances du Monde</h2>
 <div id="list">
-<div class="card"><span class="num">1</span><div class="poster p1">🤖</div><div><b>AI Video Trend</b><br><span class="tag t-red">🔥 TRENDING</span><p class="small d1">Tout le monde crée des vidéos avec l'IA !</p></div></div>
-<div class="card"><span class="num">2</span><div class="poster p2">🎵</div><div><b>Viral TikTok Song</b><br><span class="tag t-yellow">MUSIQUE</span><p class="small d2">La chanson qui a cassé TikTok cette semaine</p></div></div>
-<div class="card"><span class="num">3</span><div class="poster p3">⚽</div><div><b>World Cup 2026 Buzz</b><br><span class="tag t-blue">SPORT</span><p class="small d3">Tout le monde parle de la Coupe du Monde 2026</p></div></div>
+<div class="card" onclick="openInfo('AI Video Trend','TRENDING','Tout le monde crée des vidéos avec lIA ! En 2026, lIA est devenue le N°1 sur TikTok et Instagram. Les gens créent des films entiers avec leur téléphone.','Note: 9.5/10 | Vues: 500M+')"><span class="num">1</span><div class="poster p1">🤖</div><div><b>AI Video Trend</b><br><span class="tag t-red">TRENDING</span><p class="small">Tout le monde crée des vidéos avec l'IA !</p><span class="click">👉 Cliquez pour infos</span></div></div>
+<div class="card" onclick="openInfo('Viral TikTok Song','MUSIQUE','La chanson qui a cassé TikTok cette semaine. Plus de 2 millions de vidéos créées avec ce son.','Note: 9.0/10 | TikTok: 2M videos')"><span class="num">2</span><div class="poster p2">🎵</div><div><b>Viral TikTok Song</b><br><span class="tag t-yellow">MUSIQUE</span><p class="small">La chanson qui a cassé TikTok</p><span class="click">👉 Cliquez pour infos</span></div></div>
 
-<h2 id="t2">🎬 Top Films de la Semaine</h2>
-<div class="card"><span class="num">1</span><div class="poster p4">🏜️</div><div><b>Dune 2</b><br><span class="tag t-green">FILM - 9.2/10</span><p class="small d4">Le meilleur film science-fiction de l'année</p></div></div>
-<div class="card"><span class="num">2</span><div class="poster p5">😂</div><div><b>Inside Out 2</b><br><span class="tag t-green">FILM - 8.8/10</span><p class="small d5">Film familial drôle et émouvant</p></div></div>
-<div class="card"><span class="num">3</span><div class="poster p6">🦁</div><div><b>Mufasa - Lion King</b><br><span class="tag t-green">FILM - 8.5/10</span><p class="small d6">L'histoire du père de Simba</p></div></div>
+<h2>🎬 Top Films</h2>
+<div class="card" onclick="openInfo('Dune 2','FILM - 9.2/10','Paul Atreides continue son voyage sur la planète Arrakis. Il doit choisir entre lamour et le destin de lunivers. Film de science-fiction spectaculaire avec des effets incroyables.','Acteurs: Timothée Chalamet, Zendaya | Durée: 2h46 | Année: 2024')"><span class="num">1</span><div class="poster p4">🏜️</div><div><b>Dune 2</b><br><span class="tag t-green">FILM - 9.2/10</span><p class="small">Le meilleur film science-fiction</p><span class="click">👉 Cliquez pour infos</span></div></div>
+<div class="card" onclick="openInfo('Inside Out 2','FILM - 8.8/10','Riley est devenue adolescente ! De nouvelles émotions arrivent : Anxiété, Ennui, Envie... Un film drôle et émouvant pour toute la famille.','Acteurs: Amy Poehler | Durée: 1h37 | Année: 2024')"><span class="num">2</span><div class="poster p5">😂</div><div><b>Inside Out 2</b><br><span class="tag t-green">FILM - 8.8/10</span><p class="small">Film familial drôle et émouvant</p><span class="click">👉 Cliquez pour infos</span></div></div>
 
-<h2 id="t3">📺 Top Séries</h2>
-<div class="card"><span class="num">1</span><div class="poster p1">🦑</div><div><b>Squid Game 2</b><br><span class="tag t-green">SERIE - 9.0/10</span><p class="small d7">Le retour de la série la plus forte au monde</p></div></div>
-<div class="card"><span class="num">2</span><div class="poster p2">🖤</div><div><b> Wednesday 2</b><br><span class="tag t-green">SERIE - 8.7/10</span><p class="small d8"> Wednesday est de retour en force</p></div></div>
-<div class="card"><span class="num">3</span><div class="poster p3">🐉</div><div><b>【entity-House of the Dragon¦canonical_name=House of the Dragon】</b><br><span class="tag t-green">SERIE - 8.6/10</span><p class="small d9">Les dragons sont de retour</p></div></div>
+<h2>📺 Top Séries</h2>
+<div class="card" onclick="openInfo('Squid Game 2','SERIE - 9.0/10','Gi-hun retourne dans le jeu pour détruire lorganisation. Nouveaux jeux, nouveaux joueurs, encore plus dangereux !','Saison: 2 | Episodes: 7 | Netflix')"><span class="num">1</span><div class="poster p1">🦑</div><div><b>Squid Game 2</b><br><span class="tag t-green">SERIE - 9.0/10</span><p class="small">Le retour de la série la plus forte</p><span class="click">👉 Cliquez pour infos</span></div></div>
+<div class="card" onclick="openInfo('Wednesday 2','SERIE - 8.7/10',' Wednesday Addams retourne à Nevermore. Nouveaux mystères, nouveaux monstres, et encore plus de secrets de famille.','Saison: 2 | Episodes: 8 | Netflix')"><span class="num">2</span><div class="poster p2">🖤</div><div><b> Wednesday 2</b><br><span class="tag t-green">SERIE - 8.7/10</span><p class="small"> Wednesday est de retour en force</p><span class="click">👉 Cliquez pour infos</span></div></div>
 </div>
 
-<a class="btn" href="#" id="followBtn">📲 Suivez-nous pour plus de Trends !</a>
-<footer>© 2026 Tunisiabet206 - World Trends 🌍<br><span id="foot">Mis à jour chaque jour</span></footer>
-
-<script>
-const T={
-fr:{subtitle:"Tendances Mondiales + Films & Séries",search:"Rechercher... film, serie, trend...",t1:"🔥 Tendances du Monde",t2:"🎬 Top Films de la Semaine",t3:"📺 Top Séries",foot:"Mis à jour chaque jour"},
-en:{subtitle:"World Trends + Movies & Series",search:"Search... movie, series, trend...",t1:"🔥 World Trends",t2:"🎬 Top Movies This Week",t3:"📺 Top Series",foot:"Updated every day"},
-ar:{subtitle:"ترندات العالم + أفلام و مسلسلات",search:"لوّج... فيلم، مسلسل، ترند...",t1:"🔥 ترندات العالم",t2:"🎬 أفضل الأفلام هالجمعة",t3:"📺 أفضل المسلسلات",foot:"يتجدد كل يوم"}
-};
-function setLang(l){
-let t=T[l];
-document.getElementById('subtitle').innerText=t.subtitle;
-document.getElementById('search').placeholder=t.search;
-document.getElementById('t1').innerText=t.t1;
-document.getElementById('t2').innerText=t.t2;
-document.getElementById('t3').innerText=t.t3;
-document.getElementById('foot').innerText=t.foot;
-document.documentElement.lang=l;
-document.body.dir=(l=='ar'?'rtl':'ltr');
-document.querySelectorAll('.langs button').forEach(b=>b.classList.remove('active'));
-document.getElementById('btn-'+l).classList.add('active');
-}
-function filter(){
-let v=document.getElementById('search').value.toLowerCase();
-document.querySelectorAll('.card').forEach(c=>{c.style.display=c.innerText.toLowerCase().includes(v)?'flex':'none'});
-}
-</script>
-</body>
-</html>
+<div class="modal" id="modal" onclick="closeInfo()">
+<div class="modal-box" onclick="event.stopPropagation()">
+<span class="close" onclick="closeInfo()">
