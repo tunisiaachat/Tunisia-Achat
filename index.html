@@ -1,19 +1,21 @@
 <!DOCTYPE html>
-<html lang="ar" dir="rtl">
+<html lang="fr">
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
 <title>Tunisiabet206 - World Trends</title>
 <style>
 body{margin:0;font-family:sans-serif;background:#0f172a;color:white}
-header{background:linear-gradient(90deg,#7c3aed,#db2777);padding:25px;text-align:center}
+header{background:linear-gradient(90deg,#7c3aed,#db2777);padding:20px;text-align:center}
 h1{margin:0;font-size:30px}
+.langs{margin-top:12px}
+.langs button{background:white;color:#111;border:none;padding:8px 14px;border-radius:20px;margin:0 4px;font-weight:bold}
+.langs button.active{background:#111827;color:white}
 .search-box{padding:15px}
 input{width:100%;padding:14px;border-radius:12px;border:none;font-size:16px;box-sizing:border-box}
 h2{padding:0 15px}
 .card{background:white;color:#111;margin:0 15px 15px;padding:15px;border-radius:15px;display:flex;gap:12px;align-items:center}
 .num{font-size:28px;font-weight:bold;color:#db2777}
-.card img{width:70px;height:90px;object-fit:cover;border-radius:10px;background:#ddd}
 .tag{background:#fef3c7;color:#92400e;padding:3px 8px;border-radius:20px;font-size:12px}
 .tag2{background:#dcfce7;color:#166534;padding:3px 8px;border-radius:20px;font-size:12px}
 </style>
@@ -21,34 +23,55 @@ h2{padding:0 15px}
 <body>
 <header>
 <h1>Tunisiabet206 🌍</h1>
-<p>World Trends + Movies & Series</p>
+<p id="subtitle">Tendances Mondiales + Films & Séries</p>
+<div class="langs">
+<button onclick="setLang('fr')" id="btn-fr" class="active">FR 🇫🇷</button>
+<button onclick="setLang('en')" id="btn-en">EN 🇺🇸</button>
+<button onclick="setLang('ar')" id="btn-ar">AR 🇹🇳</button>
+</div>
 </header>
 <div class="search-box">
-<input id="search" onkeyup="filter()" placeholder="Lawj... film, serie, trend...">
+<input id="search" onkeyup="filter()" placeholder="Rechercher... film, serie, trend...">
 </div>
 
-<h2>🔥 Trending Fel 3alem El Youm</h2>
+<h2 id="t1">🔥 Tendances du Monde</h2>
 <div id="list">
-<div class="card"><span class="num">1</span><div><b>AI Video Trend</b><br><span class="tag">TRENDING</span><p style="margin:5px 0">Ennes el kol 9a3da ta3mel video bel AI taw!</p></div></div>
-<div class="card"><span class="num">2</span><div><b>New Song Viral TikTok</b><br><span class="tag">MUSIQUE</span><p style="margin:5px 0">El ghneya hethi kasret TikTok ejom3a hedhi</p></div></div>
+<div class="card"><span class="num">1</span><div><b>AI Video Trend</b><br><span class="tag">TRENDING</span><p style="margin:5px 0" class="d1">Tout le monde crée des vidéos avec l'IA !</p></div></div>
+<div class="card"><span class="num">2</span><div><b>Viral TikTok Song</b><br><span class="tag">MUSIQUE</span><p style="margin:5px 0" class="d2">La chanson qui a cassé TikTok cette semaine</p></div></div>
 
-<h2>🎬 Top Films Ejom3a Hedhi</h2>
-<div class="card"><span class="num">1</span><div><b>Dune 2</b><br><span class="tag2">FILM - 9.2/10</span><p style="margin:5px 0">A9wa film science-fiction esna</p></div></div>
-<div class="card"><span class="num">2</span><div><b>Inside Out 2</b><br><span class="tag2">FILM - 8.8/10</span><p style="margin:5px 0">Film 3a2ili ydha7ek w ybaki</p></div></div>
+<h2 id="t2">🎬 Top Films</h2>
+<div class="card"><span class="num">1</span><div><b>Dune 2</b><br><span class="tag2">FILM - 9.2/10</span><p style="margin:5px 0" class="d3">Le meilleur film science-fiction de l'année</p></div></div>
+<div class="card"><span class="num">2</span><div><b>Inside Out 2</b><br><span class="tag2">FILM - 8.8/10</span><p style="margin:5px 0" class="d4">Film familial drôle et émouvant</p></div></div>
 
-<h2>📺 Top Series</h2>
-<div class="card"><span class="num">1</span><div><b>Squid Game 2</b><br><span class="tag2">SERIE - 9.0/10</span><p style="margin:5px 0">Rja3et a9wa serie fel 3alem</p></div></div>
-<div class="card"><span class="num">2</span><div><b>【entity-Wednesday¦canonical_name=Wednesday】 2</b><br><span class="tag2">SERIE - 8.7/10</span><p style="margin:5px 0">【entity-Wednesday¦canonical_name=Wednesday】 rja3et b 9owa</p></div></div>
+<h2 id="t3">📺 Top Séries</h2>
+<div class="card"><span class="num">1</span><div><b>Squid Game 2</b><br><span class="tag2">SERIE - 9.0/10</span><p style="margin:5px 0" class="d5">Le retour de la série la plus forte au monde</p></div></div>
+<div class="card"><span class="num">2</span><div><b>【entity-Wednesday¦canonical_name=Wednesday】 2</b><br><span class="tag2">SERIE - 8.7/10</span><p style="margin:5px 0" class="d6">【entity-Wednesday¦canonical_name=Wednesday】 est de retour en force</p></div></div>
 </div>
 
 <p style="text-align:center;color:#9ca3af">© 2026 Tunisiabet206</p>
 <script>
+const T={
+fr:{subtitle:"Tendances Mondiales + Films & Séries",search:"Rechercher... film, serie, trend...",t1:"🔥 Tendances du Monde",t2:"🎬 Top Films",t3:"📺 Top Séries",d1:"Tout le monde crée des vidéos avec l'IA !",d2:"La chanson qui a cassé TikTok cette semaine",d3:"Le meilleur film science-fiction de l'année",d4:"Film familial drôle et émouvant",d5:"Le retour de la série la plus forte au monde",d6:"【entity-Wednesday¦canonical_name=Wednesday】 est de retour en force"},
+en:{subtitle:"World Trends + Movies & Series",search:"Search... movie, series, trend...",t1:"🔥 World Trends",t2:"🎬 Top Movies",t3:"📺 Top Series",d1:"Everyone is making AI videos now!",d2:"The song that broke TikTok this week",d3:"Best sci-fi movie of the year",d4:"Funny and emotional family movie",d5:"The return of the strongest series in the world",d6:"【entity-Wednesday¦canonical_name=Wednesday】 is back stronger"},
+ar:{subtitle:"ترندات العالم + أفلام و مسلسلات",search:"لوّج... فيلم، مسلسل، ترند...",t1:"🔥 ترندات العالم",t2:"🎬 أفضل الأفلام",t3:"📺 أفضل المسلسلات",d1:"الناس الكل قاعدة تعمل فيديو بالذكاء الاصطناعي!",d2:"الغنية اللي كسرت تيك توك هالجمعة",d3:"أقوى فيلم خيال علمي السنة",d4:"فيلم عائلي يضحك و يبكي",d5:"رجوع أقوى مسلسل في العالم",d6:"وينزداي رجعت بقوة"}
+};
+function setLang(l){
+let t=T[l];
+document.getElementById('subtitle').innerText=t.subtitle;
+document.getElementById('search').placeholder=t.search;
+document.getElementById('t1').innerText=t.t1;
+document.getElementById('t2').innerText=t.t2;
+document.getElementById('t3').innerText=t.t3;
+for(let i=1;i<=6;i++){document.querySelector('.d'+i).innerText=t['d'+i];}
+document.documentElement.lang=l;
+document.body.dir=(l=='ar'?'rtl':'ltr');
+document.querySelectorAll('.langs button').forEach(b=>b.classList.remove('active'));
+document.getElementById('btn-'+l).classList.add('active');
+}
 function filter(){
 let v=document.getElementById('search').value.toLowerCase();
 let cards=document.querySelectorAll('.card');
-cards.forEach(c=>{
-if(c.innerText.toLowerCase().includes(v)){c.style.display='flex'}else{c.style.display='none'}
-});
+cards.forEach(c=>{c.style.display=c.innerText.toLowerCase().includes(v)?'flex':'none'});
 }
 </script>
 </body>
