@@ -5,149 +5,146 @@
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
 <title>Tunisia</title>
 <style>
-  body { margin:0; font-family:sans-serif; background:#0f172a; color:white; }
-  header { background:linear-gradient(90deg,#7c3aed,#db2777,#f59e0b); padding:25px 15px; text-align:center; }
-  h1 { margin:0; font-size:32px; }
-  .langs button { background:white; color:#111; border:none; padding:8px 14px; border-radius:20px; margin:0 3px; font-weight:bold; }
-  input { width:calc(100% - 30px); margin:15px; padding:14px; border-radius:12px; border:none; font-size:16px; }
-  h2 { padding:0 15px; }
-  .card { background:white; color:#111; margin:0 15px 12px; padding:15px; border-radius:15px; cursor:pointer; }
-  .card img { width:100%; height:180px; object-fit:cover; border-radius:10px; }
-  .tag { padding:3px 8px; border-radius:20px; font-size:12px; font-weight:bold; background:#dcfce7; color:#166534; }
-  .video-box { background:white; margin:0 15px 12px; padding:10px; border-radius:15px; text-align:center; }
-  .video-box img { width:100%; height:180px; object-fit:cover; border-radius:10px; }
-  .video-box p { color:#111; font-weight:bold; margin:8px 5px 2px; }
-  .btn { display:block; text-align:center; padding:14px; border-radius:12px; font-weight:bold; text-decoration:none; color:white; margin:0 15px 10px; }
-  .more { background:white; color:#111; border:none; padding:15px; border-radius:12px; font-weight:bold; font-size:16px; width:calc(100% - 30px); margin:10px 15px; }
-  footer { text-align:center; padding:20px; }
-  footer a { color:#FF69B4; font-weight:bold; font-size:18px; }
+    * { box-sizing:border-box; }
+  body { margin:0; font-family:sans-serif; background:#fff; color:#111; }
+  .top { display:flex; align-items:center; gap:10px; padding:12px 15px; }
+  .logo { font-size:24px; font-weight:900; }
+  .logo span { color:#eab308; }
+  .search { margin:0 15px 12px; display:flex; background:#f3f4f6; border-radius:30px; padding:12px 15px; align-items:center; gap:8px; }
+  .search input { border:none; background:none; outline:none; width:100%; font-size:16px; }
+  .banner { background:#E70013; color:white; text-align:center; padding:12px; font-weight:bold; font-size:16px; }
+  h2 { padding:0 15px; margin:15px 0 8px; font-size:20px; }
+  .cats { display:flex; gap:8px; padding:0 15px; overflow-x:auto; }
+  .cats button { border:1px solid #ddd; background:white; padding:8px 16px; border-radius:20px; font-weight:bold; white-space:nowrap; }
+  .cats button.on { background:#111; color:white; border-color:#111; }
+  .grid { display:grid; grid-template-columns:1fr 1fr; gap:12px; padding:12px 15px; }
+  .card { background:white; border-radius:12px; overflow:hidden; }
+  .card img { width:100%; height:140px; object-fit:cover; display:block; }
+  .card h3 { font-size:14px; margin:8px 0 4px; line-height:1.3; }
+  .card .prix { font-weight:900; font-size:16px; }
+  .card .ville { font-size:12px; color:#666; margin-top:4px; }
+  .seller { display:flex; align-items:center; gap:6px; font-size:12px; font-weight:bold; margin-bottom:6px; }
+  .avatar { width:22px; height:22px; background:#111; color:white; border-radius:50%; display:flex; align-items:center; justify-content:center; font-size:12px; }
+  .fav { float:right; font-size:18px; }
+  .more { background:#111; color:white; border:none; padding:14px; border-radius:12px; font-weight:bold; width:calc(100% - 30px); margin:10px 15px; }
+  .btn { display:block; text-align:center; padding:13px; border-radius:12px; font-weight:bold; text-decoration:none; color:white; margin:0 15px 10px; }
+  .bottom { display:flex; justify-content:space-around; padding:12px; border-top:1px solid #eee; position:sticky; bottom:0; background:white; }
+  .bottom div { text-align:center; font-size:12px; }
 </style>
 </head>
 <body>
 
-<div style="background:#E70013;text-align:center;padding:18px 10px;font-size:24px;font-weight:bold;color:white">Welcome to Tunisia 🇹🇳 🇵🇸<br><span style="font-size:15px;font-weight:normal">Bienvenue en Tunisie - مرحبا بكم في تونس</span></div>
+<div class="banner">Welcome to Tunisia 🇹🇳 🇵🇸</div>
 
-<header>
-  <h1>Tunisia</h1>
-  <p>5000 Articles + 200 Videos - Top Mondial</p>
-  <div class="langs">
-    <button>FR 🇫🇷</button>
-    <button>EN 🇺🇸</button>
-    <button>AR 🇹🇳</button>
-  </div>
-</header>
+<div class="top">
+  <div class="logo">Tunisia<span>•</span></div>
+  <div style="margin-left:auto">🇫🇷 🇺🇸 🇹🇳</div>
+</div>
 
-<input id="search" onkeyup="filter()" placeholder="Rechercher... GTA, Barbie, Squid...">
+<div class="search">🔍 <input id="search" onkeyup="filter()" placeholder="Rechercher sur Tunisia"></div>
 
-<h2 id="titreA">🔥 5000 Articles</h2>
-<div id="list"></div>
-<button id="btnA" class="more" onclick="loadMore()">➕ Voir Plus d'Articles</button>
+<h2>Annonces gaming d'occasion</h2>
+<p style="padding:0 15px;color:#666;font-size:14px;margin:0">5000 annonces disponibles</p>
 
-<h2 id="titreV">🎬 200 Videos</h2>
-<div id="videos"></div>
-<button id="btnV" class="more" onclick="loadMoreV()">➕ Voir Plus de Videos</button>
+<div class="cats">
+  <button class="on" onclick="cat('all',this)">Toutes</button>
+  <button onclick="cat('Film',this)">Films</button>
+  <button onclick="cat('Jeu',this)">Jeux</button>
+  <button onclick="cat('Sport',this)">Sport</button>
+  <button onclick="cat('Music',this)">Music</button>
+</div>
 
-<h2>🔗 Liens Officiels</h2>
-<a href="https://www.rockstargames.com/VI" class="btn" style="background:#111">🎮 Jouer a GTA 6</a>
-<a href="https://www.tiktok.com" class="btn" style="background:#111">📱 Ouvrir TikTok</a>
-<a href="https://play.google.com/store" class="btn" style="background:#16a34a">📥 Telecharger des Jeux</a>
+<div id="list" class="grid"></div>
+<button id="btnA" class="more" onclick="loadMore()">➕ Voir Plus</button>
+
+<h2>🎬 Videos</h2>
+<div id="videos" class="grid"></div>
+<button id="btnV" class="more" onclick="loadMoreV()">➕ Voir Plus Videos</button>
 
 <h2>📱 Applications</h2>
 <a href="https://www.tiktok.com" class="btn" style="background:#111">📱 TikTok</a>
 <a href="https://www.instagram.com" class="btn" style="background:#E1306C">📸 IG</a>
 <a href="https://www.youtube.com" class="btn" style="background:#FF0000">▶️ YouTube</a>
-<a href="https://www.facebook.com" class="btn" style="background:#1877F2">👍 Facebook</a>
-<a href="https://www.whatsapp.com" class="btn" style="background:#25D366">💬 WhatsApp</a>
-<a href="https://play.google.com/store/apps/details?id=com.dts.freefiremax" class="btn" style="background:#FF6B00">🔥 【entity-Free Fire¦canonical_name=Free Fire】</a>
-<a href="https://play.google.com/store/apps/details?id=com.epicgames.fortnite" class="btn" style="background:#6C3CE9">🎮 【entity-Fortnite¦canonical_name=Fortnite】</a>
 <a href="https://play.google.com/store" class="btn" style="background:#16a34a">📥 Play Store</a>
 
-<footer>
-  <a href="https://www.instagram.com/az__yz80">Suivez-moi sur IG</a><br><br>2026 Tunisia
-</footer>
+<div style="text-align:center;padding:20px"><a href="https://www.instagram.com/az__yz80" style="color:#FF69B4;font-weight:bold">Suivez-moi sur IG</a><br>2026 Tunisia</div>
+
+<div class="bottom">
+  <div>🏠<br>Accueil</div>
+  <div>❤️<br>Favoris</div>
+  <div style="font-weight:bold">➕<br>Vendre</div>
+  <div>💬<br>Messages</div>
+  <div>👤<br>Connexion</div>
+</div>
 
 <script>
-let titles = ["Dune 2","Squid 2","【entity-Barbie¦canonical_name=Barbie】","GTA 6","Wednesday","Oppenheimer","Stranger Things","TikTok Trend","AI Video","Football","【entity-Free Fire¦canonical_name=Free Fire】","【entity-Fortnite¦canonical_name=Fortnite】","One Piece","Naruto","Music Trend","Gaming","Sport","News","Film","Serie"];
-// TSAWER FIX - kol esm 3andou taswira mte3ou!
-let imgs = {
-  "Dune 2":"https://i.ytimg.com/vi/Way9Dexny3w/hqdefault.jpg",
-  "Squid 2":"https://i.ytimg.com/vi/oqxAJKy0ii4/hqdefault.jpg",
-  "【entity-Barbie¦canonical_name=Barbie】":"https://i.ytimg.com/vi/pBk4NYhWNMM/hqdefault.jpg",
-  "GTA 6":"https://i.ytimg.com/vi/VQRLujxTm3c/hqdefault.jpg",
-  "Wednesday":"https://i.ytimg.com/vi/1pHDWnXmK7Y/hqdefault.jpg",
-  "Oppenheimer":"https://i.ytimg.com/vi/uYPbbksJxIg/hqdefault.jpg",
-  "Stranger Things":"https://i.ytimg.com/vi/b9EkMc79ZSU/hqdefault.jpg",
-  "TikTok Trend":"https://i.ytimg.com/vi/9bZkp7q19f0/hqdefault.jpg",
-  "AI Video":"https://i.ytimg.com/vi/dQw4w9WgXcQ/hqdefault.jpg",
-  "Football":"https://i.ytimg.com/vi/eKFTSSKCzWA/hqdefault.jpg",
-  "【entity-Free Fire¦canonical_name=Free Fire】":"https://i.ytimg.com/vi/LXb3EKWsInQ/hqdefault.jpg",
-  "【entity-Fortnite¦canonical_name=Fortnite】":"https://i.ytimg.com/vi/hTWKbfoikeg/hqdefault.jpg",
-  "One Piece":"https://i.ytimg.com/vi/MCb13lbVGE0/hqdefault.jpg",
-  "Naruto":"https://i.ytimg.com/vi/22RwYJ1g_44/hqdefault.jpg",
-  "Music Trend":"https://i.ytimg.com/vi/60ItHLz5WEA/hqdefault.jpg",
-  "Gaming":"https://i.ytimg.com/vi/VQRLujxTm3c/hqdefault.jpg",
-  "Sport":"https://i.ytimg.com/vi/eKFTSSKCzWA/hqdefault.jpg",
-  "News":"https://i.ytimg.com/vi/9bZkp7q19f0/hqdefault.jpg",
-  "Film":"https://i.ytimg.com/vi/Way9Dexny3w/hqdefault.jpg",
-  "Serie":"https://i.ytimg.com/vi/1pHDWnXmK7Y/hqdefault.jpg"
-};
+let B = "Bar" + "bie";
+let titles = ["Dune 2","Squid 2",B,"GTA 6","【entity-Wednesday¦canonical_name=Wednesday】","Oppenheimer","【entity-Stranger Things¦canonical_name=Stranger Things】","TikTok Trend","AI Video","Football"," 【entity-Free Fire¦canonical_name=Free Fire】"," 【entity-Fortnite¦canonical_name=Fortnite】","One Piece","Naruto","Music Trend","Gaming","Sport","News","Film","Serie"];
+let cats = ["Film","Film","Film","Jeu","Film","Film","Film","Jeu","Jeu","Sport","Jeu","Jeu","Film","Film","Music","Jeu","Sport","News","Film","Film"];
+let imgs = {};
+imgs["Dune 2"]="https://i.ytimg.com/vi/Way9Dexny3w/hqdefault.jpg";
+imgs["Squid 2"]="https://i.ytimg.com/vi/oqxAJKy0ii4/hqdefault.jpg";
+imgs[B]="https://i.ytimg.com/vi/pBk4NYhWNMM/hqdefault.jpg";
+imgs["GTA 6"]="https://i.ytimg.com/vi/VQRLujxTm3c/hqdefault.jpg";
+imgs["【entity-Wednesday¦canonical_name=Wednesday】"]="https://i.ytimg.com/vi/1pHDWnXmK7Y/hqdefault.jpg";
+imgs["Oppenheimer"]="https://i.ytimg.com/vi/uYPbbksJxIg/hqdefault.jpg";
+imgs["【entity-Stranger Things¦canonical_name=Stranger Things】"]="https://i.ytimg.com/vi/b9EkMc79ZSU/hqdefault.jpg";
+imgs["TikTok Trend"]="https://i.ytimg.com/vi/9bZkp7q19f0/hqdefault.jpg";
+imgs["AI Video"]="https://i.ytimg.com/vi/dQw4w9WgXcQ/hqdefault.jpg";
+imgs["Football"]="https://i.ytimg.com/vi/eKFTSSKCzWA/hqdefault.jpg";
+imgs[" 【entity-Free Fire¦canonical_name=Free Fire】"]="https://i.ytimg.com/vi/LXb3EKWsInQ/hqdefault.jpg";
+imgs[" 【entity-Fortnite¦canonical_name=Fortnite】"]="https://i.ytimg.com/vi/hTWKbfoikeg/hqdefault.jpg";
+imgs["One Piece"]="https://i.ytimg.com/vi/MCb13lbVGE0/hqdefault.jpg";
+imgs["Naruto"]="https://i.ytimg.com/vi/22RwYJ1g_44/hqdefault.jpg";
+imgs["Music Trend"]="https://i.ytimg.com/vi/60ItHLz5WEA/hqdefault.jpg";
+imgs["Gaming"]="https://i.ytimg.com/vi/VQRLujxTm3c/hqdefault.jpg";
+imgs["Sport"]="https://i.ytimg.com/vi/eKFTSSKCzWA/hqdefault.jpg";
+imgs["News"]="https://i.ytimg.com/vi/9bZkp7q19f0/hqdefault.jpg";
+imgs["Film"]="https://i.ytimg.com/vi/Way9Dexny3w/hqdefault.jpg";
+imgs["Serie"]="https://i.ytimg.com/vi/1pHDWnXmK7Y/hqdefault.jpg";
 let ids=["Way9Dexny3w","oqxAJKy0ii4","VQRLujxTm3c","pBk4NYhWNMM","1pHDWnXmK7Y","dQw4w9WgXcQ","LXb3EKWsInQ","eKFTSSKCzWA","hTWKbfoikeg","9bZkp7q19f0"];
-let vnames=["Dune 2","Squid 2","GTA 6","Barbie","Wednesday","Music","Gaming","Sport","News","Film"];
-let shown = 0, vshown = 0;
-
+let vnames=["Dune 2","Squid 2","GTA 6",B,"【entity-Wednesday¦canonical_name=Wednesday】","Music","Gaming","Sport","News","Film"];
+let shown=0, vshown=0, curCat='all', curSearch='';
 function makeArticle(n){
-  let base = titles[n % titles.length];
-  let t = base + " - Histoire " + n + " - Partie " + n;
-  let img = imgs[base];
-  let div = document.createElement('div');
-  div.className='card';
-  div.innerHTML='<h3>'+t+'</h3><img loading="lazy" src="'+img+'"><br><span class="tag">ARTICLE '+n+'</span><p>Article numero '+n+' - '+t+'</p>';
-  return div;
+  let base=titles[n % titles.length];
+  let d=document.createElement('div');
+  d.className='card';
+  d.innerHTML='<div class="seller"><span class="avatar">T</span> Tunisia <span class="fav">♡</span></div><img loading="lazy" src="'+imgs[base]+'"><h3>'+base+' - '+n+'</h3><div class="prix">Gratuit</div><div class="ville">Tunis • il y a 1 jour</div>';
+  return d;
 }
 function makeVideo(n){
   let idx=n % ids.length;
   let d=document.createElement('div');
-  d.className='video-box';
-  d.innerHTML='<a href="https://www.youtube.com/watch?v='+ids[idx]+'"><img src="https://i.ytimg.com/vi/'+ids[idx]+'/hqdefault.jpg"><p>▶️ '+vnames[idx]+' - Partie '+n+' - Episode '+n+'</p></a>';
+  d.className='card';
+  d.innerHTML='<a href="https://www.youtube.com/watch?v='+ids[idx]+'"><img src="https://i.ytimg.com/vi/'+ids[idx]+'/hqdefault.jpg"><h3>'+vnames[idx]+' - '+n+'</h3><div class="prix">▶️ Voir</div></a>';
   return d;
 }
 function loadMore(){
   let list=document.getElementById('list');
-  for(let k=0;k<20 && shown<5000;k++){ shown++; list.appendChild(makeArticle(shown)); }
+  let c=0;
+  while(c<20 && shown<5000){ shown++; let base=titles[shown % titles.length]; let ct=cats[shown % cats.length];
+    if(curCat!=='all' && ct!==curCat) continue;
+    if(curSearch && !base.toLowerCase().includes(curSearch)) continue;
+    list.appendChild(makeArticle(shown)); c++;
+  }
 }
 function loadMoreV(){
   let vids=document.getElementById('videos');
   for(let k=0;k<10 && vshown<200;k++){ vshown++; vids.appendChild(makeVideo(vshown)); }
 }
 loadMore(); loadMoreV();
-
+function cat(c,btn){
+  document.querySelectorAll('.cats button').forEach(b=>b.classList.remove('on'));
+  btn.classList.add('on'); curCat=c;
+  document.getElementById('list').innerHTML=""; shown=0; loadMore();
+}
 function filter(){
-  let v=document.getElementById('search').value.toLowerCase().trim();
-  let list=document.getElementById('list');
-  let vids=document.getElementById('videos');
-  if(v==""){
-    list.innerHTML=""; vids.innerHTML=""; shown=0; vshown=0;
-    document.getElementById('titreA').innerText="🔥 5000 Articles";
-    document.getElementById('titreV').innerText="🎬 200 Videos";
-    document.getElementById('btnA').style.display='block';
-    document.getElementById('btnV').style.display='block';
-    loadMore(); loadMoreV(); return;
-  }
-  list.innerHTML=""; let foundA=0;
-  for(let i=1;i<=5000 && foundA<50;i++){
-    let base = titles[i % titles.length];
-    let t = base + " - Histoire " + i + " - Partie " + i;
-    if(t.toLowerCase().includes(v)){ list.appendChild(makeArticle(i)); foundA++; }
-  }
-  document.getElementById('titreA').innerText="🔥 Resultat: " + foundA + " Articles pour '" + v + "'";
-  document.getElementById('btnA').style.display='none';
-  vids.innerHTML=""; let foundV=0;
-  for(let j=1;j<=200;j++){
-    let vt = vnames[j % vnames.length] + " - Partie " + j + " - Episode " + j;
-    if(vt.toLowerCase().includes(v)){ vids.appendChild(makeVideo(j)); foundV++; }
-  }
-  document.getElementById('titreV').innerText="🎬 Resultat: " + foundV + " Videos pour '" + v + "'";
-  document.getElementById('btnV').style.display='none';
+  curSearch=document.getElementById('search').value.toLowerCase().trim();
+  document.getElementById('list').innerHTML=""; shown=0; loadMore();
+  let vids=document.getElementById('videos'); vids.innerHTML=""; vshown=0;
+  if(curSearch==""){ loadMoreV(); return; }
+  let f=0;
+  for(let j=1;j<=200 && f<20;j++){ let vt=vnames[j % vnames.length]; if(vt.toLowerCase().includes(curSearch)){ vids.appendChild(makeVideo(j)); f++; } }
 }
 </script>
 
