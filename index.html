@@ -8,218 +8,86 @@
   body { margin:0; font-family:sans-serif; background:#0f172a; color:white; }
   header { background:linear-gradient(90deg,#7c3aed,#db2777,#f59e0b); padding:25px 15px; text-align:center; }
   h1 { margin:0; font-size:32px; }
-  .langs { margin-top:12px; }
   .langs button { background:white; color:#111; border:none; padding:8px 14px; border-radius:20px; margin:0 3px; font-weight:bold; }
-  .langs button.active { background:#111827; color:white; }
   input { width:calc(100% - 30px); margin:15px; padding:14px; border-radius:12px; border:none; font-size:16px; }
   h2 { padding:0 15px; }
-  .card { background:white; color:#111; margin:0 15px 12px; padding:0 0 15px; border-radius:15px; cursor:pointer; overflow:hidden; display:flex; }
-  .num { background:#7c3aed; color:white; font-size:28px; font-weight:bold; padding:20px 12px; display:flex; align-items:center; }
-  .num.gold { background:#f59e0b; }
-  .num.silver { background:#94a3b8; }
-  .num.bronze { background:#b45309; }
-  .card-in { padding:0 12px; flex:1; }
-  .card-in img { width:100%; height:120px; object-fit:cover; border-radius:10px; display:block; margin-top:8px; }
+  .card { background:white; color:#111; margin:0 15px 12px; padding:15px; border-radius:15px; cursor:pointer; }
+  .card img { width:100%; height:120px; object-fit:cover; border-radius:10px; }
   .tag { padding:3px 8px; border-radius:20px; font-size:12px; font-weight:bold; background:#dcfce7; color:#166534; }
-  .small { color:#666; font-size:13px; margin:5px 0; }
-  .more { display:none; margin-top:10px; background:#f1f5f9; padding:10px; border-radius:10px; font-size:13px; line-height:1.6; }
-  .more.open { display:block; }
-  .click { color:#db2777; font-size:12px; font-weight:bold; }
   .video-box { background:white; margin:0 15px 12px; padding:10px; border-radius:15px; }
   .video-box iframe { width:100%; height:200px; border:none; border-radius:10px; }
   .video-box p { color:#111; font-weight:bold; margin:8px 5px 2px; }
+  .btn { display:block; text-align:center; padding:14px; border-radius:12px; font-weight:bold; text-decoration:none; color:white; margin:0 15px 10px; }
   footer { text-align:center; padding:20px; }
   footer a { color:#FF69B4; font-weight:bold; font-size:18px; }
 </style>
 </head>
 <body>
 
-<!-- WELCOME -->
 <div style="background:#E70013;text-align:center;padding:18px 10px;font-size:24px;font-weight:bold;color:white">Welcome to Tunisia 🇹🇳 🇵🇸<br><span style="font-size:15px;font-weight:normal">Bienvenue en Tunisie - مرحبا بكم في تونس</span></div>
 
-<!-- HEADER -->
 <header>
   <h1>Tunisia</h1>
-  <p data-fr="Top 10 Mondial + Films et Series" data-en="Top 10 World + Movies and Series" data-ar="أفضل 10 في العالم + أفلام و مسلسلات">Top 10 Mondial + Films et Series</p>
+  <p>5000 Articles + 200 Videos - Top Mondial</p>
   <div class="langs">
-    <button onclick="setLang('fr')" id="btn-fr" class="active">FR 🇫🇷</button>
-    <button onclick="setLang('en')" id="btn-en">EN 🇺🇸</button>
-    <button onclick="setLang('ar')" id="btn-ar">AR 🇹🇳</button>
+    <button>FR 🇫🇷</button>
+    <button>EN 🇺🇸</button>
+    <button>AR 🇹🇳</button>
   </div>
 </header>
 
-<!-- SEARCH -->
-<input id="search" onkeyup="filter()" placeholder="Rechercher...">
+<input id="search" onkeyup="filter()" placeholder="Rechercher parmi 5000 articles...">
 
-<!-- TOP 10 -->
-<h2 data-fr="🔥 TOP 10 Mondial" data-en="🔥 TOP 10 World" data-ar="🔥 أفضل 10 في العالم">🔥 TOP 10 Mondial</h2>
-<div id="list">
+<h2>🔥 5000 Articles</h2>
+<div id="list"></div>
 
-  <!-- 1 DUNE -->
-  <div class="card" onclick="this.querySelector('.more').classList.toggle('open')">
-    <div class="num gold">1</div>
-    <div class="card-in">
-      <h3>Dune 2</h3>
-      <img src="https://picsum.photos/800/400?random=1">
-      <span class="tag">FILM - 9.2</span>
-      <p class="small" data-fr="Le meilleur film science-fiction" data-en="The best sci-fi movie" data-ar="أفضل فيلم خيال علمي">Le meilleur film science-fiction</p>
-      <span class="click" data-fr="Cliquez pour infos" data-en="Click for infos" data-ar="اضغط للمزيد">Cliquez pour infos</span>
-      <div class="more" data-fr="Histoire : Paul sur Arrakis, choix entre amour et destin. Duree : 2h46 | 2024" data-en="Story : Paul on Arrakis, choice between love and destiny. Duration : 2h46 | 2024" data-ar="القصة : بول في أراكيس، يختار بين الحب و مصير الكون. المدة : 2س46 | 2024">Histoire : Paul sur Arrakis, choix entre amour et destin. Duree : 2h46 | 2024</div>
-    </div>
-  </div>
+<h2>🎬 200 Videos</h2>
+<div id="videos"></div>
 
-  <!-- 2 SQUID -->
-  <div class="card" onclick="this.querySelector('.more').classList.toggle('open')">
-    <div class="num silver">2</div>
-    <div class="card-in">
-      <h3>Squid 2</h3>
-      <img src="https://picsum.photos/800/400?random=2">
-      <span class="tag">SERIE - 9.0</span>
-      <p class="small" data-fr="Le retour de la serie la plus forte" data-en="The return of the strongest series" data-ar="عودة أقوى مسلسل">Le retour de la serie la plus forte</p>
-      <span class="click" data-fr="Cliquez pour infos" data-en="Click for infos" data-ar="اضغط للمزيد">Cliquez pour infos</span>
-      <div class="more" data-fr="Histoire : Gi-hun retourne dans le jeu pour le detruire. Saison 2 | 7 Episodes" data-en="Story : Gi-hun returns to the game to destroy it. Season 2 | 7 Episodes" data-ar="القصة : جي هون يعود للعبة ليدمرها. الموسم 2 | 7 حلقات">Histoire : Gi-hun retourne dans le jeu pour le detruire. Saison 2 | 7 Episodes</div>
-    </div>
-  </div>
+<h2>🔗 Liens Officiels</h2>
+<a href="https://www.rockstargames.com/VI" class="btn" style="background:#111">🎮 Jouer a GTA 6</a>
+<a href="https://www.tiktok.com" class="btn" style="background:#111">📱 Ouvrir TikTok</a>
+<a href="https://www.youtube.com/watch?v=Way9Dexny3w" class="btn" style="background:#db2777">🎬 Voir Dune 2</a>
+<a href="https://play.google.com/store" class="btn" style="background:#16a34a">📥 Telecharger des Jeux</a>
 
-  <!-- 3 INSIDE OUT -->
-  <div class="card" onclick="this.querySelector('.more').classList.toggle('open')">
-    <div class="num bronze">3</div>
-    <div class="card-in">
-      <h3>Inside Out 2</h3>
-      <img src="https://picsum.photos/800/400?random=3">
-      <span class="tag">FILM - 8.8</span>
-      <p class="small" data-fr="Film familial drole et emouvant" data-en="Funny and touching family movie" data-ar="فيلم عائلي مضحك و مؤثر">Film familial drole et emouvant</p>
-      <span class="click" data-fr="Cliquez pour infos" data-en="Click for infos" data-ar="اضغط للمزيد">Cliquez pour infos</span>
-      <div class="more" data-fr="Histoire : Riley adolescente, nouvelles emotions : Anxiete, Ennui... Duree : 1h37 | 2024" data-en="Story : Teen Riley, new emotions : Anxiety, Boredom... Duration : 1h37 | 2024" data-ar="القصة : رايلي مراهقة، مشاعر جديدة : القلق، الملل... المدة : 1س37 | 2024">Histoire : Riley adolescente, nouvelles emotions : Anxiete, Ennui... Duree : 1h37 | 2024</div>
-    </div>
-  </div>
+<h2>📱 Applications</h2>
+<a href="https://www.tiktok.com" class="btn" style="background:#111">📱 TikTok</a>
+<a href="https://www.instagram.com" class="btn" style="background:#E1306C">📸 IG</a>
+<a href="https://www.youtube.com" class="btn" style="background:#FF0000">▶️ YouTube</a>
+<a href="https://www.facebook.com" class="btn" style="background:#1877F2">👍 Facebook</a>
+<a href="https://www.whatsapp.com" class="btn" style="background:#25D366">💬 WhatsApp</a>
+<a href="https://play.google.com/store/apps/details?id=com.dts.freefiremax" class="btn" style="background:#FF6B00">🔥 Free Fire</a>
+<a href="https://play.google.com/store/apps/details?id=com.epicgames.fortnite" class="btn" style="background:#6C3CE9">🎮 Fortnite</a>
+<a href="https://play.google.com/store" class="btn" style="background:#16a34a">📥 Play Store - Toutes les Apps</a>
 
-  <!-- 4 AI -->
-  <div class="card" onclick="this.querySelector('.more').classList.toggle('open')">
-    <div class="num">4</div>
-    <div class="card-in">
-      <h3>AI Video Trend</h3>
-      <img src="https://picsum.photos/800/400?random=4">
-      <span class="tag">TRENDING</span>
-      <p class="small" data-fr="Tout le monde cree des videos avec l IA !" data-en="Everyone creates videos with AI !" data-ar="الكل يصنع فيديوهات بالذكاء الاصطناعي !">Tout le monde cree des videos avec l IA !</p>
-      <span class="click" data-fr="Cliquez pour infos" data-en="Click for infos" data-ar="اضغط للمزيد">Cliquez pour infos</span>
-      <div class="more" data-fr="Infos : Plus de 500M vues sur TikTok en 2026 ! Note : 9.5 / 10" data-en="Infos : More than 500M views on TikTok in 2026 ! Note : 9.5 / 10" data-ar="معلومات : أكثر من 500 مليون مشاهدة على تيك توك في 2026 ! التقييم : 9.5 / 10">Infos : Plus de 500M vues sur TikTok en 2026 ! Note : 9.5 / 10</div>
-    </div>
-  </div>
-  <!-- 5 【entity-BARBIE¦canonical_name=Barbie】 -->
-  <div class="card" onclick="this.querySelector('.more').classList.toggle('open')">
-    <div class="num">5</div>
-    <div class="card-in">
-      <h3>Barbie</h3>
-      <img src="https://picsum.photos/800/400?random=5">
-      <span class="tag">FILM - 8.0</span>
-      <p class="small" data-fr="Le film rose qui a casse tout" data-en="The pink movie that broke everything" data-ar="الفيلم الوردي الذي كسر كل شيء">Le film rose qui a casse tout</p>
-      <span class="click" data-fr="Cliquez pour infos" data-en="Click for infos" data-ar="اضغط للمزيد">Cliquez pour infos</span>
-      <div class="more" data-fr="Histoire : Barbie quitte Barbieland pour decouvrir le vrai monde. Duree : 1h54 | 2023" data-en="Story : Barbie leaves Barbieland to discover the real world. Duration : 1h54 | 2023" data-ar="القصة : باربي تترك عالم باربي لتكتشف العالم الحقيقي. المدة : 1س54 | 2023">Histoire : Barbie quitte Barbieland pour decouvrir le vrai monde. Duree : 1h54 | 2023</div>
-    </div>
-  </div>
-
-  <!-- 6 WEDNESDAY -->
-  <div class="card" onclick="this.querySelector('.more').classList.toggle('open')">
-    <div class="num">6</div>
-    <div class="card-in">
-      <h3>Wednesday</h3>
-      <img src="https://picsum.photos/800/400?random=6">
-      <span class="tag">SERIE - 8.7</span>
-      <p class="small" data-fr="La serie la plus vue" data-en="The most watched series" data-ar="أكثر مسلسل مشاهدة">La serie la plus vue</p>
-      <span class="click" data-fr="Cliquez pour infos" data-en="Click for infos" data-ar="اضغط للمزيد">Cliquez pour infos</span>
-      <div class="more" data-fr="Histoire : Wednesday Addams a l academie Nevermore, mysteres et monstres. Saison 2" data-en="Story : Wednesday Addams at Nevermore Academy, mysteries and monsters. Season 2" data-ar="القصة : وينزداي آدامز في أكاديمية نيفرمور، أسرار و وحوش. الموسم 2">Histoire : 【entity-Wednesday¦canonical_name=Wednesday】 Addams a l academie Nevermore, mysteres et monstres. Saison 2</div>
-    </div>
-  </div>
-
-  <!-- 7 GTA 6 -->
-  <div class="card" onclick="this.querySelector('.more').classList.toggle('open')">
-    <div class="num">7</div>
-    <div class="card-in">
-      <h3>GTA 6</h3>
-      <img src="https://picsum.photos/800/400?random=7">
-      <span class="tag">JEU - 9.8</span>
-      <p class="small" data-fr="Tout le monde attend GTA 6 !" data-en="Everyone waits for GTA 6 !" data-ar="الكل ينتظر GTA 6 !">Tout le monde attend GTA 6 !</p>
-      <span class="click" data-fr="Cliquez pour infos" data-en="Click for infos" data-ar="اضغط للمزيد">Cliquez pour infos</span>
-      <div class="more" data-fr="Infos : Le jeu le plus attendu au monde, sortie 2026 ! Plus de 100M vues pour le trailer." data-en="Infos : The most awaited game in the world, release 2026 ! More than 100M views for the trailer." data-ar="معلومات : أكثر لعبة منتظرة في العالم، صدور 2026 ! أكثر من 100 مليون مشاهدة للتريلر.">Infos : Le jeu le plus attendu au monde, sortie 2026 ! Plus de 100M vues pour le trailer.</div>
-    </div>
-  </div>
-
-  <!-- 8 OPPENHEIMER -->
-  <div class="card" onclick="this.querySelector('.more').classList.toggle('open')">
-    <div class="num">8</div>
-    <div class="card-in">
-      <h3>Oppenheimer</h3>
-      <img src="https://picsum.photos/800/400?random=8">
-      <span class="tag">FILM - 8.6</span>
-      <p class="small" data-fr="Le film qui a gagne l Oscar" data-en="The movie that won the Oscar" data-ar="الفيلم الذي فاز بالأوسكار">Le film qui a gagne l Oscar</p>
-      <span class="click" data-fr="Cliquez pour infos" data-en="Click for infos" data-ar="اضغط للمزيد">Cliquez pour infos</span>
-      <div class="more" data-fr="Histoire : L histoire du createur de la bombe atomique. Duree : 3h00 | 2023" data-en="Story : The story of the creator of the atomic bomb. Duration : 3h00 | 2023" data-ar="القصة : قصة صانع القنبلة الذرية. المدة : 3س00 | 2023">Histoire : L histoire du createur de la bombe atomique. Duree : 3h00 | 2023</div>
-    </div>
-  </div>
-
-  <!-- 9 STRANGER -->
-  <div class="card" onclick="this.querySelector('.more').classList.toggle('open')">
-    <div class="num">9</div>
-    <div class="card-in">
-      <h3>Stranger Things</h3>
-      <img src="https://picsum.photos/800/400?random=9">
-      <span class="tag">SERIE - 8.9</span>
-      <p class="small" data-fr="La serie culte" data-en="The cult series" data-ar="المسلسل الأسطوري">La serie culte</p>
-      <span class="click" data-fr="Cliquez pour infos" data-en="Click for infos" data-ar="اضغط للمزيد">Cliquez pour infos</span>
-      <div class="more" data-fr="Histoire : Eleven et ses amis contre le monde a l envers. Saison 5" data-en="Story : Eleven and her friends against the upside down world. Season 5" data-ar="القصة : إليفن و أصدقاؤها ضد العالم المقلوب. الموسم 5">Histoire : Eleven et ses amis contre le monde a l envers. Saison 5</div>
-    </div>
-  </div>
-
-  <!-- 10 TIKTOK -->
-  <div class="card" onclick="this.querySelector('.more').classList.toggle('open')">
-    <div class="num">10</div>
-    <div class="card-in">
-      <h3>TikTok Trend</h3>
-      <img src="https://picsum.photos/800/400?random=10">
-      <span class="tag">TRENDING</span>
-      <p class="small" data-fr="Les danses qui font le tour du monde" data-en="Dances around the world" data-ar="رقصات تجوب العالم">Les danses qui font le tour du monde</p>
-      <span class="click" data-fr="Cliquez pour infos" data-en="Click for infos" data-ar="اضغط للمزيد">Cliquez pour infos</span>
-      <div class="more" data-fr="Infos : Plus de 1 Milliard d utilisateurs sur TikTok ! La danse du moment : partout !" data-en="Infos : More than 1 Billion users on TikTok ! The dance of the moment : everywhere !" data-ar="معلومات : أكثر من 1 مليار مستخدم على تيك توك ! رقصة اللحظة : في كل مكان !">Infos : Plus de 1 Milliard d utilisateurs sur TikTok ! La danse du moment : partout !</div>
-    </div>
-  </div>
-  <!-- VIDEOS -->
-  <h2 data-fr="Videos" data-en="Videos" data-ar="فيديوهات">Videos</h2>
-  <div class="video-box"><iframe src="https://www.youtube.com/embed/Way9Dexny3w" allowfullscreen></iframe><p>Dune 2 - Bande Annonce</p></div>
-  <div class="video-box"><iframe src="https://www.youtube.com/embed/oqxAJKy0ii4" allowfullscreen></iframe><p>Squid 2 - Bande Annonce</p></div>
-  <div class="video-box"><iframe src="https://www.youtube.com/embed/VQRLujxTm3c" allowfullscreen></iframe><p>GTA 6 - Bande Annonce</p></div>
-  <div class="video-box"><iframe src="https://www.youtube.com/embed/pBk4NYhWNMM" allowfullscreen></iframe><p> 【entity-Barbie¦canonical_name=Barbie】 - Bande Annonce</p></div>
-  <div class="video-box"><iframe src="https://www.youtube.com/embed/1pHDWnXmK7Y" allowfullscreen></iframe><p> 【entity-Wednesday¦canonical_name=Wednesday】 - Bande Annonce</p></div>
-
-  <h2>🔗 Liens Officiels</h2>
-  <div style="margin:0 15px 12px;display:flex;flex-direction:column;gap:10px">
-    <a href="https://www.rockstargames.com/VI" style="background:#111;color:white;text-align:center;padding:14px;border-radius:12px;font-weight:bold;text-decoration:none">🎮 Jouer a GTA 6</a>
-    <a href="https://www.tiktok.com" style="background:#111;color:white;text-align:center;padding:14px;border-radius:12px;font-weight:bold;text-decoration:none">📱 Ouvrir TikTok</a>
-    <a href="https://www.youtube.com/watch?v=Way9Dexny3w" style="background:#db2777;color:white;text-align:center;padding:14px;border-radius:12px;font-weight:bold;text-decoration:none">🎬 Voir Dune 2</a>
-    <a href="https://play.google.com/store" style="background:#16a34a;color:white;text-align:center;padding:14px;border-radius:12px;font-weight:bold;text-decoration:none">📥 Telecharger des Jeux</a>
-  </div>
-</div>
-<!-- FOOTER -->
 <footer>
-  <a href="https://www.instagram.com/az__yz80">Suivez-moi sur IG</a>
-  <br><br>
-  2026 Tunisia
+  <a href="https://www.instagram.com/az__yz80">Suivez-moi sur IG</a><br><br>2026 Tunisia
 </footer>
 
-<!-- SCRIPT -->
 <script>
-function setLang(l) {
-  document.body.dir = (l == 'ar' ? 'rtl' : 'ltr');
-  document.querySelectorAll('.langs button').forEach(b => b.classList.remove('active'));
-  document.getElementById('btn-' + l).classList.add('active');
-  document.querySelectorAll('[data-fr]').forEach(e => { e.innerText = e.getAttribute('data-' + l); });
-  if (l == 'fr') document.getElementById('search').placeholder = 'Rechercher...';
-  if (l == 'en') document.getElementById('search').placeholder = 'Search...';
-  if (l == 'ar') document.getElementById('search').placeholder = 'بحث...';
+let list = document.getElementById('list');
+let titles = ["Dune 2","Squid 2"," Barbie","GTA 6"," Wednesday","Oppenheimer","Stranger Things","TikTok Trend","AI Video","Football"," Free Fire"," Fortnite","One Piece","Naruto","Music Trend","Gaming","Sport","News","Film","Serie"];
+for (let i = 1; i <= 5000; i++) {
+  let t = titles[i % titles.length] + " #" + i;
+  let div = document.createElement('div');
+  div.className = 'card';
+  div.innerHTML = '<h3>' + t + '</h3><img src="https://picsum.photos/800/400?random=' + i + '"><br><span class="tag">ARTICLE ' + i + '</span><p>Article numero ' + i + ' - ' + t + '</p>';
+  div.onclick = function() { alert(t + ' - Article ' + i); };
+  list.appendChild(div);
+}
+let vids = document.getElementById('videos');
+let ids = ["Way9Dexny3w","oqxAJKy0ii4","VQRLujxTm3c","pBk4NYhWNMM","1pHDWnXmK7Y","dQw4w9WgXcQ","LXb3EKWsInQ","eKFTSSKCzWA","hTWKbfoikeg","9bZkp7q19f0"];
+let vnames = ["Dune 2","Squid 2","GTA 6"," Barbie"," Wednesday","Music","Gaming","Sport","News","Film"];
+for (let j = 1; j <= 200; j++) {
+  let k = j % ids.length;
+  let d = document.createElement('div');
+  d.className = 'video-box';
+  d.innerHTML = '<iframe src="https://www.youtube.com/embed/' + ids[k] + '" allowfullscreen></iframe><p>Video ' + j + ' - ' + vnames[k] + ' - Bande Annonce</p>';
+  vids.appendChild(d);
 }
 function filter() {
   let v = document.getElementById('search').value.toLowerCase();
-  document.querySelectorAll('.card').forEach(c => { c.style.display = c.innerText.toLowerCase().includes(v) ? 'flex' : 'none'; });
+  document.querySelectorAll('.card').forEach(c => { c.style.display = c.innerText.toLowerCase().includes(v) ? 'block' : 'none'; });
 }
 </script>
 
