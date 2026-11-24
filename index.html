@@ -5,72 +5,140 @@
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
 <title>Tunisiabet206</title>
 <style>
-body{margin:0;font-family:sans-serif;background:#0f172a;color:white}
-header{background:linear-gradient(90deg,#7c3aed,#db2777,#f59e0b);padding:25px 15px;text-align:center}
-h1{margin:0;font-size:32px}
-.langs{margin-top:12px}
-.langs button{background:white;color:#111;border:none;padding:8px 14px;border-radius:20px;margin:0 3px;font-weight:bold}
-.langs button.active{background:#111827;color:white}
-input{width:calc(100% - 30px);margin:15px;padding:14px;border-radius:12px;border:none;font-size:16px}
-h2{padding:0 15px}
-.card{background:white;color:#111;margin:0 15px 12px;padding:15px;border-radius:15px;cursor:pointer}
-.tag{padding:3px 8px;border-radius:20px;font-size:12px;font-weight:bold;background:#dcfce7;color:#166534}
-.small{color:#666;font-size:13px;margin:5px 0}
-.more{display:none;margin-top:10px;background:#f1f5f9;padding:10px;border-radius:10px;font-size:13px;line-height:1.6}
-.more.open{display:block}
-.click{color:#db2777;font-size:12px;font-weight:bold}
+  body { margin:0; font-family:sans-serif; background:#0f172a; color:white; }
+  header { background:linear-gradient(90deg,#7c3aed,#db2777,#f59e0b); padding:25px 15px; text-align:center; }
+  h1 { margin:0; font-size:32px; }
+  .langs { margin-top:12px; }
+  .langs button { background:white; color:#111; border:none; padding:8px 14px; border-radius:20px; margin:0 3px; font-weight:bold; }
+  .langs button.active { background:#111827; color:white; }
+  input { width:calc(100% - 30px); margin:15px; padding:14px; border-radius:12px; border:none; font-size:16px; }
+  h2 { padding:0 15px; }
+  .card { background:white; color:#111; margin:0 15px 12px; padding:15px; border-radius:15px; cursor:pointer; }
+  .tag { padding:3px 8px; border-radius:20px; font-size:12px; font-weight:bold; background:#dcfce7; color:#166534; }
+  .small { color:#666; font-size:13px; margin:5px 0; }
+  .more { display:none; margin-top:10px; background:#f1f5f9; padding:10px; border-radius:10px; font-size:13px; line-height:1.6; }
+  .more.open { display:block; }
+  .click { color:#db2777; font-size:12px; font-weight:bold; }
+  footer { text-align:center; padding:20px; }
+  footer a { color:#FF69B4; font-weight:bold; font-size:18px; }
 </style>
 </head>
 <body>
+
+<!-- ===== HEADER ===== -->
 <header>
-<h1>Tunisiabet206</h1>
-<p id="subtitle">Tendances Mondiales + Films et Series</p>
-<div class="langs">
-<button onclick="setLang('fr')" id="btn-fr" class="active">FR</button>
-<button onclick="setLang('en')" id="btn-en">EN</button>
-<button onclick="setLang('ar')" id="btn-ar">AR</button>
-</div>
+  <h1>Tunisiabet206</h1>
+  <p id="subtitle">Tendances Mondiales + Films et Series</p>
+  <div class="langs">
+    <button onclick="setLang('fr')" id="btn-fr" class="active">FR</button>
+    <button onclick="setLang('en')" id="btn-en">EN</button>
+    <button onclick="setLang('ar')" id="btn-ar">AR</button>
+  </div>
 </header>
+
+<!-- ===== SEARCH ===== -->
 <input id="search" onkeyup="filter()" placeholder="Rechercher...">
 
+<!-- ===== TRENDS ===== -->
 <h2 id="t1">Tendances du Monde</h2>
 <div id="list">
-<div class="card" onclick="this.querySelector('.more').classList.toggle('open')">
-<h3>AI Video Trend</h3><span class="tag">TRENDING</span><p class="small">Tout le monde cree des videos avec l IA !</p><span class="click">Cliquez pour infos</span>
-<div class="more"><b>Infos:</b> Tout le monde cree des videos avec l IA !</div> 
+
+  <div class="card" onclick="this.querySelector('.more').classList.toggle('open')">
+    <h3>AI Video Trend</h3>
+    <span class="tag">TRENDING</span>
+    <p class="small">Tout le monde cree des videos avec l IA !</p>
+    <span class="click">Cliquez pour infos</span>
+    <div class="more">
+      <b>Infos :</b><br>
+      Tout le monde cree des videos avec l IA en 2026 ! Plus de 500M vues sur TikTok.<br>
+      Note : 9.5 / 10
+    </div>
+  </div>
+
+  <!-- ===== FILMS ===== -->
+  <h2 id="t2">Top Films</h2>
+
+  <div class="card" onclick="this.querySelector('.more').classList.toggle('open')">
+    <h3>Dune 2</h3>
+    <span class="tag">FILM - 9.2 / 10</span>
+    <p class="small">Le meilleur film science-fiction</p>
+    <span class="click">Cliquez pour infos</span>
+    <div class="more">
+      <b>Histoire :</b> Paul continue son voyage sur Arrakis. Il doit choisir entre l amour et le destin de l univers.<br><br>
+      Acteurs : Timothee C. 
+      Duree : 2h46 | 2024 | Science-Fiction
+    </div>
+  </div>
+
+  <div class="card" onclick="this.querySelector('.more').classList.toggle('open')">
+    <h3>Inside Out 2</h3>
+    <span class="tag">FILM - 8.8 / 10</span>
+    <p class="small">Film familial drole et emouvant</p>
+    <span class="click">Cliquez pour infos</span>
+    <div class="more">
+      <b>Histoire :</b> Riley est devenue adolescente ! De nouvelles emotions arrivent : Anxiete, Ennui, Envie...<br><br>
+      Acteurs : Amy P.<br>
+      Duree : 1h37 | 2024 | Familial
+    </div>
+  </div>
+
+  <!-- ===== SERIES ===== -->
+  <h2 id="t3">Top Series</h2>
+
+  <div class="card" onclick="this.querySelector('.more').classList.toggle('open')">
+    <h3>Squid Game 2</h3>
+    <span class="tag">SERIE - 9.0 / 10</span>
+    <p class="small">Le retour de la serie la plus forte</p>
+    <span class="click">Cliquez pour infos</span>
+    <div class="more">
+      <b>Histoire :</b> Gi-hun retourne dans le jeu pour detruire l organisation. Nouveaux jeux, encore plus dangereux !<br><br>
+      Saison 2 | 7 Episodes 
+    </div>
+  </div>
+
 </div>
 
-<div class="card" onclick="this.querySelector('.more').classList.toggle('open')">
-<h3>Dune 2</h3><span class="tag">FILM - 9.2/10</span><p class="small">Le meilleur film science-fiction</p><span class="click">Cliquez pour infos</span>
-<div class="more"><b>Histoire:</b> Paul continue son voyage sur Arrakis. Il doit choisir entre l amour et le destin de l univers.<br><br>Acteurs: Timothee C. , 【entity-Zendaya¦canonical_name=Zendaya】<br>Duree: 2h46 | 2024 | Science-Fiction</div>
-</div>
+<!-- ===== FOOTER + INSTAGRAM ===== -->
+<footer>
+  <a href="https://www.instagram.com/az__yz80">Suivez-moi sur Instagram</a>
+  <br><br>
+  2026 Tunisiabet206
+</footer>
 
-<div class="card" onclick="this.querySelector('.more').classList.toggle('open')">
-<h3>Inside Out 2</h3><span class="tag">FILM - 8.8/10</span><p class="small">Film familial drole et emouvant</p><span class="click">Cliquez pour infos</span>
-<div class="more"><b>Histoire:</b> Riley est devenue adolescente ! De nouvelles emotions arrivent: Anxiete, Ennui, Envie...<br><br>Acteurs: Amy P.<br>Duree: 1h37 | 2024 | Familial</div>
-</div>
-
-<div class="card" onclick="this.querySelector('.more').classList.toggle('open')">
-<h3>Squid Game 2</h3><span class="tag">SERIE - 9.0/10</span><p class="small">Le retour de la serie la plus forte</p><span class="click">Cliquez pour infos</span>
-<div class="more"><b>Histoire:</b> Gi-hun retourne dans le jeu pour detruire l organisation. Nouveaux jeux, encore plus dangereux !<br><br>Saison 2 | 7 Episodes | Netflix</div>
-</div>
-</div>
-
-<a href="https://www.instagram.com/az__yz80">Suivez-moi sur Instagram</a>
-<scri
-function setLang(l){
-document.documentElement.lang=l;
-document.body.dir=(l=='ar'?'rtl':'ltr');
-document.querySelectorAll('.langs button').forEach(b=>b.classList.remove('active'));
-document.getElementById('btn-'+l).classList.add('active');
-if(l=='en'){document.getElementById('subtitle').innerText='World Trends + Movies and Series';document.getElementById('t1').innerText='World Trends';}
-if(l=='fr'){document.getElementById('subtitle').innerText='Tendances Mondiales + Films et Series';document.getElementById('t1').innerText='Tendances du Monde';}
-if(l=='ar'){document.getElementById('subtitle').innerText='ترندات العالم + أفلام و مسلسلات';document.getElementById('t1').innerText='ترندات العالم';}
+<!-- ===== SCRIPT ===== -->
+<script>
+function setLang(l) {
+  document.documentElement.lang = l;
+  document.body.dir = (l == 'ar' ? 'rtl' : 'ltr');
+  document.querySelectorAll('.langs button').forEach(b => b.classList.remove('active'));
+  document.getElementById('btn-' + l).classList.add('active');
+  if (l == 'en') {
+    document.getElementById('subtitle').innerText = 'World Trends + Movies and Series';
+    document.getElementById('t1').innerText = 'World Trends';
+    document.getElementById('t2').innerText = 'Top Movies';
+    document.getElementById('t3').innerText = 'Top Series';
+  }
+  if (l == 'fr') {
+    document.getElementById('subtitle').innerText = 'Tendances Mondiales + Films et Series';
+    document.getElementById('t1').innerText = 'Tendances du Monde';
+    document.getElementById('t2').innerText = 'Top Films';
+    document.getElementById('t3').innerText = 'Top Series';
+  }
+  if (l == 'ar') {
+    document.getElementById('subtitle').innerText = 'ترندات العالم + أفلام و مسلسلات';
+    document.getElementById('t1').innerText = 'ترندات العالم';
+    document.getElementById('t2').innerText = 'أفضل الأفلام';
+    document.getElementById('t3').innerText = 'أفضل المسلسلات';
+  }
 }
-function filter(){
-let v=document.getElementById('search').value.toLowerCase();
-document.querySelectorAll('.card').forEach(c=>{c.style.display=c.innerText.toLowerCase().includes(v)?'block':'none'});
+
+function filter() {
+  let v = document.getElementById('search').value.toLowerCase();
+  document.querySelectorAll('.card').forEach(c => {
+    c.style.display = c.innerText.toLowerCase().includes(v) ? 'block' : 'none';
+  });
 }
 </script>
+
 </body>
 </html>
