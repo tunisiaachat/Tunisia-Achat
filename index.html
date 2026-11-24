@@ -3,26 +3,49 @@
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>Tunisiabet206</title>
+<title>Tunisiabet206 - Koura Tounsiya</title>
 <style>
 body{margin:0;font-family:sans-serif;background:#0f172a;color:white;text-align:center}
-header{padding:50px 20px;background:#16a34a}
-h1{font-size:32px;margin:0}
-p{color:#e2e8f0}
-.box{background:white;color:#111;margin:20px;padding:20px;border-radius:15px}
-button{background:#16a34a;color:white;border:none;padding:15px 30px;font-size:18px;border-radius:10px}
+header{padding:30px 15px;background:#16a34a}
+h1{margin:0;font-size:30px}
+.card{background:white;color:#111;margin:15px;padding:18px;border-radius:15px;text-align:right}
+.match{display:flex;justify-content:space-between;align-items:center;background:#f1f5f9;padding:12px;border-radius:10px;margin:10px 0}
+button{background:#16a34a;color:white;border:none;padding:10px 15px;border-radius:8px;font-size:15px}
+#result{font-weight:bold;color:#16a34a}
 </style>
 </head>
 <body>
 <header>
 <h1>Tunisiabet206 🇹🇳</h1>
-<p>أهلا بيك في موقعنا الجديد</p>
+<p>Akbar Koura Tounsiya - Tawa9o3at w Jaw</p>
 </header>
-<div class="box">
-<h2>مرحبا بيك</h2>
-<p>الموقع مازال في طور البناء، استنانا قريبا...</p>
-<button>ادخل هنا</button>
+
+<div class="card">
+<h2>⚽ Matchs Ejom3a Hedhi</h2>
+<div class="match"><span>EST vs CA</span><b>Dimanche 18:00</b></div>
+<div class="match"><span>Etoile du Sahel vs CS Sfaxien</span><b>Samedi 16:00</b></div>
+<div class="match"><span>CA Bizertin vs Stade Tunisien</span><b>Samedi 14:00</b></div>
 </div>
+
+<div class="card">
+<h2>🗳️ Chkoun Bech Yerba7 El Derby ?</h2>
+<p>Vote blech, juste lel jaw:</p>
+<button onclick="vote('Esperance')">Esperance</button>
+<button onclick="vote('CA')">CA</button>
+<button onclick="vote('Ta3adol')">Ta3adol 🤝</button>
+<p id="result"></p>
+</div>
+
+<div class="card">
+<h2>📰 A5er 5bar</h2>
+<p>El championnat raja3 b 9owa ejom3a hedhi! Chkoun trah bech ye5ou el botoula esna?</p>
+</div>
+
 <p>© 2026 Tunisiabet206</p>
+<script>
+function vote(equipe){
+document.getElementById('result').innerText = "Merci! Enti vote l : " + equipe + " ✅";
+}
+</script>
 </body>
 </html>
