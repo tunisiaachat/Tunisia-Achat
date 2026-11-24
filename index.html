@@ -14,10 +14,11 @@
   .card { background:white; color:#111; margin:0 15px 12px; padding:15px; border-radius:15px; cursor:pointer; }
   .card img { width:100%; height:120px; object-fit:cover; border-radius:10px; }
   .tag { padding:3px 8px; border-radius:20px; font-size:12px; font-weight:bold; background:#dcfce7; color:#166534; }
-  .video-box { background:white; margin:0 15px 12px; padding:10px; border-radius:15px; }
-  .video-box iframe { width:100%; height:200px; border:none; border-radius:10px; }
+  .video-box { background:white; margin:0 15px 12px; padding:10px; border-radius:15px; text-align:center; }
+  .video-box img { width:100%; height:180px; object-fit:cover; border-radius:10px; }
   .video-box p { color:#111; font-weight:bold; margin:8px 5px 2px; }
   .btn { display:block; text-align:center; padding:14px; border-radius:12px; font-weight:bold; text-decoration:none; color:white; margin:0 15px 10px; }
+  .more { background:white; color:#111; border:none; padding:15px; border-radius:12px; font-weight:bold; font-size:16px; width:calc(100% - 30px); margin:10px 15px; }
   footer { text-align:center; padding:20px; }
   footer a { color:#FF69B4; font-weight:bold; font-size:18px; }
 </style>
@@ -40,14 +41,15 @@
 
 <h2>🔥 5000 Articles</h2>
 <div id="list"></div>
+<button class="more" onclick="loadMore()">➕ Voir Plus d'Articles</button>
 
 <h2>🎬 200 Videos</h2>
 <div id="videos"></div>
+<button class="more" onclick="loadMoreV()">➕ Voir Plus de Videos</button>
 
 <h2>🔗 Liens Officiels</h2>
 <a href="https://www.rockstargames.com/VI" class="btn" style="background:#111">🎮 Jouer a GTA 6</a>
 <a href="https://www.tiktok.com" class="btn" style="background:#111">📱 Ouvrir TikTok</a>
-<a href="https://www.youtube.com/watch?v=Way9Dexny3w" class="btn" style="background:#db2777">🎬 Voir Dune 2</a>
 <a href="https://play.google.com/store" class="btn" style="background:#16a34a">📥 Telecharger des Jeux</a>
 
 <h2>📱 Applications</h2>
@@ -56,38 +58,47 @@
 <a href="https://www.youtube.com" class="btn" style="background:#FF0000">▶️ YouTube</a>
 <a href="https://www.facebook.com" class="btn" style="background:#1877F2">👍 Facebook</a>
 <a href="https://www.whatsapp.com" class="btn" style="background:#25D366">💬 WhatsApp</a>
-<a href="https://play.google.com/store/apps/details?id=com.dts.freefiremax" class="btn" style="background:#FF6B00">🔥 Free Fire</a>
-<a href="https://play.google.com/store/apps/details?id=com.epicgames.fortnite" class="btn" style="background:#6C3CE9">🎮 Fortnite</a>
-<a href="https://play.google.com/store" class="btn" style="background:#16a34a">📥 Play Store - Toutes les Apps</a>
+<a href="https://play.google.com/store/apps/details?id=com.dts.freefiremax" class="btn" style="background:#FF6B00">🔥 【entity-Free Fire¦canonical_name=Free Fire】</a>
+<a href="https://play.google.com/store/apps/details?id=com.epicgames.fortnite" class="btn" style="background:#6C3CE9">🎮 【entity-Fortnite¦canonical_name=Fortnite】</a>
+<a href="https://play.google.com/store" class="btn" style="background:#16a34a">📥 Play Store</a>
 
 <footer>
   <a href="https://www.instagram.com/az__yz80">Suivez-moi sur IG</a><br><br>2026 Tunisia
 </footer>
 
 <script>
-let list = document.getElementById('list');
-let titles = ["Dune 2","Squid 2"," Barbie","GTA 6"," Wednesday","Oppenheimer","Stranger Things","TikTok Trend","AI Video","Football"," Free Fire"," Fortnite","One Piece","Naruto","Music Trend","Gaming","Sport","News","Film","Serie"];
-for (let i = 1; i <= 5000; i++) {
-  let t = titles[i % titles.length] + " #" + i;
-  let div = document.createElement('div');
-  div.className = 'card';
-  div.innerHTML = '<h3>' + t + '</h3><img src="https://picsum.photos/800/400?random=' + i + '"><br><span class="tag">ARTICLE ' + i + '</span><p>Article numero ' + i + ' - ' + t + '</p>';
-  div.onclick = function() { alert(t + ' - Article ' + i); };
-  list.appendChild(div);
+let titles = ["Dune 2","Squid 2"," Barbie","GTA 6"," Wednesday","Oppenheimer","Stranger Things","TikTok Trend","AI Video","Football"," 【entity-Free Fire¦canonical_name=Free Fire】"," 【entity-Fortnite¦canonical_name=Fortnite】","One Piece","Naruto","Music Trend","Gaming","Sport","News","Film","Serie"];
+let shown = 0;
+function loadMore(){
+  let list = document.getElementById('list');
+  for(let k=0;k<20 && shown<5000;k++){ shown++;
+    let t = titles[shown % titles.length] + " #" + shown;
+    let div = document.createElement('div');
+    div.className='card';
+    div.innerHTML='<h3>'+t+'</h3><img loading="lazy" src="https://picsum.photos/800/400?random='+shown+'"><br><span class="tag">ARTICLE '+shown+'</span><p>Article numero '+shown+' - '+t+'</p>';
+    list.appendChild(div);
+  }
 }
-let vids = document.getElementById('videos');
-let ids = ["Way9Dexny3w","oqxAJKy0ii4","VQRLujxTm3c","pBk4NYhWNMM","1pHDWnXmK7Y","dQw4w9WgXcQ","LXb3EKWsInQ","eKFTSSKCzWA","hTWKbfoikeg","9bZkp7q19f0"];
-let vnames = ["Dune 2","Squid 2","GTA 6"," Barbie"," Wednesday","Music","Gaming","Sport","News","Film"];
-for (let j = 1; j <= 200; j++) {
-  let k = j % ids.length;
-  let d = document.createElement('div');
-  d.className = 'video-box';
-  d.innerHTML = '<iframe src="https://www.youtube.com/embed/' + ids[k] + '" allowfullscreen></iframe><p>Video ' + j + ' - ' + vnames[k] + ' - Bande Annonce</p>';
-  vids.appendChild(d);
+loadMore();
+
+let vshown=0;
+let ids=["Way9Dexny3w","oqxAJKy0ii4","VQRLujxTm3c","pBk4NYhWNMM","1pHDWnXmK7Y","dQw4w9WgXcQ","LXb3EKWsInQ","eKFTSSKCzWA","hTWKbfoikeg","9bZkp7q19f0"];
+let vnames=["Dune 2","Squid 2","GTA 6"," Barbie"," Wednesday","Music","Gaming","Sport","News","Film"];
+function loadMoreV(){
+  let vids=document.getElementById('videos');
+  for(let k=0;k<10 && vshown<200;k++){ vshown++;
+    let idx=vshown % ids.length;
+    let d=document.createElement('div');
+    d.className='video-box';
+    d.innerHTML='<a href="https://www.youtube.com/watch?v='+ids[idx]+'"><img src="https://i.ytimg.com/vi/'+ids[idx]+'/hqdefault.jpg"><p>▶️ Video '+vshown+' - '+vnames[idx]+'</p></a>';
+    vids.appendChild(d);
+  }
 }
-function filter() {
-  let v = document.getElementById('search').value.toLowerCase();
-  document.querySelectorAll('.card').forEach(c => { c.style.display = c.innerText.toLowerCase().includes(v) ? 'block' : 'none'; });
+loadMoreV();
+
+function filter(){
+  let v=document.getElementById('search').value.toLowerCase();
+  document.querySelectorAll('.card').forEach(c=>{ c.style.display=c.innerText.toLowerCase().includes(v)?'block':'none'; });
 }
 </script>
 
