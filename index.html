@@ -6,59 +6,74 @@
 <title>Tunisiabet206</title>
 <style>
 body{margin:0;font-family:sans-serif;background:#0f172a;color:white}
-header{background:linear-gradient(90deg,#7c3aed,#db2777,#f59e0b);padding:20px;text-align:center}
-h1{margin:0;font-size:30px}
+header{background:linear-gradient(90deg,#7c3aed,#db2777,#f59e0b);padding:25px 15px;text-align:center}
+h1{margin:0;font-size:32px}
 .langs{margin-top:12px}
 .langs button{background:white;color:#111;border:none;padding:8px 14px;border-radius:20px;margin:0 3px;font-weight:bold}
 .langs button.active{background:#111827;color:white}
 input{width:calc(100% - 30px);margin:15px;padding:14px;border-radius:12px;border:none;font-size:16px}
 h2{padding:0 15px}
-.card{background:white;color:#111;margin:0 15px 12px;padding:15px;border-radius:15px}
-.card h3{margin:0 0 5px 0}
-.tag{background:#dcfce7;color:#166534;padding:3px 8px;border-radius:20px;font-size:12px;font-weight:bold}
-.desc{color:#333;line-height:1.6;margin:10px 0}
-.info{background:#f1f5f9;padding:10px;border-radius:10px;font-size:13px;line-height:1.6}
-footer{text-align:center;color:#9ca3af;padding:20px}
+.card{background:white;color:#111;margin:0 15px 12px;padding:15px;border-radius:15px;display:flex;gap:12px;cursor:pointer}
+.num{font-size:28px;font-weight:bold;color:#db2777}
+.poster{width:60px;height:85px;border-radius:10px;display:flex;align-items:center;justify-content:center;font-size:30px;flex-shrink:0;background:#ddd6fe}
+.tag{padding:3px 8px;border-radius:20px;font-size:12px;font-weight:bold;background:#dcfce7;color:#166534}
+.small{color:#666;font-size:13px;margin:5px 0}
+.more{display:none;margin-top:10px;background:#f1f5f9;padding:10px;border-radius:10px;font-size:13px;line-height:1.6;color:#111}
+.more.open{display:block}
+.click{color:#db2777;font-size:12px;font-weight:bold}
 </style>
 </head>
 <body>
 <header>
 <h1>Tunisiabet206 🌍</h1>
-<p id="subtitle">Films & Séries - Toutes les infos</p>
+<p id="subtitle">Tendances Mondiales + Films & Séries</p>
 <div class="langs">
 <button onclick="setLang('fr')" id="btn-fr" class="active">FR 🇫🇷</button>
 <button onclick="setLang('en')" id="btn-en">EN 🇺🇸</button>
 <button onclick="setLang('ar')" id="btn-ar">AR 🇹🇳</button>
 </div>
 </header>
-<input id="search" onkeyup="filter()" placeholder="Rechercher... film, serie...">
+<input id="search" onkeyup="filter()" placeholder="Rechercher... film, serie, trend...">
+
+<h2 id="t1">🔥 Tendances du Monde</h2>
+<div id="list">
+<div class="card" onclick="this.querySelector('.more').classList.toggle('open')">
+<span class="num">1</span><div><div style="display:flex;gap:10px"><div class="poster">🤖</div><div><b>AI Video Trend</b><br><span class="tag">TRENDING</span><p class="small">Tout le monde crée des vidéos avec l'IA !</p><span class="click">👉 Cliquez pour infos</span></div></div>
+<div class="more"><b>Infos:</b><br>Tout le monde crée des vidéos avec l'IA en 2026 ! Plus de 500M vues sur TikTok.<br>🎬 Comment faire: Télécharge CapCut AI, choisis ton style.<br>⭐ Note: 9.5/10</div></div>
+</div>
+
+<div class="card" onclick="this.querySelector('.more').classList.toggle('open')">
+<span class="num">2</span><div><div style="display:flex;gap:10px"><div class="poster">🎵</div><div><b>Viral TikTok Song</b><br><span class="tag">MUSIQUE</span><p class="small">La chanson qui a cassé TikTok</p><span class="click">👉 Cliquez pour infos</span></div></div>
+<div class="more"><b>Infos:</b><br>La chanson qui a cassé TikTok cette semaine. Plus de 2M vidéos créées.<br>🎵 Artiste: En tendance sur TikTok<br>⭐ Note: 9.0/10</div></div>
+</div>
 
 <h2 id="t2">🎬 Top Films</h2>
-<div id="list">
-<div class="card">
-<h3>🏜️ Dune 2</h3>
-<span class="tag">FILM - 9.2/10</span>
-<p class="desc" data-fr="Histoire: Paul Atreides continue son voyage sur Arrakis. Il doit choisir entre l'amour et le destin de l'univers." data-en="Story: Paul Atreides continues his journey on Arrakis. He must choose between love and the fate of the universe." data-ar="القصة: بول يواصل رحلته في أراكيس. لازم يختار بين الحب و مصير الكون.">Histoire: Paul Atreides continue son voyage sur Arrakis. Il doit choisir entre l'amour et le destin de l'univers.</p>
-<div class="info">🎭 Timothée Chalamet, Zendaya<br>⏰ 2h46 | 📅 2024 | 🎬 Science-Fiction</div>
+<div class="card" onclick="this.querySelector('.more').classList.toggle('open')">
+<span class="num">1</span><div><div style="display:flex;gap:10px"><div class="poster">🏜️</div><div><b>Dune 2</b><br><span class="tag">FILM - 9.2/10</span><p class="small">Le meilleur film science-fiction</p><span class="click">👉 Cliquez pour infos</span></div></div>
+<div class="more"><b>Histoire:</b> Paul Atreides continue son voyage sur Arrakis. Il doit choisir entre l'amour et le destin de l'univers.<br><br>🎭 Acteurs: 【entity-Timothée Chalamet¦canonical_name=Timothée Chalamet】, 【entity-Zendaya¦canonical_name=Zendaya】<br>⏰ Durée: 2h46 | 📅 2024 | 🎬 Science-Fiction<br>⭐ Note: 9.2/10</div></div>
 </div>
 
-<div class="card">
-<h3>😂 Inside Out 2</h3>
-<span class="tag">FILM - 8.8/10</span>
-<p class="desc" data-fr="Histoire: Riley est devenue adolescente ! De nouvelles émotions arrivent: Anxiété, Ennui, Envie..." data-en="Story: Riley became a teenager! New emotions arrive: Anxiety, Boredom, Envy..." data-ar="القصة: رايلي ولات مراهقة! مشاعر جديدة وصلت: القلق، الملل، الغيرة...">Histoire: Riley est devenue adolescente ! De nouvelles émotions arrivent: Anxiété, Ennui, Envie...</p>
-<div class="info">🎭 【entity-Amy Poehler¦canonical_name=Amy Poehler】<br>⏰ 1h37 | 📅 2024 | 🎬 Familial / Comédie</div>
+<div class="card" onclick="this.querySelector('.more').classList.toggle('open')">
+<span class="num">1</span><div><div style="display:flex;gap:10px"><div class="poster">🦑</div><div><b>【entity-Squid Game¦canonical_name=Squid Game】 2</b><br><span class="tag">SERIE - 9.0/10</span><p class="small">Le retour de la série la plus forte</p><span class="click">👉 Cliquez pour infos</span></div></div>
+<div class="more"><b>Histoire:</b> Gi-hun retourne dans le jeu pour détruire l'organisation. Nouveaux jeux, encore plus dangereux !<br><br>📺 Saison 2 | 7 Episodes | 【entity-Netflix¦canonical_name=Netflix】<br>⭐ Note: 9.0/10</div></div>
+</div>
 </div>
 
-<h2 id="t3">📺 Top Séries</h2>
-<div class="card">
-<h3>🦑 Squid Game 2</h3>
-<span class="tag">SERIE - 9.0/10</span>
-<p class="desc" data-fr="Histoire: Gi-hun retourne dans le jeu pour détruire l'organisation. Nouveaux jeux, encore plus dangereux !" data-en="Story: Gi-hun returns to the game to destroy the organization. New games, even more dangerous!" data-ar="القصة: جي-هون رجع للعبة باش يدمر المنظمة. ألعاب جديدة، أخطر برشا!">Histoire: Gi-hun retourne dans le jeu pour détruire l'organisation. Nouveaux jeux, encore plus dangereux !</p>
-<div class="info">📺 Saison 2 | 7 Episodes | Netflix | 📅 2024</div>
-</div>
-
-<div class="card">
-<h3>🖤 Wednesday 2</h3>
-<span class="tag">SERIE - 8.7/10</span>
-<p class="desc" data-fr="Histoire: Wednesday retourne à Nevermore. Nouveaux mystères, nouveaux monstres." data-en="Story: Wednesday returns to Nevermore. New mysteries, new monsters." data-ar="القصة: وينزداي رجعت لنيفرمور. أسرار جديدة، وحوش جديدة.">Histoire: Wednesday retourne à Nevermore. Nouveaux mystères, nouveaux monstres.</p>
-<div class="info">📺 Saison 2 | 8 Episodes | Netflix | 📅 2025</
+<footer style="text-align:center;color:#9ca3af;padding:20px">© 2026 Tunisiabet206 🌍</footer>
+<script>
+function setLang(l){
+document.documentElement.lang=l;
+document.body.dir=(l=='ar'?'rtl':'ltr');
+document.querySelectorAll('.langs button').forEach(b=>b.classList.remove('active'));
+document.getElementById('btn-'+l).classList.add('active');
+if(l=='en'){document.getElementById('subtitle').innerText='World Trends + Movies & Series';document.getElementById('t1').innerText='🔥 World Trends';document.getElementById('t2').innerText='🎬 Top Movies';}
+if(l=='fr'){document.getElementById('subtitle').innerText='Tendances Mondiales + Films & Séries';document.getElementById('t1').innerText='🔥 Tendances du Monde';document.getElementById('t2').innerText='🎬 Top Films';}
+if(l=='ar'){document.getElementById('subtitle').innerText='ترندات العالم + أفلام و مسلسلات';document.getElementById('t1').innerText='🔥 ترندات العالم';document.getElementById('t2').innerText='🎬 أفضل الأفلام';}
+}
+function filter(){
+let v=document.getElementById('search').value.toLowerCase();
+document.querySelectorAll('.card').forEach(c=>{c.style.display=c.innerText.toLowerCase().includes(v)?'flex':'none'});
+}
+</script>
+</body>
+</html>
