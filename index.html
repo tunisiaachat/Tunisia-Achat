@@ -3,48 +3,46 @@
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>Tunisiabet206 - Koura Tounsiya</title>
+<title>Tunisiabet206 - Live Scores</title>
 <style>
-body{margin:0;font-family:sans-serif;background:#0f172a;color:white;text-align:center}
-header{padding:30px 15px;background:#16a34a}
-h1{margin:0;font-size:30px}
-.card{background:white;color:#111;margin:15px;padding:18px;border-radius:15px;text-align:right}
-.match{display:flex;justify-content:space-between;align-items:center;background:#f1f5f9;padding:12px;border-radius:10px;margin:10px 0}
-button{background:#16a34a;color:white;border:none;padding:10px 15px;border-radius:8px;font-size:15px}
-#result{font-weight:bold;color:#16a34a}
+body{margin:0;font-family:sans-serif;background:#111827;color:white}
+header{background:#16a34a;padding:20px;text-align:center}
+h1{margin:0;font-size:28px}
+.search-box{padding:15px}
+input{width:100%;padding:14px;border-radius:10px;border:none;font-size:16px;box-sizing:border-box}
+.live{color:#ef4444;font-weight:bold;font-size:13px}
+.match{background:white;color:#111;margin:0 15px 12px;padding:15px;border-radius:12px}
+.row{display:flex;justify-content:space-between;align-items:center}
+.team{font-size:17px}
+.score{font-weight:bold;font-size:20px;background:#111827;color:white;padding:5px 12px;border-radius:8px}
+.minute{font-size:12px;color:#666}
 </style>
 </head>
 <body>
 <header>
 <h1>Tunisiabet206 🇹🇳</h1>
-<p>Akbar Koura Tounsiya - Tawa9o3at w Jaw</p>
+<p>Live Scores - Koura Tounsiya</p>
 </header>
 
-<div class="card">
-<h2>⚽ Matchs Ejom3a Hedhi</h2>
-<div class="match"><span>EST vs CA</span><b>Dimanche 18:00</b></div>
-<div class="match"><span>Etoile du Sahel vs CS Sfaxien</span><b>Samedi 16:00</b></div>
-<div class="match"><span>CA Bizertin vs Stade Tunisien</span><b>Samedi 14:00</b></div>
+<div class="search-box">
+<input id="search" onkeyup="filter()" placeholder="🔍 Lawj 3la jam3iya... EST, CA, ESS...">
 </div>
 
-<div class="card">
-<h2>🗳️ Chkoun Bech Yerba7 El Derby ?</h2>
-<p>Vote blech, juste lel jaw:</p>
-<button onclick="vote('Esperance')">Esperance</button>
-<button onclick="vote('CA')">CA</button>
-<button onclick="vote('Ta3adol')">Ta3adol 🤝</button>
-<p id="result"></p>
+<div id="list">
+<div class="match"><span class="live">● LIVE 67'</span><div class="row"><span class="team">EST - Esperance</span><span class="score">2 - 1</span><span class="team">CA - Club Africain</span></div><div class="minute">Stade Rades - Derby</div></div>
+<div class="match"><span class="live">● LIVE 34'</span><div class="row"><span class="team">ESS - Etoile Sahel</span><span class="score">0 - 0</span><span class="team">CSS - Sfaxien</span></div><div class="minute">Stade Sousse</div></div>
+<div class="match"><span>⏰ 16:00</span><div class="row"><span class="team">CAB - Bizertin</span><span class="score">VS</span><span class="team">ST - Stade Tunisien</span></div><div class="minute">Samedi</div></div>
+<div class="match"><span>✅ Terminé</span><div class="row"><span class="team">USM - Monastir</span><span class="score">1 - 0</span><span class="team">OB - Beja</span></div><div class="minute">Hier</div></div>
 </div>
 
-<div class="card">
-<h2>📰 A5er 5bar</h2>
-<p>El championnat raja3 b 9owa ejom3a hedhi! Chkoun trah bech ye5ou el botoula esna?</p>
-</div>
-
-<p>© 2026 Tunisiabet206</p>
+<p style="text-align:center;color:#9ca3af">© 2026 Tunisiabet206</p>
 <script>
-function vote(equipe){
-document.getElementById('result').innerText = "Merci! Enti vote l : " + equipe + " ✅";
+function filter(){
+let v=document.getElementById('search').value.toLowerCase();
+let matchs=document.querySelectorAll('.match');
+matchs.forEach(m=>{
+if(m.innerText.toLowerCase().includes(v)){m.style.display='block'}else{m.style.display='none'}
+});
 }
 </script>
 </body>
