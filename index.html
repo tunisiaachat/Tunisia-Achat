@@ -44,7 +44,7 @@
 <div class="search">🔍 <input id="search" onkeyup="filter()" placeholder="Rechercher sur Tunisia"></div>
 
 <h2>Annonces gaming d'occasion</h2>
-<p style="padding:0 15px;color:#666;font-size:14px;margin:0">5000 annonces disponibles</p>
+<p style="padding:0 15px;color:#666;font-size:14px;margin:0">50000 annonces + 20000 videos</p>
 
 <div class="cats">
   <button class="on" onclick="cat('all',this)">Toutes</button>
@@ -54,12 +54,52 @@
   <button onclick="cat('Music',this)">Music</button>
 </div>
 
+<h2 id="titreA">🔥 50000 Articles</h2>
 <div id="list" class="grid"></div>
 <button id="btnA" class="more" onclick="loadMore()">➕ Voir Plus</button>
 
-<h2>🎬 Videos</h2>
+<h2 id="titreV">🎬 20000 Videos</h2>
 <div id="videos" class="grid"></div>
 <button id="btnV" class="more" onclick="loadMoreV()">➕ Voir Plus Videos</button>
+
+<h2>⭐ Annonces Sponsorisees</h2>
+<p style="padding:0 15px;color:#666;font-size:14px">Votre pub ici? Contactez-nous!</p>
+<div class="grid">
+  <div class="card" style="border:2px solid #eab308">
+    <img src="https://picsum.photos/seed/pub1/400/300">
+    <h3>🔥 Gaming Shop Tunis - Manettes -50%</h3>
+    <div class="prix" style="color:#eab308">Sponsorise</div>
+    <div class="ville">Tunis • Annonce Payee</div>
+  </div>
+  <div class="card" style="border:2px solid #eab308">
+    <img src="https://picsum.photos/seed/pub2/400/300">
+    <h3>📱 Phone Shop - iPhone 15 Dispo!</h3>
+    <div class="prix" style="color:#eab308">Sponsorise</div>
+    <div class="ville">Sousse • Annonce Payee</div>
+  </div>
+</div>
+<a href="https://www.instagram.com/az__yz80" class="btn" style="background:#eab308;color:#111">📢 Je veux une Annonce ici - Contactez-moi!</a>
+
+<h2>🇹🇳 Annonces Tunis</h2>
+<a href="https://www.tayara.tn" class="btn" style="background:#ff5a00">🛒 Tayara - Tunis</a>
+<a href="https://www.jumia.com.tn" class="btn" style="background:#f68b1e">🛍️ Jumia Tunis</a>
+<a href="https://www.mytek.tn" class="btn" style="background:#111">💻 MyTek - Tunis</a>
+<a href="https://www.tunisianet.com.tn" class="btn" style="background:#0066cc">📱 Tunisianet - Tunis</a>
+
+<h2>🌍 Annonces Bara - International</h2>
+<a href="https://www.amazon.com" class="btn" style="background:#ff9900;color:#111">🛒 【entity-Amazon¦canonical_name=Amazon】 - Monde</a>
+<a href="https://www.aliexpress.com" class="btn" style="background:#e62e04">🛍️ 【entity-AliExpress¦canonical_name=AliExpress】 - Chine</a>
+<a href="https://www.temu.com" class="btn" style="background:#fb7701">🔥 【entity-Temu¦canonical_name=Temu】 - Monde</a>
+<a href="https://store.steampowered.com" class="btn" style="background:#1b2838">🎮 Steam - Jeux Monde</a>
+<a href="https://www.ebay.com" class="btn" style="background:#0064d2">💰 【entity-eBay¦canonical_name=eBay】 - Monde</a>
+
+<h2>🌐 Les Sites Web</h2>
+<a href="https://www.tayara.tn" class="btn" style="background:#ff5a00">🛒 Tayara - Vente en Tunisie</a>
+<a href="https://www.jumia.com.tn" class="btn" style="background:#f68b1e">🛍️ Jumia - Shopping</a>
+<a href="https://lecoingaming.fr" class="btn" style="background:#111">🎮 Le Coin Gaming</a>
+<a href="https://www.youtube.com" class="btn" style="background:#FF0000">▶️ YouTube</a>
+<a href="https://www.google.com" class="btn" style="background:#4285F4">🔍 Google</a>
+<a href="https://www.wikipedia.org" class="btn" style="background:#111">📚 Wikipedia</a>
 
 <h2>📱 Applications</h2>
 <a href="https://www.tiktok.com" class="btn" style="background:#111">📱 TikTok</a>
@@ -79,37 +119,18 @@
 
 <script>
 let B = "Bar" + "bie";
-let titles = ["Dune 2","Squid 2",B,"GTA 6","【entity-Wednesday¦canonical_name=Wednesday】","Oppenheimer","【entity-Stranger Things¦canonical_name=Stranger Things】","TikTok Trend","AI Video","Football"," 【entity-Free Fire¦canonical_name=Free Fire】"," 【entity-Fortnite¦canonical_name=Fortnite】","One Piece","Naruto","Music Trend","Gaming","Sport","News","Film","Serie"];
-let cats = ["Film","Film","Film","Jeu","Film","Film","Film","Jeu","Jeu","Sport","Jeu","Jeu","Film","Film","Music","Jeu","Sport","News","Film","Film"];
-let imgs = {};
-imgs["Dune 2"]="https://i.ytimg.com/vi/Way9Dexny3w/hqdefault.jpg";
-imgs["Squid 2"]="https://i.ytimg.com/vi/oqxAJKy0ii4/hqdefault.jpg";
-imgs[B]="https://i.ytimg.com/vi/pBk4NYhWNMM/hqdefault.jpg";
-imgs["GTA 6"]="https://i.ytimg.com/vi/VQRLujxTm3c/hqdefault.jpg";
-imgs["【entity-Wednesday¦canonical_name=Wednesday】"]="https://i.ytimg.com/vi/1pHDWnXmK7Y/hqdefault.jpg";
-imgs["Oppenheimer"]="https://i.ytimg.com/vi/uYPbbksJxIg/hqdefault.jpg";
-imgs["【entity-Stranger Things¦canonical_name=Stranger Things】"]="https://i.ytimg.com/vi/b9EkMc79ZSU/hqdefault.jpg";
-imgs["TikTok Trend"]="https://i.ytimg.com/vi/9bZkp7q19f0/hqdefault.jpg";
-imgs["AI Video"]="https://i.ytimg.com/vi/dQw4w9WgXcQ/hqdefault.jpg";
-imgs["Football"]="https://i.ytimg.com/vi/eKFTSSKCzWA/hqdefault.jpg";
-imgs[" 【entity-Free Fire¦canonical_name=Free Fire】"]="https://i.ytimg.com/vi/LXb3EKWsInQ/hqdefault.jpg";
-imgs[" 【entity-Fortnite¦canonical_name=Fortnite】"]="https://i.ytimg.com/vi/hTWKbfoikeg/hqdefault.jpg";
-imgs["One Piece"]="https://i.ytimg.com/vi/MCb13lbVGE0/hqdefault.jpg";
-imgs["Naruto"]="https://i.ytimg.com/vi/22RwYJ1g_44/hqdefault.jpg";
-imgs["Music Trend"]="https://i.ytimg.com/vi/60ItHLz5WEA/hqdefault.jpg";
-imgs["Gaming"]="https://i.ytimg.com/vi/VQRLujxTm3c/hqdefault.jpg";
-imgs["Sport"]="https://i.ytimg.com/vi/eKFTSSKCzWA/hqdefault.jpg";
-imgs["News"]="https://i.ytimg.com/vi/9bZkp7q19f0/hqdefault.jpg";
-imgs["Film"]="https://i.ytimg.com/vi/Way9Dexny3w/hqdefault.jpg";
-imgs["Serie"]="https://i.ytimg.com/vi/1pHDWnXmK7Y/hqdefault.jpg";
+let FF = "Free " + "Fire";
+let FT = "Fort" + "nite";
+let titles = ["Dune 2","Squid 2",B,"GTA 6"," 【entity-Wednesday¦canonical_name=Wednesday】","Oppenheimer"," Stranger Things","TikTok Trend","AI Video","Football",FF,FT,"One Piece","Naruto","Music Trend","Gaming","Sport","News","Film","Serie","Tech","Voyage","Cuisine","Mode","Auto","Maison","Sante","Ecole","Business","Nature"];
+let cats = ["Film","Film","Film","Jeu","Film","Film","Film","Jeu","Jeu","Sport","Jeu","Jeu","Film","Film","Music","Jeu","Sport","News","Film","Film","Tech","Voyage","Cuisine","Mode","Auto","Maison","Sante","Ecole","Business","Nature"];
 let ids=["Way9Dexny3w","oqxAJKy0ii4","VQRLujxTm3c","pBk4NYhWNMM","1pHDWnXmK7Y","dQw4w9WgXcQ","LXb3EKWsInQ","eKFTSSKCzWA","hTWKbfoikeg","9bZkp7q19f0"];
-let vnames=["Dune 2","Squid 2","GTA 6",B,"【entity-Wednesday¦canonical_name=Wednesday】","Music","Gaming","Sport","News","Film"];
+let vnames=["Dune 2","Squid 2","GTA 6",B," 【entity-Wednesday¦canonical_name=Wednesday】","Music","Gaming","Sport","News","Film"];
 let shown=0, vshown=0, curCat='all', curSearch='';
 function makeArticle(n){
   let base=titles[n % titles.length];
   let d=document.createElement('div');
   d.className='card';
-  d.innerHTML='<div class="seller"><span class="avatar">T</span> Tunisia <span class="fav">♡</span></div><img loading="lazy" src="'+imgs[base]+'"><h3>'+base+' - '+n+'</h3><div class="prix">Gratuit</div><div class="ville">Tunis • il y a 1 jour</div>';
+  d.innerHTML='<div class="seller"><span class="avatar">T</span> Tunisia <span class="fav">♡</span></div><img loading="lazy" src="https://picsum.photos/seed/Tunisia'+n+'/400/300"><h3>'+base+' - '+n+'</h3><div class="prix">Gratuit</div><div class="ville">Tunis • il y a 1 jour</div>';
   return d;
 }
 function makeVideo(n){
@@ -122,7 +143,7 @@ function makeVideo(n){
 function loadMore(){
   let list=document.getElementById('list');
   let c=0;
-  while(c<20 && shown<5000){ shown++; let base=titles[shown % titles.length]; let ct=cats[shown % cats.length];
+  while(c<20 && shown<50000){ shown++; let base=titles[shown % titles.length]; let ct=cats[shown % cats.length];
     if(curCat!=='all' && ct!==curCat) continue;
     if(curSearch && !base.toLowerCase().includes(curSearch)) continue;
     list.appendChild(makeArticle(shown)); c++;
@@ -130,7 +151,7 @@ function loadMore(){
 }
 function loadMoreV(){
   let vids=document.getElementById('videos');
-  for(let k=0;k<10 && vshown<200;k++){ vshown++; vids.appendChild(makeVideo(vshown)); }
+  for(let k=0;k<10 && vshown<20000;k++){ vshown++; vids.appendChild(makeVideo(vshown)); }
 }
 loadMore(); loadMoreV();
 function cat(c,btn){
@@ -140,11 +161,21 @@ function cat(c,btn){
 }
 function filter(){
   curSearch=document.getElementById('search').value.toLowerCase().trim();
-  document.getElementById('list').innerHTML=""; shown=0; loadMore();
+  document.getElementById('list').innerHTML=""; shown=0;
+  if(curSearch==""){ document.getElementById('titreA').innerText="🔥 50000 Articles"; loadMore(); }
+  else{
+    let list=document.getElementById('list'); let found=0;
+    for(let i=1;i<=50000 && found<50;i++){
+      let base=titles[i % titles.length];
+      if(base.toLowerCase().includes(curSearch)){ list.appendChild(makeArticle(i)); found++; }
+    }
+    document.getElementById('titreA').innerText="🔥 Resultat: " + found + " Articles";
+  }
   let vids=document.getElementById('videos'); vids.innerHTML=""; vshown=0;
   if(curSearch==""){ loadMoreV(); return; }
   let f=0;
-  for(let j=1;j<=200 && f<20;j++){ let vt=vnames[j % vnames.length]; if(vt.toLowerCase().includes(curSearch)){ vids.appendChild(makeVideo(j)); f++; } }
+  for(let j=1;j<=20000 && f<20;j++){ let vt=vnames[j % vnames.length]; if(vt.toLowerCase().includes(curSearch)){ vids.appendChild(makeVideo(j)); f++; } }
+  document.getElementById('titreV').innerText="🎬 Resultat: " + f + " Videos";
 }
 </script>
 
