@@ -12,7 +12,7 @@
   input { width:calc(100% - 30px); margin:15px; padding:14px; border-radius:12px; border:none; font-size:16px; }
   h2 { padding:0 15px; }
   .card { background:white; color:#111; margin:0 15px 12px; padding:15px; border-radius:15px; cursor:pointer; }
-  .card img { width:100%; height:120px; object-fit:cover; border-radius:10px; }
+  .card img { width:100%; height:180px; object-fit:cover; border-radius:10px; }
   .tag { padding:3px 8px; border-radius:20px; font-size:12px; font-weight:bold; background:#dcfce7; color:#166534; }
   .video-box { background:white; margin:0 15px 12px; padding:10px; border-radius:15px; text-align:center; }
   .video-box img { width:100%; height:180px; object-fit:cover; border-radius:10px; }
@@ -37,7 +37,7 @@
   </div>
 </header>
 
-<input id="search" onkeyup="filter()" placeholder="Rechercher... GTA, 【entity-Barbie¦canonical_name=Barbie】, Squid...">
+<input id="search" onkeyup="filter()" placeholder="Rechercher... GTA, Barbie, Squid...">
 
 <h2 id="titreA">🔥 5000 Articles</h2>
 <div id="list"></div>
@@ -67,16 +67,41 @@
 </footer>
 
 <script>
-let titles = ["Dune 2","Squid 2"," 【entity-Barbie¦canonical_name=Barbie】","GTA 6"," 【entity-Wednesday¦canonical_name=Wednesday】","Oppenheimer","【entity-Stranger Things¦canonical_name=Stranger Things】","TikTok Trend","AI Video","Football"," 【entity-Free Fire¦canonical_name=Free Fire】"," 【entity-Fortnite¦canonical_name=Fortnite】","One Piece","Naruto","Music Trend","Gaming","Sport","News","Film","Serie"];
+let titles = ["Dune 2","Squid 2","【entity-Barbie¦canonical_name=Barbie】","GTA 6","Wednesday","Oppenheimer","Stranger Things","TikTok Trend","AI Video","Football","【entity-Free Fire¦canonical_name=Free Fire】","【entity-Fortnite¦canonical_name=Fortnite】","One Piece","Naruto","Music Trend","Gaming","Sport","News","Film","Serie"];
+// TSAWER FIX - kol esm 3andou taswira mte3ou!
+let imgs = {
+  "Dune 2":"https://i.ytimg.com/vi/Way9Dexny3w/hqdefault.jpg",
+  "Squid 2":"https://i.ytimg.com/vi/oqxAJKy0ii4/hqdefault.jpg",
+  "【entity-Barbie¦canonical_name=Barbie】":"https://i.ytimg.com/vi/pBk4NYhWNMM/hqdefault.jpg",
+  "GTA 6":"https://i.ytimg.com/vi/VQRLujxTm3c/hqdefault.jpg",
+  "Wednesday":"https://i.ytimg.com/vi/1pHDWnXmK7Y/hqdefault.jpg",
+  "Oppenheimer":"https://i.ytimg.com/vi/uYPbbksJxIg/hqdefault.jpg",
+  "Stranger Things":"https://i.ytimg.com/vi/b9EkMc79ZSU/hqdefault.jpg",
+  "TikTok Trend":"https://i.ytimg.com/vi/9bZkp7q19f0/hqdefault.jpg",
+  "AI Video":"https://i.ytimg.com/vi/dQw4w9WgXcQ/hqdefault.jpg",
+  "Football":"https://i.ytimg.com/vi/eKFTSSKCzWA/hqdefault.jpg",
+  "【entity-Free Fire¦canonical_name=Free Fire】":"https://i.ytimg.com/vi/LXb3EKWsInQ/hqdefault.jpg",
+  "【entity-Fortnite¦canonical_name=Fortnite】":"https://i.ytimg.com/vi/hTWKbfoikeg/hqdefault.jpg",
+  "One Piece":"https://i.ytimg.com/vi/MCb13lbVGE0/hqdefault.jpg",
+  "Naruto":"https://i.ytimg.com/vi/22RwYJ1g_44/hqdefault.jpg",
+  "Music Trend":"https://i.ytimg.com/vi/60ItHLz5WEA/hqdefault.jpg",
+  "Gaming":"https://i.ytimg.com/vi/VQRLujxTm3c/hqdefault.jpg",
+  "Sport":"https://i.ytimg.com/vi/eKFTSSKCzWA/hqdefault.jpg",
+  "News":"https://i.ytimg.com/vi/9bZkp7q19f0/hqdefault.jpg",
+  "Film":"https://i.ytimg.com/vi/Way9Dexny3w/hqdefault.jpg",
+  "Serie":"https://i.ytimg.com/vi/1pHDWnXmK7Y/hqdefault.jpg"
+};
 let ids=["Way9Dexny3w","oqxAJKy0ii4","VQRLujxTm3c","pBk4NYhWNMM","1pHDWnXmK7Y","dQw4w9WgXcQ","LXb3EKWsInQ","eKFTSSKCzWA","hTWKbfoikeg","9bZkp7q19f0"];
-let vnames=["Dune 2","Squid 2","GTA 6"," 【entity-Barbie¦canonical_name=Barbie】"," 【entity-Wednesday¦canonical_name=Wednesday】","Music","Gaming","Sport","News","Film"];
+let vnames=["Dune 2","Squid 2","GTA 6","Barbie","Wednesday","Music","Gaming","Sport","News","Film"];
 let shown = 0, vshown = 0;
 
 function makeArticle(n){
-  let t = titles[n % titles.length] + " - Histoire " + n + " - Partie " + n;
+  let base = titles[n % titles.length];
+  let t = base + " - Histoire " + n + " - Partie " + n;
+  let img = imgs[base];
   let div = document.createElement('div');
   div.className='card';
-  div.innerHTML='<h3>'+t+'</h3><img loading="lazy" src="https://picsum.photos/800/400?random='+n+'"><br><span class="tag">ARTICLE '+n+'</span><p>Article numero '+n+' - '+t+'</p>';
+  div.innerHTML='<h3>'+t+'</h3><img loading="lazy" src="'+img+'"><br><span class="tag">ARTICLE '+n+'</span><p>Article numero '+n+' - '+t+'</p>';
   return div;
 }
 function makeVideo(n){
@@ -108,15 +133,14 @@ function filter(){
     document.getElementById('btnV').style.display='block';
     loadMore(); loadMoreV(); return;
   }
-  // SEARCH FI 5000 ARTICLE EL KOL
   list.innerHTML=""; let foundA=0;
   for(let i=1;i<=5000 && foundA<50;i++){
-    let t = titles[i % titles.length] + " - Histoire " + i + " - Partie " + i;
+    let base = titles[i % titles.length];
+    let t = base + " - Histoire " + i + " - Partie " + i;
     if(t.toLowerCase().includes(v)){ list.appendChild(makeArticle(i)); foundA++; }
   }
   document.getElementById('titreA').innerText="🔥 Resultat: " + foundA + " Articles pour '" + v + "'";
   document.getElementById('btnA').style.display='none';
-  // SEARCH FI 200 VIDEOS EL KOL
   vids.innerHTML=""; let foundV=0;
   for(let j=1;j<=200;j++){
     let vt = vnames[j % vnames.length] + " - Partie " + j + " - Episode " + j;
