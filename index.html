@@ -8,8 +8,8 @@
   .top { display:flex; align-items:center; gap:10px; padding:12px 15px; }
   .logo { font-size:24px; font-weight:900; }
   .logo span { color:#eab308; }
-  .langs button { border:1px solid #ddd; background:white; border-radius:20px; padding:6px 10px; font-size:16px; }
-  .langs button.on { background:#111; color:white; }
+  .langs button { border:2px solid #111; background:white; border-radius:25px; padding:8px 12px; font-size:20px; cursor:pointer; }
+  .langs button.on { background:#111; }
   .search { margin:0 15px 12px; display:flex; background:#f3f4f6; border-radius:30px; padding:12px 15px; align-items:center; gap:8px; }
   .search input { border:none; background:none; outline:none; width:100%; font-size:16px; }
   .banner { background:#E70013; color:white; text-align:center; padding:12px; font-weight:bold; font-size:16px; }
@@ -39,7 +39,7 @@
 
 <div class="top">
   <div class="logo">Tunisia<span>•</span></div>
-  <div class="langs" style="margin-left:auto">
+  <div class="langs" style="margin-left:auto; display:flex; gap:5px;">
     <button id="b-fr" class="on" onclick="setLang('fr')">🇫🇷</button>
     <button id="b-en" onclick="setLang('en')">🇺🇸</button>
     <button id="b-ar" onclick="setLang('ar')">🇹🇳</button>
@@ -106,7 +106,7 @@
 
 <div style="background:#111;color:white;margin:15px;padding:20px;border-radius:15px;text-align:center">
   <h3 style="margin:0" id="t-sub">📧 Abonnez-vous!</h3>
-  <p id="t-sub2">Recevez les nouveautes Music, Squid, GTA...</p>
+  <p id="t-sub2">Recevez les nouveautes Music, 【entity-Squid¦canonical_name=Squid Game】, GTA...</p>
   <input id="email" placeholder="Votre email..." style="width:100%;padding:12px;border-radius:10px;border:none;margin-bottom:10px">
   <button onclick="sub()" id="t-subbtn" style="background:#E70013;color:white;border:none;padding:12px 20px;border-radius:10px;font-weight:bold;width:100%">S'abonner</button>
   <p id="msg" style="display:none;color:#4ade80;font-weight:bold;margin-top:10px">✅ THANKS FOR SUBSCRIBING! Check your email!</p>
@@ -159,7 +159,7 @@
 <a href="https://www.tiktok.com" class="btn" style="background:#111">📱 &#84;ikTok</a>
 <a href="https://www.instagram.com" class="btn" style="background:#E1306C">📸 IG</a>
 <a href="https://www.youtube.com" class="btn" style="background:#FF0000">▶️ &#89;ouTube</a>
-<a href="https://play.google.com/store" class="btn" style="background:#16a34a">📥 【entity-Play Store¦canonical_name=Play Store】</a>
+<a href="https://play.google.com/store" class="btn" style="background:#16a34a">📥 Play Store</a>
 
 <div style="text-align:center;padding:20px"><a href="https://www.instagram.com/az__yz80" style="color:#FF69B4;font-weight:bold" id="t-follow">Suivez-moi sur IG</a><br>2026 Tunisia</div>
 
@@ -224,17 +224,17 @@ let FT = "&#70;" + "ortnite";
 let titles = ["&#68;une 2","&#83;quid 2",B,"&#71;TA 6","&#87;ednesday","&#79;ppenheimer","&#84;ikTok Trend","AI Video","Football",FF,FT,"&#79;ne Piece","&#78;aruto","Music Trend","Gaming","Sport","News","Film","Serie","Tech","Voyage","Cuisine","Mode","Auto","Maison","Sante","Ecole","Business","Nature"];
 let cats = ["Film","Film","Film","Jeu","Film","Film","Jeu","Jeu","Sport","Jeu","Jeu","Film","Film","Music","Jeu","Sport","News","Film","Film","Tech","Voyage","Cuisine","Mode","Auto","Maison","Sante","Ecole","Business","Nature"];
 let titleImgs = [
- "https://images.unsplash.com/photo-1440404653325-ab127d49abc1?w=400&q=80",
- "https://images.unsplash.com/photo-1489599849927-2ee91cede3ba?w=400&q=80",
- "https://images.unsplash.com/photo-1490481651871-ab68de25d43d?w=400&q=80",
- "https://images.unsplash.com/photo-1550745165-9bc0b252726f?w=400&q=80",
- "https://images.unsplash.com/photo-1489599849927-2ee91cede3ba?w=400&q=80",
- "https://images.unsplash.com/photo-1440404653325-ab127d49abc1?w=400&q=80",
- "https://images.unsplash.com/photo-1611162617213-7d7a39e9b1d7?w=400&q=80",
- "https://images.unsplash.com/photo-1677442136019-21780ecad995?w=400&q=80",
+ "https://i.ytimg.com/vi/Way9Dexny3w/hqdefault.jpg",
+ "https://i.ytimg.com/vi/oqxAJKy0ii4/hqdefault.jpg",
+ "https://i.ytimg.com/vi/pBk4NYhWNMM/hqdefault.jpg",
+ "https://i.ytimg.com/vi/VQRLujxTm3c/hqdefault.jpg",
+ "https://i.ytimg.com/vi/1pHDWnXmK7Y/hqdefault.jpg",
+ "https://i.ytimg.com/vi/dQw4w9WgXcQ/hqdefault.jpg",
+ "https://i.ytimg.com/vi/LXb3EKWsInQ/hqdefault.jpg",
+ "https://i.ytimg.com/vi/eKFTSSKCzWA/hqdefault.jpg",
  "https://images.unsplash.com/photo-1579952363873-27f3bade9f55?w=400&q=80",
- "https://images.unsplash.com/photo-1550745165-9bc0b252726f?w=400&q=80",
- "https://images.unsplash.com/photo-1550745165-9bc0b252726f?w=400&q=80",
+ "https://i.ytimg.com/vi/hTWKbfoikeg/hqdefault.jpg",
+ "https://i.ytimg.com/vi/9bZkp7q19f0/hqdefault.jpg",
  "https://images.unsplash.com/photo-1578632767115-351597cf2477?w=400&q=80",
  "https://images.unsplash.com/photo-1578632767115-351597cf2477?w=400&q=80",
  "https://images.unsplash.com/photo-1493225457124-a3eb161ffa5f?w=400&q=80",
