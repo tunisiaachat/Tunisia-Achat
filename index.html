@@ -56,6 +56,7 @@
 
 <div class="cats">
   <button class="on" onclick="cat('all',this)" id="c-all">Toutes</button>
+  <button onclick="cat('Rap',this)" id="c-rap">🎤 Rap</button>
   <button onclick="cat('Film',this)" id="c-film">Films</button>
   <button onclick="cat('Jeu',this)" id="c-jeu">Jeux</button>
   <button onclick="cat('Sport',this)" id="c-sport">Sport</button>
@@ -65,6 +66,9 @@
 <h2 id="titreA">🔥 50000 Articles</h2>
 <div id="list" class="grid"></div>
 <button id="btnA" class="more" onclick="loadMore()">➕ Voir Plus</button>
+
+<h2 id="titreRap">🎤 Rappeurs - Tunis & Monde</h2>
+<div id="rapList" class="grid"></div>
 
 <h2 id="titreV">🎬 20000 Videos</h2>
 <div id="videos" class="grid"></div>
@@ -92,7 +96,7 @@
   <a href="https://www.amazon.com/s?k=squid+game+hoodie">
     <div class="card">
       <img src="https://images.unsplash.com/photo-1556821840-3a63f95609a7?w=400&q=80">
-      <h3 id="shop3">Squid 2 - Hoodie</h3>
+      <h3 id="shop3">【entity-Squid¦canonical_name=Squid Game】 2 - Hoodie</h3>
       <div class="prix">60dt</div>
       <div class="ville" data-ville>Voir le produit - Cliquer pour acheter</div>
     </div>
@@ -109,7 +113,7 @@
 
 <div style="background:#111;color:white;margin:15px;padding:20px;border-radius:15px;text-align:center">
   <h3 style="margin:0" id="t-sub">📧 Abonnez-vous!</h3>
-  <p id="t-sub2">Recevez les nouveautes Music, Squid, GTA...</p>
+  <p id="t-sub2">Recevez les nouveautes Rap, 【entity-Squid¦canonical_name=Squid Game】, GTA...</p>
   <input id="email" placeholder="Votre email..." style="width:100%;padding:12px;border-radius:10px;border:none;margin-bottom:10px">
   <button onclick="sub()" id="t-subbtn" style="background:#E70013;color:white;border:none;padding:12px 20px;border-radius:10px;font-weight:bold;width:100%">S'abonner</button>
   <p id="msg" style="display:none;color:#4ade80;font-weight:bold;margin-top:10px">✅ THANKS FOR SUBSCRIBING! Check your email!</p>
@@ -177,9 +181,9 @@
 <script>
 let LANG='fr';
 let TR={
- fr:{banner:"Welcome to Tunisia 🇹🇳 🇵🇸",search:"Rechercher sur Tunisia",anno:"Annonces gaming d'occasion",count:"50000 annonces + 20000 videos",all:"Toutes",film:"Films",jeu:"Jeux",sport:"Sport",music:"Music",shop:"🛒 Shop Officiel",shop2:"Cliquer pour acheter sur le vrai site!",sub:"📧 Abonnez-vous!",sub2:"Recevez les nouveautes Music, Squid, GTA...",subbtn:"S'abonner",spon:"⭐ Annonces Sponsorisees",spon2:"Votre pub ici? Contactez-nous!",pub:"📢 Je veux une Annonce ici - Contactez-moi!",tunis:"🇹🇳 Annonces Tunis",monde:"🌍 Annonces Bara - International",sites:"🌐 Les Sites Web",apps:"📱 Applications",follow:"Suivez-moi sur IG",acc:"Accueil",fav:"Favoris",vend:"Vendre",msg:"Messages",conn:"Connexion",more:"➕ Voir Plus",moreV:"➕ Voir Plus Videos",art:"🔥 50000 Articles",vid:"🎬 20000 Videos",ville:"Voir le produit - Cliquer pour acheter",free:"مجاني - اضغط للمشاهدة",city:"Tunis • il y a 1 jour",shop1:"Collection - Mug",shop2:"Collection - T-Shirt",shop3:"Squid 2 - Hoodie",shop4:"Serie - Casquette"},
- en:{banner:"Welcome to Tunisia 🇹🇳 🇵🇸",search:"Search on Tunisia",anno:"Second-hand gaming ads",count:"50000 ads + 20000 videos",all:"All",film:"Movies",jeu:"Games",sport:"Sports",music:"Music",shop:"🛒 Official Shop",shop2:"Click to buy on the real site!",sub:"📧 Subscribe!",sub2:"Get the latest Music, Squid, GTA...",subbtn:"Subscribe",spon:"⭐ Sponsored Ads",spon2:"Your ad here? Contact us!",pub:"📢 I want an Ad here - Contact me!",tunis:"🇹🇳 Tunis Ads",monde:"🌍 International Ads",sites:"🌐 Websites",apps:"📱 Apps",follow:"Follow me on IG",acc:"Home",fav:"Favorites",vend:"Sell",msg:"Messages",conn:"Login",more:"➕ See More",moreV:"➕ See More Videos",art:"🔥 50000 Articles",vid:"🎬 20000 Videos",ville:"See product - Click to buy",free:"Free - Click to see",city:"Tunis • 1 day ago",shop1:"Collection - Mug",shop2:"Collection - T-Shirt",shop3:"Squid 2 - Hoodie",shop4:"Serie - Cap"},
- ar:{banner:"مرحبا بكم في تونس 🇹🇳 🇵🇸",search:"ابحث في تونس",anno:"إعلانات ألعاب مستعملة",count:"50000 إعلان + 20000 فيديو",all:"الكل",film:"أفلام",jeu:"ألعاب",sport:"رياضة",music:"موسيقى",shop:"🛒 المتجر الرسمي",shop2:"اضغط للشراء من الموقع الحقيقي!",sub:"📧 اشترك!",sub2:"احصل على جديد الموسيقى و سكويد و GTA...",subbtn:"اشترك",spon:"⭐ إعلانات ممولة",spon2:"إعلانك هنا؟ اتصل بنا!",pub:"📢 أريد إعلانا هنا - اتصل بي!",tunis:"🇹🇳 إعلانات تونس",monde:"🌍 إعلانات دولية",sites:"🌐 المواقع",apps:"📱 التطبيقات",follow:"تابعني على انستغرام",acc:"الرئيسية",fav:"المفضلة",vend:"بيع",msg:"رسائل",conn:"دخول",more:"➕ عرض المزيد",moreV:"➕ عرض المزيد فيديو",art:"🔥 50000 مقال",vid:"🎬 20000 فيديو",ville:"شاهد المنتج - اضغط للشراء",free:"مجاني - اضغط للمشاهدة",city:"تونس • منذ يوم واحد",shop1:"تشكيلة - كوب",shop2:"تشكيلة - تي شيرت",shop3:"سكويد 2 - هودي",shop4:"سلسلة - قبعة"}
+ fr:{banner:"Welcome to Tunisia 🇹🇳 🇵🇸",search:"Rechercher sur Tunisia",anno:"Annonces gaming d'occasion",count:"50000 annonces + 20000 videos",all:"Toutes",rap:"🎤 Rap",film:"Films",jeu:"Jeux",sport:"Sport",music:"Music",shop:"🛒 Shop Officiel",shop2:"Cliquer pour acheter sur le vrai site!",sub:"📧 Abonnez-vous!",sub2:"Recevez les nouveautes Rap, Squid, GTA...",subbtn:"S'abonner",spon:"⭐ Annonces Sponsorisees",spon2:"Votre pub ici? Contactez-nous!",pub:"📢 Je veux une Annonce ici - Contactez-moi!",tunis:"🇹🇳 Annonces Tunis",monde:"🌍 Annonces Bara - International",sites:"🌐 Les Sites Web",apps:"📱 Applications",follow:"Suivez-moi sur IG",acc:"Accueil",fav:"Favoris",vend:"Vendre",msg:"Messages",conn:"Connexion",more:"➕ Voir Plus",moreV:"➕ Voir Plus Videos",art:"🔥 50000 Articles",vid:"🎬 20000 Videos",rapT:"🎤 Rappeurs - Tunis & Monde",ville:"Voir le produit - Cliquer pour acheter",free:"Gratuit - Cliquer pour voir",city:"Tunis • il y a 1 jour",shop1:"Collection - Mug",shop2:"Collection - T-Shirt",shop3:"Squid 2 - Hoodie",shop4:"Serie - Casquette"},
+ en:{banner:"Welcome to Tunisia 🇹🇳 🇵🇸",search:"Search on Tunisia",anno:"Second-hand gaming ads",count:"50000 ads + 20000 videos",all:"All",rap:"🎤 Rap",film:"Movies",jeu:"Games",sport:"Sports",music:"Music",shop:"🛒 Official Shop",shop2:"Click to buy on the real site!",sub:"📧 Subscribe!",sub2:"Get the latest Rap, Squid, GTA...",subbtn:"Subscribe",spon:"⭐ Sponsored Ads",spon2:"Your ad here? Contact us!",pub:"📢 I want an Ad here - Contact me!",tunis:"🇹🇳 Tunis Ads",monde:"🌍 International Ads",sites:"🌐 Websites",apps:"📱 Apps",follow:"Follow me on 【entity-IG¦canonical_name=IG】",acc:"Home",fav:"Favorites",vend:"Sell",msg:"Messages",conn:"Login",more:"➕ See More",moreV:"➕ See More Videos",art:"🔥 50000 Articles",vid:"🎬 20000 Videos",rapT:"🎤 Rappers - Tunis & World",ville:"See product - Click to buy",free:"Free - Click to see",city:"Tunis • 1 day ago",shop1:"Collection - Mug",shop2:"Collection - T-Shirt",shop3:"【entity-Squid¦canonical_name=Squid Game】 2 - Hoodie",shop4:"Serie - Cap"},
+ ar:{banner:"مرحبا بكم في تونس 🇹🇳 🇵🇸",search:"ابحث في تونس",anno:"إعلانات ألعاب مستعملة",count:"50000 إعلان + 20000 فيديو",all:"الكل",rap:"🎤 راب",film:"أفلام",jeu:"ألعاب",sport:"رياضة",music:"موسيقى",shop:"🛒 المتجر الرسمي",shop2:"اضغط للشراء من الموقع الحقيقي!",sub:"📧 اشترك!",sub2:"احصل على جديد الراب و سكويد و GTA...",subbtn:"اشترك",spon:"⭐ إعلانات ممولة",spon2:"إعلانك هنا؟ اتصل بنا!",pub:"📢 أريد إعلانا هنا - اتصل بي!",tunis:"🇹🇳 إعلانات تونس",monde:"🌍 إعلانات دولية",sites:"🌐 المواقع",apps:"📱 التطبيقات",follow:"تابعني على انستغرام",acc:"الرئيسية",fav:"المفضلة",vend:"بيع",msg:"رسائل",conn:"دخول",more:"➕ عرض المزيد",moreV:"➕ عرض المزيد فيديو",art:"🔥 50000 مقال",vid:"🎬 20000 فيديو",rapT:"🎤 مغنيو الراب - تونس و العالم",ville:"شاهد المنتج - اضغط للشراء",free:"مجاني - اضغط للمشاهدة",city:"تونس • منذ يوم واحد",shop1:"تشكيلة - كوب",shop2:"تشكيلة - تي شيرت",shop3:"سكويد 2 - هودي",shop4:"سلسلة - قبعة"}
 };
 function setLang(l){
  LANG=l; let t=TR[l];
@@ -188,6 +192,7 @@ function setLang(l){
  document.getElementById('t-anno').innerText=t.anno;
  document.getElementById('t-count').innerText=t.count;
  document.getElementById('c-all').innerText=t.all;
+ document.getElementById('c-rap').innerText=t.rap;
  document.getElementById('c-film').innerText=t.film;
  document.getElementById('c-jeu').innerText=t.jeu;
  document.getElementById('c-sport').innerText=t.sport;
@@ -214,6 +219,7 @@ function setLang(l){
  document.getElementById('btnV').innerText=t.moreV;
  document.getElementById('titreA').innerText=t.art;
  document.getElementById('titreV').innerText=t.vid;
+ document.getElementById('titreRap').innerText=t.rapT;
  document.getElementById('shop1').innerText=t.shop1;
  document.getElementById('shop2').innerText=t.shop2;
  document.getElementById('shop3').innerText=t.shop3;
@@ -226,11 +232,36 @@ function setLang(l){
  document.getElementById('b-ar').classList.toggle('on',l=='ar');
  document.getElementById('list').innerHTML=""; shown=0; loadMore();
  document.getElementById('videos').innerHTML=""; vshown=0; loadMoreV();
+ renderRap();
 }
-let titles = ["Dune 2","Squid 2","Barbie","GTA 6","Wednesday","Oppenheimer","TikTok Trend","AI Video","Football","Free Fire","Fortnite","One Piece","Naruto","Music Trend","Gaming","Sport","News","Film","Serie","Tech","Voyage","Cuisine","Mode","Auto","Maison","Sante","Ecole","Business","Nature"];
-let titlesAr = ["ديون 2","لعبة الحبار 2","باربي","جي تي اي 6","وينزداي","أوبنهايمر","ترند تيك توك","فيديو ذكاء اصطناعي","كرة قدم","فري فاير","فورتنايت","ون بيس","ناروتو","ترند موسيقى","ألعاب","رياضة","أخبار","فيلم","مسلسل","تكنولوجيا","سفر","طبخ","موضة","سيارات","منزل","صحة","مدرسة","أعمال","طبيعة"];
-let titlesEn = ["Dune 2","Squid Game 2","Barbie","GTA 6","Wednesday","Oppenheimer","TikTok Trend","AI Video","Football","Free Fire","Fortnite","One Piece","Naruto","Music Trend","Gaming","Sport","News","Movie","Series","Tech","Travel","Cooking","Fashion","Cars","Home","Health","School","Business","Nature"];
-let cats = ["Film","Film","Film","Jeu","Film","Film","Jeu","Jeu","Sport","Jeu","Jeu","Film","Film","Music","Jeu","Sport","News","Film","Film","Tech","Voyage","Cuisine","Mode","Auto","Maison","Sante","Ecole","Business","Nature"];
+// --- RAPPEURS ---
+let rappers = [
+ {n:"【entity-Balti¦canonical_name=Balti】", ar:"بلطي", img:"https://i.ytimg.com/vi/3zJ8eYk0hQw/hqdefault.jpg", tag:"Rap Tunis"},
+ {n:"【entity-Klay BBJ¦canonical_name=Klay BBJ】", ar:"كلاي بي بي جي", img:"https://images.unsplash.com/photo-1493225457124-a3eb161ffa5f?w=400&q=80", tag:"Rap Tunis"},
+ {n:"Nordo", ar:"نوردو", img:"https://images.unsplash.com/photo-1571330739297-a9574746a54b?w=400&q=80", tag:"Rap Tunis"},
+ {n:"Sanfara", ar:"سنفارة", img:"https://images.unsplash.com/photo-1511671782779-c97d3d27a1d4?w=400&q=80", tag:"Rap Tunis"},
+ {n:"【entity-A.L.A¦canonical_name=A.L.A】", ar:"علاء", img:"https://images.unsplash.com/photo-1470225620780-dba8ba36b745?w=400&q=80", tag:"Rap Tunis"},
+ {n:"Janjoun", ar:"جنجون", img:"https://images.unsplash.com/photo-1508700115892-45ecd05ae2ad?w=400&q=80", tag:"Rap Tunis"},
+ {n:"【entity-Drake¦canonical_name=Drake】", ar:"دريك", img:"https://i.ytimg.com/vi/7NJqUN9TClM/hqdefault.jpg", tag:"Rap Monde"},
+ {n:"【entity-Travis Scott¦canonical_name=Travis Scott】", ar:"ترافيس سكوت", img:"https://i.ytimg.com/vi/6ONRf7h3Mdk/hqdefault.jpg", tag:"Rap Monde"},
+ {n:"【entity-Eminem¦canonical_name=Eminem】", ar:"ايمينيم", img:"https://i.ytimg.com/vi/eJO5HU_7_1w/hqdefault.jpg", tag:"Rap Monde"},
+ {n:"Booba", ar:"بوبا", img:"https://images.unsplash.com/photo-1520523839897-bd0b52f945a0?w=400&q=80", tag:"Rap France"},
+ {n:"【entity-Ninho¦canonical_name=Ninho】", ar:"نينيو", img:"https://images.unsplash.com/photo-1516280440614-37939bbacd81?w=400&q=80", tag:"Rap France"},
+ {n:"【entity-Jul¦canonical_name=Jul】", ar:"جول", img:"https://images.unsplash.com/photo-1485579149621-3123dd979885?w=400&q=80", tag:"Rap France"}
+];
+function renderRap(){
+  let box=document.getElementById('rapList'); box.innerHTML="";
+  rappers.forEach((r,i)=>{
+    let name = LANG=='ar' ? r.ar : r.n;
+    let d=document.createElement('div'); d.className='card';
+    d.innerHTML='<div class="seller"><span class="avatar">🎤</span> '+r.tag+' <span class="fav">♡</span></div><a href="https://www.youtube.com/results?search_query='+r.n+' rap"><img src="'+r.img+'"><h3>'+name+' - '+(i+1)+'</h3></a><div class="prix">'+TR[LANG].free+'</div><div class="ville">'+TR[LANG].city+'</div>';
+    box.appendChild(d);
+  });
+}
+let titles = ["Dune 2","【entity-Squid¦canonical_name=Squid Game】 2","【entity-Barbie¦canonical_name=Barbie】","GTA 6","【entity-Wednesday¦canonical_name=Wednesday】","Oppenheimer","TikTok Trend","AI Video","Football","Free Fire","Fortnite","One Piece","Naruto","Music Trend","Gaming","Sport","News","Film","Serie","Tech","Voyage","Cuisine","Mode","Auto","Maison","Sante","Ecole","Business","Nature","【entity-Balti¦canonical_name=Balti】","【entity-Klay BBJ¦canonical_name=Klay BBJ】","Nordo","Sanfara","【entity-Drake¦canonical_name=Drake】","【entity-Travis Scott¦canonical_name=Travis Scott】"];
+let titlesAr = ["ديون 2","لعبة الحبار 2","باربي","جي تي اي 6","وينزداي","أوبنهايمر","ترند تيك توك","فيديو ذكاء اصطناعي","كرة قدم","فري فاير","فورتنايت","ون بيس","ناروتو","ترند موسيقى","ألعاب","رياضة","أخبار","فيلم","مسلسل","تكنولوجيا","سفر","طبخ","موضة","سيارات","منزل","صحة","مدرسة","أعمال","طبيعة","بلطي","كلاي بي بي جي","نوردو","سنفارة","دريك","ترافيس سكوت"];
+let titlesEn = ["Dune 2","【entity-Squid¦canonical_name=Squid Game】 Game 2","Barbie","GTA 6","Wednesday","Oppenheimer","TikTok Trend","AI Video","Football","Free Fire","Fortnite","One Piece","Naruto","Music Trend","Gaming","Sport","News","Movie","Series","Tech","Travel","Cooking","Fashion","Cars","Home","Health","School","Business","Nature","【entity-Balti¦canonical_name=Balti】","【entity-Klay BBJ¦canonical_name=Klay BBJ】","Nordo","Sanfara","【entity-Drake¦canonical_name=Drake】","【entity-Travis Scott¦canonical_name=Travis Scott】"];
+let cats = ["Film","Film","Film","Jeu","Film","Film","Jeu","Jeu","Sport","Jeu","Jeu","Film","Film","Music","Jeu","Sport","News","Film","Film","Tech","Voyage","Cuisine","Mode","Auto","Maison","Sante","Ecole","Business","Nature","Rap","Rap","Rap","Rap","Rap","Rap"];
 let titleImgs = [
  "https://i.ytimg.com/vi/Way9Dexny3w/hqdefault.jpg",
  "https://i.ytimg.com/vi/oqxAJKy0ii4/hqdefault.jpg",
@@ -260,7 +291,13 @@ let titleImgs = [
  "https://images.unsplash.com/photo-1505751172876-fa1923c5c528?w=400&q=80",
  "https://images.unsplash.com/photo-1503676260728-1c00da094a0b?w=400&q=80",
  "https://images.unsplash.com/photo-1507679799987-c73779587ccf?w=400&q=80",
- "https://images.unsplash.com/photo-1501854140801-50d01698950b?w=400&q=80"
+ "https://images.unsplash.com/photo-1501854140801-50d01698950b?w=400&q=80",
+ "https://i.ytimg.com/vi/3zJ8eYk0hQw/hqdefault.jpg",
+ "https://images.unsplash.com/photo-1493225457124-a3eb161ffa5f?w=400&q=80",
+ "https://images.unsplash.com/photo-1571330739297-a9574746a54b?w=400&q=80",
+ "https://images.unsplash.com/photo-1511671782779-c97d3d27a1d4?w=400&q=80",
+ "https://i.ytimg.com/vi/7NJqUN9TClM/hqdefault.jpg",
+ "https://i.ytimg.com/vi/6ONRf7h3Mdk/hqdefault.jpg"
 ];
 let ids=["Way9Dexny3w","oqxAJKy0ii4","VQRLujxTm3c","pBk4NYhWNMM","1pHDWnXmK7Y","LXb3EKWsInQ","eKFTSSKCzWA","hTWKbfoikeg","9bZkp7q19f0","U7mPqycQ0tQ"];
 let vnames=["Dune 2","Squid 2","GTA 6","Barbie","Wednesday","Music","Gaming","Sport","News","Film"];
@@ -302,7 +339,7 @@ function loadMoreV(){
   let vids=document.getElementById('videos');
   for(let k=0;k<10 && vshown<20000;k++){ vshown++; vids.appendChild(makeVideo(vshown)); }
 }
-loadMore(); loadMoreV();
+loadMore(); loadMoreV(); renderRap();
 function cat(c,btn){
   document.querySelectorAll('.cats button').forEach(b=>b.classList.remove('on'));
   btn.classList.add('on'); curCat=c;
