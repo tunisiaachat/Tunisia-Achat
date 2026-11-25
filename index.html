@@ -5,14 +5,14 @@
 *{box-sizing:border-box;margin:0;padding:0;font-family:Arial,sans-serif}
 body{background:#f6f6f6;color:#111} a{text-decoration:none;color:inherit}
 .top{background:#111;color:#fff;text-align:center;padding:6px;font-size:13px}
-header{position:sticky;top:0;background:#fff;display:flex;gap:10px;align-items:center;padding:10px;z-index:10;box-shadow:0 2px 8px #0001}
+header{position:sticky;top:0;background:#fff;display:flex;gap:10px;align-items:center;padding:10px;z-index:10}
 .logo{font-weight:900;font-size:22px;white-space:nowrap}.logo span{color:#ff6b00}
 .search{flex:1;display:flex} .search input{flex:1;padding:11px;border:2px solid #ff6b00;border-radius:8px 0 0 8px;outline:none}
 .search button{background:#ff6b00;color:#fff;border:0;padding:0 16px;border-radius:0 8px 8px 0;font-weight:700;cursor:pointer}
-.langs{display:flex;gap:4px}.langs button{border:1px solid #ddd;background:#fff;padding:7px 8px;border-radius:8px;cursor:pointer;font-size:16px}.langs button.on{background:#ff6b00;color:#fff}
+.langs{display:flex;gap:4px}.langs button{border:1px solid #ddd;background:#fff;padding:7px 8px;border-radius:8px;cursor:pointer}
 .cats{display:flex;gap:10px;overflow:auto;padding:12px;background:#fff}.cat{min-width:68px;text-align:center;cursor:pointer}.cat i{display:block;width:56px;height:56px;line-height:56px;background:#fff2e6;border-radius:50%;font-size:26px;margin:0 auto 4px}.cat b{font-size:12px}
 .hero{margin:10px;background:linear-gradient(90deg,#e31e24,#ff6b00);color:#fff;border-radius:14px;padding:18px;display:flex;justify-content:space-between;align-items:center}
-.hero h1{font-size:26px}.hero p{opacity:.9}.hero a{background:#fff;color:#e31e24;padding:10px 16px;border-radius:10px;font-weight:800;display:inline-block;margin-top:10px}
+.hero h1{font-size:26px}.hero a{background:#fff;color:#e31e24;padding:10px 16px;border-radius:10px;font-weight:800;display:inline-block;margin-top:10px}
 .mini{display:flex;gap:10px;padding:0 10px}.mini div{flex:1;border-radius:12px;padding:14px;color:#fff;font-weight:800}.mini .a{background:#111}.mini .b{background:#0077ff}
 h2{padding:14px 10px 6px;font-size:19px} .grid{display:grid;grid-template-columns:repeat(2,1fr);gap:8px;padding:0 10px}
 @media(min-width:800px){.grid{grid-template-columns:repeat(4,1fr)}}
@@ -23,21 +23,21 @@ h2{padding:14px 10px 6px;font-size:19px} .grid{display:grid;grid-template-column
 .more{display:block;margin:16px auto;padding:12px 22px;background:#111;color:#fff;border:0;border-radius:10px;font-weight:800;cursor:pointer}
 footer{background:#111;color:#fff;text-align:center;padding:20px;margin-top:10px;font-size:14px}
 </style></head>
-<body id="body">
-<div class="top">Livraison partout en Tunisie | Paiement à la livraison</div>
+<body>
+<div class="top">Livraison partout en Tunisie | Paiement a la livraison</div>
 <header><div class="logo">Tunisia<span>Bet206</span></div>
 <div class="search"><input id="q" placeholder="Rechercher un produit..."><button onclick="doSearch()">🔍</button></div>
-<div class="langs"><button onclick="setLang('fr',this)" class="on">🇫🇷</button><button onclick="setLang('en',this)">🇬🇧</button><button onclick="setLang('ar',this)">🇹🇳</button></div></header>
+<div class="langs"><button>🇫🇷</button><button>🇬🇧</button><button>🇹🇳</button></div></header>
 <div class="cats" id="cats"></div>
-<div class="hero"><div><h1>HAPPY FRIDAY - Jusqu'à -70%</h1><p>Les meilleures promos Mytek & Jujma</p><a href="#grid">Voir les promos</a></div><div style="font-size:54px">🔥</div></div>
+<div class="hero"><div><h1>HAPPY FRIDAY - Jusqu'a -70%</h1><p>Les meilleures promos Mytek & Jujma</p><a href="#grid">Voir les promos</a></div><div style="font-size:54px">🔥</div></div>
 <div class="mini"><div class="a">⚡ FLASH OFFRE<br><small>-50% aujourd'hui</small></div><div class="b">🛒 PROMO JUJMA<br><small>Prix bas</small></div></div>
-<h2 id="title">🔥 Flash Offre</h2>
+<h2>🔥 Flash Offre</h2>
 <div class="grid" id="grid"></div>
 <button class="more" onclick="voirPlus()" id="moreBtn">Voir Plus +</button>
-<footer>Tunisiabet206 © 2026 - WhatsApp : 26 751 581<br><a href="https://mytek.tn" style="color:#ff9">Mytek</a> | <a href="https://jujma.tn" style="color:#ff9">Jujma</a></footer>
+<footer>Tunisiabet206 © 2026 - WhatsApp : 26 751 581</footer>
 <script>
 const P=[
-["TV Haier 55", "📺",999,1499,"TV"],["Machine a cafe","☕",399,549,"Cafe"],["Trottinette","🛴",899,1199,"Jeux"],["Smartphone","📱",699,899,"Telephone"],
+["TV Haier 55","📺",999,1499,"TV"],["Machine a cafe","☕",399,549,"Cafe"],["Trottinette","🛴",899,1199,"Jeux"],["Smartphone","📱",699,899,"Telephone"],
 ["Casque Bluetooth","🎧",89,149,"Telephone"],["Montre connectee","⌚",129,199,"Telephone"],["Aspirateur","🧹",249,349,"Maison"],["Mixeur","🥤",119,179,"Cuisine"],
 ["Parfum","🧴",69,99,"Beaute"],["Chaussures","👟",99,149,"Vetements"],["Sac","👜",79,119,"Vetements"],["Jouet enfant","🧸",45,69,"Jouets"],
 ["Barbecue","🔥",199,299,"Cuisine"],["Cafetiere","☕",159,219,"Cafe"],["Climatiseur","❄️",1199,1599,"Maison"],["Lave-linge","👕",899,1199,"Maison"],
@@ -49,21 +49,15 @@ function renderCats(){document.getElementById("cats").innerHTML=CATS.map(c=>`<di
 function setCat(c){curCat=c; shown=20; render()}
 function doSearch(){curQ=document.getElementById("q").value.trim().toLowerCase(); shown=20; render()}
 function render(){
- let list=P.filter(p=> (curCat=="Tous"||p[3]==curCat) && (!curQ || p[0].toLowerCase().includes(curQ)));
- list.sort((a,b)=> (b[0].toLowerCase()==curQ)-(a[0].toLowerCase()==curQ));
+ let list=P.filter(p=> (curCat=="Tous"||p[4]==curCat) && (!curQ || p[0].toLowerCase().includes(curQ)));
  let show=list.slice(0,shown);
  document.getElementById("grid").innerHTML=show.map(p=>{
-  let off=Math.round((1-p[1]/p[2])*100); let link=p[3]=="TV"||p[3]=="Maison"?"https://mytek.tn":"https://jujma.tn";
-  return `<div class="card"><span class="badge">-${off}%</span><div class="img">${p[1]}</div><b>${p[0]}</b><div>⭐⭐⭐⭐⭐</div><div><span class="price">${p[1]} DT</span> <span class="old">${p[2]} DT</span></div><a class="buy" href="${link}" target="_blank">Commander →</a></div>`
- }).join("") || "<p style='padding:20px'>Aucun resultat</p>";
+  let off=Math.round((1-p[2]/p[3])*100);
+  let link=(p[4]=="TV"||p[4]=="Maison")?"https://mytek.tn":"https://jujma.tn";
+  return `<div class="card"><span class="badge">-${off}%</span><div class="img">${p[1]}</div><b>${p[0]}</b><div>⭐⭐⭐⭐⭐</div><div><span class="price">${p[2]} DT</span> <span class="old">${p[3]} DT</span></div><a class="buy" href="${link}" target="_blank">Commander →</a></div>`
+ }).join("");
  document.getElementById("moreBtn").style.display=list.length>shown?"block":"none";
 }
 function voirPlus(){shown+=8; render()}
-function setLang(l,btn){
- document.querySelectorAll(".langs button").forEach(b=>b.classList.remove("on")); btn.classList.add("on");
- document.getElementById("body").dir=l=="ar"?"rtl":"ltr";
- document.getElementById("q").placeholder=l=="fr"?"Rechercher un produit...":l=="en"?"Search a product...":"لوّج على منتوج...";
-}
 renderCats(); render();
-document.getElementById("q").addEventListener("keyup",e=>{if(e.key=="Enter")doSearch()});
 </script></body></html>
