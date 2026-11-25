@@ -1,164 +1,69 @@
 <!DOCTYPE html>
-<html lang="fr" dir="ltr"><head><meta charset="UTF-8"><meta name="viewport" content="width=device-width,initial-scale=1,maximum-scale=1"><title>Tunisia - Rap, Films, Jeux</title>
+<html lang="fr"><head><meta charset="UTF-8"><meta name="viewport" content="width=device-width,initial-scale=1">
+<title>Tunisiabet206 - Promo Tunisie</title>
 <style>
-html,body{width:100%;margin:0 auto !important;padding:0 !important}
-body{max-width:430px !important;margin:0 auto !important;position:relative;left:0 !important;transform:none !important}
-.top,.head,.sec,.foot{max-width:430px !important;margin-left:auto !important;margin-right:auto !important}
-.grid{justify-content:center !important}
-
-*{margin:0;padding:0;box-sizing:border-box}
-body{font-family:Arial,sans-serif;background:#fff;color:#111;direction:ltr;text-align:left;overflow-x:hidden}
-.top{background:#E70013;color:#fff;text-align:center;padding:14px;font-size:20px;font-weight:bold}
-.head{padding:14px}
-.head h1{font-size:28px}
-.head p{color:#666;font-size:14px;margin:4px 0 10px}
-.search{width:100%;padding:11px;border:1px solid #ddd;border-radius:20px;font-size:15px}
-.langs{display:flex;gap:8px;margin:12px 0}
-.langs button{border:1px solid #ddd;background:#fff;padding:7px 14px;border-radius:20px}
-.langs button.on{background:#111;color:#fff}
-.sec{padding:0 12px 18px}
-.sec h2{font-size:20px;margin:4px 0 10px}
-.grid{display:grid;grid-template-columns:1fr 1fr;gap:10px}
-.card{border:1px solid #eee;border-radius:12px;overflow:hidden;background:#fff}
-.card.sale{border:2px solid #E70013}
-.card img{width:100%;height:135px;object-fit:cover;display:block}
-.card .t{padding:9px}
-.card .t b{font-size:14px;display:block;line-height:1.3;min-height:36px}
-.card .t span{color:#E70013;font-weight:bold;font-size:14px}
-.card .t i{color:#666;font-size:12px;font-style:normal}
-a{text-decoration:none;color:#111}
-.foot{background:#111;color:#fff;text-align:center;padding:16px;font-size:13px;margin-top:10px}
-.foot a{color:#fff}
-</style>
-<style>
-#prodModal{display:none;position:fixed;inset:0;background:rgba(0,0,0,.85);z-index:9999;align-items:center;justify-content:center;padding:15px}
-#prodModal .box{background:#fff;border-radius:16px;width:100%;max-width:430px;overflow:hidden;max-height:90vh;overflow-y:auto}
-#prodModal .box img{width:100%;height:260px;object-fit:cover}
-</style>
-</head>
-<body>
-<div class="top">Welcome to Tunisia</div>
-<div class="head"><h1>Tunisia</h1><p>Your hub for music, movies & gaming - shop the latest phones</p><input class="search" placeholder="Rechercher..."><div class="langs"><button>Toutes</button><button>Rap</button><button>Films</button><button>Jeux</button><button>Sport</button></div></div>
-
-<div class="sec"><h2>1. 👕 SPORT - DBACHE - A VENDRE!</h2><div class="grid">
-<a class="card sale" href="javascript:void(0)" onclick="openProd('taekwondo')"><img src="https://images.unsplash.com/photo-1555597673-b21d5c935865?w=400"><div class="t"><b>Tenue Taekwondo - Dobok</b><span>89 TND - ECHRI</span></div></a>
-<a class="card sale" href="javascript:void(0)" onclick="openProd('kick')"><img src="https://images.unsplash.com/photo-1549719386-74dfcbf7dbed?w=400"><div class="t"><b>Short Kick Boxing</b><span>59 TND - ECHRI</span></div></a>
-<a class="card sale" href="javascript:void(0)" onclick="openProd('kora')"><img src="https://images.unsplash.com/photo-1579952363873-27f3bade9f55?w=400"><div class="t"><b>Maillot Kora - Football</b><span>69 TND - ECHRI</span></div></a>
-<a class="card sale" href="javascript:void(0)" onclick="openProd('gants')"><img src="https://images.unsplash.com/photo-1544113559-31a4b9ab1c9d?w=400"><div class="t"><b>Gants Boxe</b><span>79 TND - ECHRI</span></div></a>
-<a class="card sale" href="javascript:void(0)" onclick="openProd('surv')"><img src="https://images.unsplash.com/photo-1517836357463-d25dfeac3438?w=400"><div class="t"><b>Survetement Sport</b><span>99 TND - ECHRI</span></div></a>
-<a class="card sale" href="javascript:void(0)" onclick="openProd('baskets')"><img src="https://images.unsplash.com/photo-1542291026-7eec264c27ff?w=400"><div class="t"><b>Baskets Sport</b><span>129 TND - ECHRI</span></div></a>
-</div></div>
-
-<div class="sec"><h2>🧢 Accessoires + Bnet Sport - A VENDRE!</h2><div class="grid">
-<a class="card sale" href="javascript:void(0)" onclick="openProd('casquette')"><img src="https://images.unsplash.com/photo-1588850561407-ed78c282e89b?w=400"><div class="t"><b>Casquette Sport</b><span>35 TND - ECHRI</span></div></a>
-<a class="card sale" href="javascript:void(0)" onclick="openProd('sac')"><img src="https://images.unsplash.com/photo-1553062407-98eeb64c6a62?w=400"><div class="t"><b>Sac Sport</b><span>79 TND - ECHRI</span></div></a>
-<a class="card sale" href="javascript:void(0)" onclick="openProd('montre')"><img src="https://images.unsplash.com/photo-1523275335684-37898b6baf30?w=400"><div class="t"><b>Montre Sport</b><span>99 TND - ECHRI</span></div></a>
-<a class="card sale" href="javascript:void(0)" onclick="openProd('bnet')"><img src="https://images.unsplash.com/photo-1518459031867-a89b6a7a5c57?w=400"><div class="t"><b>Dbache Bnet Sport</b><span>89 TND - ECHRI</span></div></a>
-<a class="card sale" href="javascript:void(0)" onclick="openProd('legging')"><img src="https://images.unsplash.com/photo-1506629082955-511b1aa562c8?w=400"><div class="t"><b>Legging Bnet Sport</b><span>49 TND - ECHRI</span></div></a>
-<a class="card sale" href="javascript:void(0)" onclick="openProd('lunettes')"><img src="https://images.unsplash.com/photo-1572635196237-14b3f281503f?w=400"><div class="t"><b>Lunettes Soleil</b><span>45 TND - ECHRI</span></div></a>
-</div></div>
-
-<div class="sec"><h2>2. 🎵 5 Music - Top Rap</h2><div class="grid">
-<a class="card" href="https://www.youtube.com/results?search_query=Balti+rap" target="_blank"><img src="https://images.unsplash.com/photo-1493225457124-a3eb161ffa5f?w=400"><div class="t"><b>1. Balti</b><span>Music - Ecouter</span></div></a>
-<a class="card" href="https://www.youtube.com/results?search_query=Klay+BBJ+rap" target="_blank"><img src="https://images.unsplash.com/photo-1508700115892-45ecd05ae2ad?w=400"><div class="t"><b>2. Klay BBJ</b><span>Music - Ecouter</span></div></a>
-<a class="card" href="https://www.youtube.com/results?search_query=Nordo+rap" target="_blank"><img src="https://images.unsplash.com/photo-1493225457124-a3eb161ffa5f?w=400"><div class="t"><b>3. Nordo</b><span>Music - Ecouter</span></div></a>
-<a class="card" href="https://www.youtube.com/results?search_query=Sanfara+rap" target="_blank"><img src="https://images.unsplash.com/photo-1470225620780-dba8ba36b745?w=400"><div class="t"><b>4. Sanfara</b><span>Music - Ecouter</span></div></a>
-<a class="card" href="https://www.youtube.com/results?search_query=Drake+rap" target="_blank"><img src="https://images.unsplash.com/photo-1493225457124-a3eb161ffa5f?w=400"><div class="t"><b>5. Drake</b><span>Music - Ecouter</span></div></a>
-</div></div>
-
-<div class="sec"><h2>📰 5 Articles - Top</h2><div class="grid">
-<a class="card" href="https://www.youtube.com/results?search_query=GTA+6+trailer" target="_blank"><img src="https://i.ytimg.com/vi/VQRLujxTm3c/hqdefault.jpg"><div class="t"><b>1. GTA 6 - Trailer</b><span>Article - Lire</span></div></a>
-<a class="card" href="https://www.youtube.com/results?search_query=Squid+Game+2" target="_blank"><img src="https://i.ytimg.com/vi/oqxAJKy0ii4/hqdefault.jpg"><div class="t"><b>2. Squid Game 2</b><span>Article - Lire</span></div></a>
-<a class="card" href="https://www.youtube.com/results?search_query=Barbie+film" target="_blank"><img src="https://i.ytimg.com/vi/pBk4NYhWNMM/hqdefault.jpg"><div class="t"><b>3. Barbie</b><span>Article - Lire</span></div></a>
-<a class="card" href="https://www.youtube.com/results?search_query=Free+Fire" target="_blank"><img src="https://i.ytimg.com/vi/hTWKbfoikeg/hqdefault.jpg"><div class="t"><b>4. Free Fire</b><span>Article - Lire</span></div></a>
-<a class="card" href="https://www.youtube.com/results?search_query=iPhone+15+Pro" target="_blank"><img src="https://images.unsplash.com/photo-1592750475338-74b7b21085ab?w=400"><div class="t"><b>5. iPhone 15 Pro</b><span>Article - Lire</span></div></a>
-</div></div>
-
-<div class="sec"><h2>💄 Pour Les Filles - Beaute & Mode</h2><div class="grid">
-<a class="card" href="https://www.youtube.com/results?search_query=maquillage+tutoriel" target="_blank"><img src="https://images.unsplash.com/photo-1596462502278-27bfdc403348?w=400"><div class="t"><b>Maquillage</b><span>Tutos - Voir</span></div></a>
-<a class="card" href="https://www.youtube.com/results?search_query=mode+fille+tendance" target="_blank"><img src="https://images.unsplash.com/photo-1490481651871-ab68de25d43d?w=400"><div class="t"><b>Mode & Style</b><span>Tendances - Voir</span></div></a>
-<a class="card" href="https://www.youtube.com/results?search_query=coiffure+fille" target="_blank"><img src="https://images.unsplash.com/photo-1562322140-8baeececf3df?w=400"><div class="t"><b>Coiffure</b><span>Idees - Voir</span></div></a>
-<a class="card" href="https://www.youtube.com/results?search_query=soins+visage" target="_blank"><img src="https://images.unsplash.com/photo-1570172619644-dfd03ed5d881?w=400"><div class="t"><b>Soins Visage</b><span>Routine - Voir</span></div></a>
-<a class="card" href="https://www.youtube.com/results?search_query=parfum+fille" target="_blank"><img src="https://images.unsplash.com/photo-1541643600914-78b084683601?w=400"><div class="t"><b>Parfum</b><span>Top - Voir</span></div></a>
-<a class="card" href="https://www.youtube.com/results?search_query=vetements+fille" target="_blank"><img src="https://images.unsplash.com/photo-1483985988355-763728e1935b?w=400"><div class="t"><b>Shopping Filles</b><span>Shopping - Voir</span></div></a>
-</div></div>
-
-<div class="sec"><h2>🛒 A VENDRE - Telephones</h2><div class="grid">
-<a class="card sale" href="javascript:void(0)" onclick="openProd('iphone')"><img src="https://images.unsplash.com/photo-1592750475338-74b7b21085ab?w=400"><div class="t"><b>iPhone 15 Pro</b><span>2 899 TND - ECHRI</span></div></a>
-<a class="card sale" href="javascript:void(0)" onclick="openProd('samsung')"><img src="https://images.unsplash.com/photo-1610945415295-d9bbf067e59c?w=400"><div class="t"><b>Samsung S24</b><span>2 499 TND - ECHRI</span></div></a>
-<a class="card sale" href="javascript:void(0)" onclick="openProd('redmi')"><img src="https://images.unsplash.com/photo-1598327105666-5b89351aff97?w=400"><div class="t"><b>Redmi Note 13</b><span>899 TND - ECHRI</span></div></a>
-</div></div>
-
-
-<div class="sec"><h2>Annonces Sponsorisees</h2><div class="grid">
-<a class="card" href="https://instagram.com/az__yz80" target="_blank"><img src="https://images.unsplash.com/photo-1606144042614-b2417e99c4e3?w=400"><div class="t"><b>Gaming Shop Tunis - Manettes -50%</b><span>Sponsorise</span></div></a>
-<a class="card" href="https://instagram.com/az__yz80" target="_blank"><img src="https://images.unsplash.com/photo-1592750475338-74b7b21085ab?w=400"><div class="t"><b>Phone Shop - iPhone 15 Dispo!</b><span>Sponsorise</span></div></a>
-</div>
-<a href="https://instagram.com/az__yz80" target="_blank" style="display:block;background:#FFC107;color:#000;text-align:center;padding:14px;border-radius:12px;font-weight:bold;margin-top:10px">Je veux une Annonce ici - Contactez-moi!</a></div>
-
-<div class="sec"><h2>Annonces Tunis</h2>
-<a href="https://www.tayara.tn/" target="_blank" style="display:block;background:#FF6B00;color:#fff;text-align:center;padding:14px;border-radius:14px;font-weight:bold;margin:6px 0">Tayara - Tunis</a>
-<a href="https://www.jumia.com.tn/" target="_blank" style="display:block;background:#FF8C00;color:#fff;text-align:center;padding:14px;border-radius:14px;font-weight:bold;margin:6px 0">Jumia Tunis</a>
-<a href="https://www.mytek.tn/" target="_blank" style="display:block;background:#000;color:#fff;text-align:center;padding:14px;border-radius:14px;font-weight:bold;margin:6px 0">MyTek - Tunis</a>
-<a href="https://www.tunisianet.com.tn/" target="_blank" style="display:block;background:#007BFF;color:#fff;text-align:center;padding:14px;border-radius:14px;font-weight:bold;margin:6px 0">Tunisianet - Tunis</a>
-</div>
-
-<div class="sec"><h2>Annonces Bara - Monde</h2>
-<a href="https://www.amazon.com/" target="_blank" style="display:block;background:#FF9900;color:#000;text-align:center;padding:14px;border-radius:14px;font-weight:bold;margin:6px 0">Amazon - Monde</a>
-<a href="https://www.aliexpress.com/" target="_blank" style="display:block;background:#E62E1B;color:#fff;text-align:center;padding:14px;border-radius:14px;font-weight:bold;margin:6px 0">AliExpress - Chine</a>
-<a href="https://www.temu.com/" target="_blank" style="display:block;background:#FF6B00;color:#fff;text-align:center;padding:14px;border-radius:14px;font-weight:bold;margin:6px 0">Temu - Monde</a>
-<a href="https://store.steampowered.com/" target="_blank" style="display:block;background:#1B2838;color:#fff;text-align:center;padding:14px;border-radius:14px;font-weight:bold;margin:6px 0">Steam - Jeux</a>
-<a href="https://www.ebay.com/" target="_blank" style="display:block;background:#0064D2;color:#fff;text-align:center;padding:14px;border-radius:14px;font-weight:bold;margin:6px 0">eBay - Monde</a>
-</div>
-
-<div class="sec"><h2>Les Sites Web</h2>
-<a href="https://www.tayara.tn/" target="_blank" style="display:block;background:#FF6B00;color:#fff;text-align:center;padding:14px;border-radius:14px;font-weight:bold;margin:6px 0">Tayara - Vente en Tunisie</a>
-<a href="https://www.youtube.com/results?search_query=gaming+tunisie" target="_blank" style="display:block;background:#000;color:#fff;text-align:center;padding:14px;border-radius:14px;font-weight:bold;margin:6px 0">Le Coin Gaming</a>
-<a href="https://www.youtube.com/" target="_blank" style="display:block;background:#FF0000;color:#fff;text-align:center;padding:14px;border-radius:14px;font-weight:bold;margin:6px 0">YouTube</a>
-<a href="https://www.google.com/" target="_blank" style="display:block;background:#4285F4;color:#fff;text-align:center;padding:14px;border-radius:14px;font-weight:bold;margin:6px 0">Google</a>
-<a href="https://fr.wikipedia.org/" target="_blank" style="display:block;background:#000;color:#fff;text-align:center;padding:14px;border-radius:14px;font-weight:bold;margin:6px 0">Wikipedia</a>
-</div>
-
-<div class="sec"><h2>Applications</h2>
-<a href="https://www.tiktok.com/" target="_blank" style="display:block;background:#000;color:#fff;text-align:center;padding:14px;border-radius:14px;font-weight:bold;margin:6px 0">TikTok</a>
-<a href="https://www.instagram.com/" target="_blank" style="display:block;background:#E1306C;color:#fff;text-align:center;padding:14px;border-radius:14px;font-weight:bold;margin:6px 0">IG - Instagram</a>
-<a href="https://www.youtube.com/" target="_blank" style="display:block;background:#FF0000;color:#fff;text-align:center;padding:14px;border-radius:14px;font-weight:bold;margin:6px 0">YouTube</a>
-<a href="https://play.google.com/" target="_blank" style="display:block;background:#0F9D58;color:#fff;text-align:center;padding:14px;border-radius:14px;font-weight:bold;margin:6px 0">Play Store</a>
-</div>
-
-<div class="sec" style="background:#F8F8F8;border-radius:14px;padding:16px"><h2>Site Mawthou9 - Tunisia Officiel</h2><p style="font-size:14px;line-height:1.6">Tunisia howa site Tounsi officiel. Rap Tounsi, Films, Jeux, GTA 6.<br><b>Proprietaire:</b> Aziz Aziz - Tunis<br><b>Contact:</b> <a href="https://instagram.com/az__yz80" style="color:#E1306C;font-weight:bold">@az__yz80 - Instagram</a><br><b>Depuis:</b> 2026 - Tunis</p><a href="https://instagram.com/az__yz80" target="_blank" style="display:inline-block;background:#000;color:#fff;padding:12px 20px;border-radius:20px;font-weight:bold;margin-top:10px">Verifier sur Instagram</a></div>
-<div class="foot">2026 Tunisia - Tunis<br>Contact: <a href="https://instagram.com/az__yz80">@az__yz80</a> - Instagram</div>
-
-<div id="prodModal" onclick="closeProd()"><div class="box" onclick="event.stopPropagation()">
-<img id="pImg" src="">
-<div style="padding:16px">
-<div style="display:flex;justify-content:space-between;align-items:start"><h2 id="pName" style="font-size:20px"></h2><p style="font-size:13px;color:#666;text-align:center;margin-top:10px">Tiklik 3al bouton -> yet7al Instagram mte3i - ab3athli esm l produit - njawebek w nab3athlek - ma3adch Jumia!</p><button onclick="closeProd()" style="border:0;background:#E70013;color:#fff;border-radius:50%;width:32px;height:32px;font-size:18px">X</button></div>
-<div id="pPrice" style="color:#E70013;font-size:22px;font-weight:bold;margin:8px 0"></div>
-<p id="pDesc" style="font-size:14px;color:#444;line-height:1.6"></p>
-<div id="pSizes" style="display:flex;gap:8px;margin:12px 0"></div>
-<a id="pBuy" href="#" target="_blank" style="display:block;background:#E70013;color:#fff;text-align:center;padding:14px;border-radius:12px;font-weight:bold;text-decoration:none;font-size:16px">ECHRI TAWA - Commander sur Instagram</a>
-<p style="font-size:13px;color:#666;text-align:center;margin-top:10px">Tiklik 3al bouton -> yet7al Instagram mte3i - ab3athli esm l produit - njawebek w nab3athlek - ma3adch Jumia!</p><button onclick="closeProd()" style="width:100%;margin-top:10px;padding:12px;border:1px solid #ddd;background:#fff;border-radius:12px">Retour au site</button>
-</div></div></div>
+*{box-sizing:border-box;margin:0;padding:0;font-family:Arial,sans-serif}
+body{background:#f6f6f6;color:#111} a{text-decoration:none;color:inherit}
+.top{background:#111;color:#fff;text-align:center;padding:6px;font-size:13px}
+header{position:sticky;top:0;background:#fff;display:flex;gap:10px;align-items:center;padding:10px;z-index:10;box-shadow:0 2px 8px #0001}
+.logo{font-weight:900;font-size:22px;white-space:nowrap}.logo span{color:#ff6b00}
+.search{flex:1;display:flex} .search input{flex:1;padding:11px;border:2px solid #ff6b00;border-radius:8px 0 0 8px;outline:none}
+.search button{background:#ff6b00;color:#fff;border:0;padding:0 16px;border-radius:0 8px 8px 0;font-weight:700;cursor:pointer}
+.langs{display:flex;gap:4px}.langs button{border:1px solid #ddd;background:#fff;padding:7px 8px;border-radius:8px;cursor:pointer;font-size:16px}.langs button.on{background:#ff6b00;color:#fff}
+.cats{display:flex;gap:10px;overflow:auto;padding:12px;background:#fff}.cat{min-width:68px;text-align:center;cursor:pointer}.cat i{display:block;width:56px;height:56px;line-height:56px;background:#fff2e6;border-radius:50%;font-size:26px;margin:0 auto 4px}.cat b{font-size:12px}
+.hero{margin:10px;background:linear-gradient(90deg,#e31e24,#ff6b00);color:#fff;border-radius:14px;padding:18px;display:flex;justify-content:space-between;align-items:center}
+.hero h1{font-size:26px}.hero p{opacity:.9}.hero a{background:#fff;color:#e31e24;padding:10px 16px;border-radius:10px;font-weight:800;display:inline-block;margin-top:10px}
+.mini{display:flex;gap:10px;padding:0 10px}.mini div{flex:1;border-radius:12px;padding:14px;color:#fff;font-weight:800}.mini .a{background:#111}.mini .b{background:#0077ff}
+h2{padding:14px 10px 6px;font-size:19px} .grid{display:grid;grid-template-columns:repeat(2,1fr);gap:8px;padding:0 10px}
+@media(min-width:800px){.grid{grid-template-columns:repeat(4,1fr)}}
+.card{background:#fff;border-radius:12px;padding:10px;position:relative}.card .img{font-size:44px;text-align:center;background:#f9f9f9;border-radius:10px;padding:14px 0}
+.badge{position:absolute;top:8px;left:8px;background:#e31e24;color:#fff;font-size:12px;padding:3px 7px;border-radius:20px;font-weight:800}
+.price{color:#e31e24;font-weight:900;font-size:17px}.old{color:#888;text-decoration:line-through;font-size:13px}
+.buy{display:block;text-align:center;background:#ff6b00;color:#fff;padding:9px;border-radius:8px;font-weight:800;margin-top:8px}
+.more{display:block;margin:16px auto;padding:12px 22px;background:#111;color:#fff;border:0;border-radius:10px;font-weight:800;cursor:pointer}
+footer{background:#111;color:#fff;text-align:center;padding:20px;margin-top:10px;font-size:14px}
+</style></head>
+<body id="body">
+<div class="top">Livraison partout en Tunisie | Paiement à la livraison</div>
+<header><div class="logo">Tunisia<span>Bet206</span></div>
+<div class="search"><input id="q" placeholder="Rechercher un produit..."><button onclick="doSearch()">🔍</button></div>
+<div class="langs"><button onclick="setLang('fr',this)" class="on">🇫🇷</button><button onclick="setLang('en',this)">🇬🇧</button><button onclick="setLang('ar',this)">🇹🇳</button></div></header>
+<div class="cats" id="cats"></div>
+<div class="hero"><div><h1>HAPPY FRIDAY - Jusqu'à -70%</h1><p>Les meilleures promos Mytek & Jujma</p><a href="#grid">Voir les promos</a></div><div style="font-size:54px">🔥</div></div>
+<div class="mini"><div class="a">⚡ FLASH OFFRE<br><small>-50% aujourd'hui</small></div><div class="b">🛒 PROMO JUJMA<br><small>Prix bas</small></div></div>
+<h2 id="title">🔥 Flash Offre</h2>
+<div class="grid" id="grid"></div>
+<button class="more" onclick="voirPlus()" id="moreBtn">Voir Plus +</button>
+<footer>Tunisiabet206 © 2026 - WhatsApp : 26 751 581<br><a href="https://mytek.tn" style="color:#ff9">Mytek</a> | <a href="https://jujma.tn" style="color:#ff9">Jujma</a></footer>
 <script>
-var PRODS={
-'taekwondo':['Tenue Taekwondo - Dobok','89 TND','Tenue Taekwondo officielle Dobok blanc. Tissu coton epais, ceinture blanche incluse. Tailles S M L XL. Livraison Tunis 24h.','https://images.unsplash.com/photo-1555597673-b21d5c935865?w=600','https://instagram.com/az__yz80'],
-'kick':['Short Kick Boxing','59 TND','Short Kick Boxing pro - leger, sec vite. Elastique large, poche. Tailles S M L XL.','https://images.unsplash.com/photo-1549719386-74dfcbf7dbed?w=600','https://instagram.com/az__yz80'],
-'kora':['Maillot Kora - Football','69 TND','Maillot Football 2026 - tissu respirant, logo brode. Tailles S M L XL XXL. Equipes dispo.','https://images.unsplash.com/photo-1579952363873-27f3bade9f55?w=600','https://instagram.com/az__yz80'],
-'gants':['Gants Boxe','79 TND','Gants Boxe 12 OZ - cuir synth, protection poignet. Pour entrainement + combat.','https://images.unsplash.com/photo-1544113559-31a4b9ab1c9d?w=600','https://instagram.com/az__yz80'],
-'surv':['Survetement Sport','99 TND','Survetement complet veste + pantalon. Coton chaud, zip. Tailles S M L XL.','https://images.unsplash.com/photo-1517836357463-d25dfeac3438?w=600','https://instagram.com/az__yz80'],
-'baskets':['Baskets Sport','129 TND','Baskets Sport running - semelle amorti, leger. Pointures 39 a 45.','https://images.unsplash.com/photo-1542291026-7eec264c27ff?w=600','https://instagram.com/az__yz80'],
-'casquette':['Casquette Sport','35 TND','Casquette Sport reglable - coton, protection soleil. Couleurs: noir, blanc, rouge.','https://images.unsplash.com/photo-1588850561407-ed78c282e89b?w=600','https://instagram.com/az__yz80'],
-'sac':['Sac Sport','79 TND','Sac Sport grand - 40L, poche chaussures, poche bouteille. Noir / bleu.','https://images.unsplash.com/photo-1553062407-98eeb64c6a62?w=600','https://instagram.com/az__yz80'],
-'montre':['Montre Sport','99 TND','Montre Sport - chrono, etanche, bracelet silicone. Garantie 1 an.','https://images.unsplash.com/photo-1523275335684-37898b6baf30?w=600','https://instagram.com/az__yz80'],
-'bnet':['Dbache Bnet Sport','89 TND','Ensemble Bnet Sport - haut + pantalon, tissu stretch. Tailles S M L.','https://images.unsplash.com/photo-1518459031867-a89b6a7a5c57?w=600','https://instagram.com/az__yz80'],
-'legging':['Legging Bnet Sport','49 TND','Legging Bnet Sport - taille haute, ne glisse pas. Noir / gris / rose.','https://images.unsplash.com/photo-1506629082955-511b1aa562c8?w=600','https://instagram.com/az__yz80'],
-'lunettes':['Lunettes Soleil','45 TND','Lunettes Soleil UV400 - protection 100%, monture legere.','https://images.unsplash.com/photo-1572635196237-14b3f281503f?w=600','https://instagram.com/az__yz80'],
-'iphone':['iPhone 15 Pro','2 899 TND','iPhone 15 Pro 128GB - Titane, puce A17 Pro, camera 48MP. Neuf, garantie 1 an. Livraison Tunis.','https://images.unsplash.com/photo-1592750475338-74b7b21085ab?w=600','https://instagram.com/az__yz80'],
-'samsung':['Samsung S24','2 499 TND','Samsung Galaxy S24 256GB - 5G, camera 50MP, ecran 120Hz. Neuf, garantie.','https://images.unsplash.com/photo-1610945415295-d9bbf067e59c?w=600','https://instagram.com/az__yz80'],
-'redmi':['Redmi Note 13','899 TND','Redmi Note 13 256GB - ecran AMOLED, camera 108MP. Neuf, garantie 1 an.','https://images.unsplash.com/photo-1598327105666-5b89351aff97?w=600','https://instagram.com/az__yz80']
-};
-function openProd(id){var p=PRODS[id];if(!p)return;document.getElementById('pImg').src=p[3];document.getElementById('pName').innerText=p[0];document.getElementById('pPrice').innerText=p[1];document.getElementById('pDesc').innerText=p[2];document.getElementById('pBuy').href='https://instagram.com/az__yz80'; document.getElementById('pBuy').innerText='ECHRI TAWA - Message @az__yz80';var s=document.getElementById('pSizes');s.innerHTML='';['S','M','L','XL'].forEach(function(sz){var b=document.createElement('button');b.innerText=sz;b.style.cssText='padding:8px 14px;border:1px solid #ddd;border-radius:20px;background:#fff';b.onclick=function(){this.style.background='#111';this.style.color='#fff'};s.appendChild(b)});document.getElementById('prodModal').style.display='flex';document.body.style.overflow='hidden';}
-function closeProd(){document.getElementById('prodModal').style.display='none';document.body.style.overflow='';}
-</script>
-</body></html>
-
+const P=[
+["TV Haier 55", "📺",999,1499,"TV"],["Machine a cafe","☕",399,549,"Cafe"],["Trottinette","🛴",899,1199,"Jeux"],["Smartphone","📱",699,899,"Telephone"],
+["Casque Bluetooth","🎧",89,149,"Telephone"],["Montre connectee","⌚",129,199,"Telephone"],["Aspirateur","🧹",249,349,"Maison"],["Mixeur","🥤",119,179,"Cuisine"],
+["Parfum","🧴",69,99,"Beaute"],["Chaussures","👟",99,149,"Vetements"],["Sac","👜",79,119,"Vetements"],["Jouet enfant","🧸",45,69,"Jouets"],
+["Barbecue","🔥",199,299,"Cuisine"],["Cafetiere","☕",159,219,"Cafe"],["Climatiseur","❄️",1199,1599,"Maison"],["Lave-linge","👕",899,1199,"Maison"],
+["Refrigerateur","🧊",1299,1699,"Maison"],["Drone","🚁",349,499,"Jeux"],["Console jeu","🎮",799,999,"Jeux"],["Four electrique","🍕",299,399,"Cuisine"]
+];
+const CATS=[["Tous","🛍️"],["Telephone","📱"],["TV","📺"],["Cafe","☕"],["Cuisine","🍳"],["Beaute","💄"],["Jeux","🎮"],["Maison","🏠"],["Vetements","👗"],["Jouets","🧸"]];
+let shown=20, curCat="Tous", curQ="";
+function renderCats(){document.getElementById("cats").innerHTML=CATS.map(c=>`<div class="cat" onclick="setCat('${c[0]}')"><i>${c[1]}</i><b>${c[0]}</b></div>`).join("")}
+function setCat(c){curCat=c; shown=20; render()}
+function doSearch(){curQ=document.getElementById("q").value.trim().toLowerCase(); shown=20; render()}
+function render(){
+ let list=P.filter(p=> (curCat=="Tous"||p[3]==curCat) && (!curQ || p[0].toLowerCase().includes(curQ)));
+ list.sort((a,b)=> (b[0].toLowerCase()==curQ)-(a[0].toLowerCase()==curQ));
+ let show=list.slice(0,shown);
+ document.getElementById("grid").innerHTML=show.map(p=>{
+  let off=Math.round((1-p[1]/p[2])*100); let link=p[3]=="TV"||p[3]=="Maison"?"https://mytek.tn":"https://jujma.tn";
+  return `<div class="card"><span class="badge">-${off}%</span><div class="img">${p[1]}</div><b>${p[0]}</b><div>⭐⭐⭐⭐⭐</div><div><span class="price">${p[1]} DT</span> <span class="old">${p[2]} DT</span></div><a class="buy" href="${link}" target="_blank">Commander →</a></div>`
+ }).join("") || "<p style='padding:20px'>Aucun resultat</p>";
+ document.getElementById("moreBtn").style.display=list.length>shown?"block":"none";
+}
+function voirPlus(){shown+=8; render()}
+function setLang(l,btn){
+ document.querySelectorAll(".langs button").forEach(b=>b.classList.remove("on")); btn.classList.add("on");
+ document.getElementById("body").dir=l=="ar"?"rtl":"ltr";
+ document.getElementById("q").placeholder=l=="fr"?"Rechercher un produit...":l=="en"?"Search a product...":"لوّج على منتوج...";
+}
+renderCats(); render();
+document.getElementById("q").addEventListener("keyup",e=>{if(e.key=="Enter")doSearch()});
+</script></body></html>
