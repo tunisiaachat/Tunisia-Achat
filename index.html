@@ -29,27 +29,33 @@ body{font-family:Arial,sans-serif;background:#fff;color:#111;direction:ltr;text-
 a{text-decoration:none;color:#111}
 .foot{background:#111;color:#fff;text-align:center;padding:16px;font-size:13px;margin-top:10px}
 .foot a{color:#fff}
-</style></head>
+</style>
+<style>
+#prodModal{display:none;position:fixed;inset:0;background:rgba(0,0,0,.85);z-index:9999;align-items:center;justify-content:center;padding:15px}
+#prodModal .box{background:#fff;border-radius:16px;width:100%;max-width:430px;overflow:hidden;max-height:90vh;overflow-y:auto}
+#prodModal .box img{width:100%;height:260px;object-fit:cover}
+</style>
+</head>
 <body>
 <div class="top">Welcome to Tunisia</div>
 <div class="head"><h1>Tunisia</h1><p>Your hub for music, movies & gaming - shop the latest phones</p><input class="search" placeholder="Rechercher..."><div class="langs"><button>Toutes</button><button>Rap</button><button>Films</button><button>Jeux</button><button>Sport</button></div></div>
 
 <div class="sec"><h2>1. 👕 SPORT - DBACHE - A VENDRE!</h2><div class="grid">
-<a class="card sale" href="https://www.jumia.com.tn/catalog/?q=tenue+taekwondo"><img src="https://images.unsplash.com/photo-1555597673-b21d5c935865?w=400"><div class="t"><b>Tenue Taekwondo - Dobok</b><span>89 TND - ECHRI</span></div></a>
-<a class="card sale" href="https://www.jumia.com.tn/catalog/?q=short+kick+boxing"><img src="https://images.unsplash.com/photo-1549719386-74dfcbf7dbed?w=400"><div class="t"><b>Short Kick Boxing</b><span>59 TND - ECHRI</span></div></a>
-<a class="card sale" href="https://www.jumia.com.tn/catalog/?q=maillot+football"><img src="https://images.unsplash.com/photo-1579952363873-27f3bade9f55?w=400"><div class="t"><b>Maillot Kora - Football</b><span>69 TND - ECHRI</span></div></a>
-<a class="card sale" href="https://www.jumia.com.tn/catalog/?q=gants+boxe"><img src="https://images.unsplash.com/photo-1544113559-31a4b9ab1c9d?w=400"><div class="t"><b>Gants Boxe</b><span>79 TND - ECHRI</span></div></a>
-<a class="card sale" href="https://www.jumia.com.tn/catalog/?q=survetement+sport"><img src="https://images.unsplash.com/photo-1517836357463-d25dfeac3438?w=400"><div class="t"><b>Survetement Sport</b><span>99 TND - ECHRI</span></div></a>
-<a class="card sale" href="https://www.jumia.com.tn/catalog/?q=basket+sport"><img src="https://images.unsplash.com/photo-1542291026-7eec264c27ff?w=400"><div class="t"><b>Baskets Sport</b><span>129 TND - ECHRI</span></div></a>
+<a class="card sale" href="javascript:void(0)" onclick="openProd('taekwondo')"><img src="https://images.unsplash.com/photo-1555597673-b21d5c935865?w=400"><div class="t"><b>Tenue Taekwondo - Dobok</b><span>89 TND - ECHRI</span></div></a>
+<a class="card sale" href="javascript:void(0)" onclick="openProd('kick')"><img src="https://images.unsplash.com/photo-1549719386-74dfcbf7dbed?w=400"><div class="t"><b>Short Kick Boxing</b><span>59 TND - ECHRI</span></div></a>
+<a class="card sale" href="javascript:void(0)" onclick="openProd('kora')"><img src="https://images.unsplash.com/photo-1579952363873-27f3bade9f55?w=400"><div class="t"><b>Maillot Kora - Football</b><span>69 TND - ECHRI</span></div></a>
+<a class="card sale" href="javascript:void(0)" onclick="openProd('gants')"><img src="https://images.unsplash.com/photo-1544113559-31a4b9ab1c9d?w=400"><div class="t"><b>Gants Boxe</b><span>79 TND - ECHRI</span></div></a>
+<a class="card sale" href="javascript:void(0)" onclick="openProd('surv')"><img src="https://images.unsplash.com/photo-1517836357463-d25dfeac3438?w=400"><div class="t"><b>Survetement Sport</b><span>99 TND - ECHRI</span></div></a>
+<a class="card sale" href="javascript:void(0)" onclick="openProd('baskets')"><img src="https://images.unsplash.com/photo-1542291026-7eec264c27ff?w=400"><div class="t"><b>Baskets Sport</b><span>129 TND - ECHRI</span></div></a>
 </div></div>
 
 <div class="sec"><h2>🧢 Accessoires + Bnet Sport - A VENDRE!</h2><div class="grid">
-<a class="card sale" href="https://www.jumia.com.tn/catalog/?q=casquette"><img src="https://images.unsplash.com/photo-1588850561407-ed78c282e89b?w=400"><div class="t"><b>Casquette Sport</b><span>35 TND - ECHRI</span></div></a>
-<a class="card sale" href="https://www.jumia.com.tn/catalog/?q=sac+sport"><img src="https://images.unsplash.com/photo-1553062407-98eeb64c6a62?w=400"><div class="t"><b>Sac Sport</b><span>79 TND - ECHRI</span></div></a>
-<a class="card sale" href="https://www.jumia.com.tn/catalog/?q=montre+sport"><img src="https://images.unsplash.com/photo-1523275335684-37898b6baf30?w=400"><div class="t"><b>Montre Sport</b><span>99 TND - ECHRI</span></div></a>
-<a class="card sale" href="https://www.jumia.com.tn/catalog/?q=tenue+sport+femme"><img src="https://images.unsplash.com/photo-1518459031867-a89b6a7a5c57?w=400"><div class="t"><b>Dbache Bnet Sport</b><span>89 TND - ECHRI</span></div></a>
-<a class="card sale" href="https://www.jumia.com.tn/catalog/?q=legging+sport+femme"><img src="https://images.unsplash.com/photo-1506629082955-511b1aa562c8?w=400"><div class="t"><b>Legging Bnet Sport</b><span>49 TND - ECHRI</span></div></a>
-<a class="card sale" href="https://www.jumia.com.tn/catalog/?q=lunette+soleil"><img src="https://images.unsplash.com/photo-1572635196237-14b3f281503f?w=400"><div class="t"><b>Lunettes Soleil</b><span>45 TND - ECHRI</span></div></a>
+<a class="card sale" href="javascript:void(0)" onclick="openProd('casquette')"><img src="https://images.unsplash.com/photo-1588850561407-ed78c282e89b?w=400"><div class="t"><b>Casquette Sport</b><span>35 TND - ECHRI</span></div></a>
+<a class="card sale" href="javascript:void(0)" onclick="openProd('sac')"><img src="https://images.unsplash.com/photo-1553062407-98eeb64c6a62?w=400"><div class="t"><b>Sac Sport</b><span>79 TND - ECHRI</span></div></a>
+<a class="card sale" href="javascript:void(0)" onclick="openProd('montre')"><img src="https://images.unsplash.com/photo-1523275335684-37898b6baf30?w=400"><div class="t"><b>Montre Sport</b><span>99 TND - ECHRI</span></div></a>
+<a class="card sale" href="javascript:void(0)" onclick="openProd('bnet')"><img src="https://images.unsplash.com/photo-1518459031867-a89b6a7a5c57?w=400"><div class="t"><b>Dbache Bnet Sport</b><span>89 TND - ECHRI</span></div></a>
+<a class="card sale" href="javascript:void(0)" onclick="openProd('legging')"><img src="https://images.unsplash.com/photo-1506629082955-511b1aa562c8?w=400"><div class="t"><b>Legging Bnet Sport</b><span>49 TND - ECHRI</span></div></a>
+<a class="card sale" href="javascript:void(0)" onclick="openProd('lunettes')"><img src="https://images.unsplash.com/photo-1572635196237-14b3f281503f?w=400"><div class="t"><b>Lunettes Soleil</b><span>45 TND - ECHRI</span></div></a>
 </div></div>
 
 <div class="sec"><h2>2. 🎵 5 Music - Top Rap</h2><div class="grid">
@@ -78,15 +84,15 @@ a{text-decoration:none;color:#111}
 </div></div>
 
 <div class="sec"><h2>🛒 A VENDRE - Telephones</h2><div class="grid">
-<a class="card sale" href="https://www.jumia.com.tn/catalog/?q=iphone+15+pro"><img src="https://images.unsplash.com/photo-1592750475338-74b7b21085ab?w=400"><div class="t"><b>iPhone 15 Pro</b><span>2 899 TND - ECHRI</span></div></a>
-<a class="card sale" href="https://www.jumia.com.tn/catalog/?q=samsung+s24"><img src="https://images.unsplash.com/photo-1610945415295-d9bbf067e59c?w=400"><div class="t"><b>Samsung S24</b><span>2 499 TND - ECHRI</span></div></a>
-<a class="card sale" href="https://www.jumia.com.tn/catalog/?q=redmi+note+13"><img src="https://images.unsplash.com/photo-1598327105666-5b89351aff97?w=400"><div class="t"><b>Redmi Note 13</b><span>899 TND - ECHRI</span></div></a>
+<a class="card sale" href="javascript:void(0)" onclick="openProd('iphone')"><img src="https://images.unsplash.com/photo-1592750475338-74b7b21085ab?w=400"><div class="t"><b>iPhone 15 Pro</b><span>2 899 TND - ECHRI</span></div></a>
+<a class="card sale" href="javascript:void(0)" onclick="openProd('samsung')"><img src="https://images.unsplash.com/photo-1610945415295-d9bbf067e59c?w=400"><div class="t"><b>Samsung S24</b><span>2 499 TND - ECHRI</span></div></a>
+<a class="card sale" href="javascript:void(0)" onclick="openProd('redmi')"><img src="https://images.unsplash.com/photo-1598327105666-5b89351aff97?w=400"><div class="t"><b>Redmi Note 13</b><span>899 TND - ECHRI</span></div></a>
 </div></div>
 
 
 <div class="sec"><h2>Annonces Sponsorisees</h2><div class="grid">
-<a class="card" href="https://www.jumia.com.tn/catalog/?q=manette+ps4" target="_blank"><img src="https://images.unsplash.com/photo-1606144042614-b2417e99c4e3?w=400"><div class="t"><b>Gaming Shop Tunis - Manettes -50%</b><span>Sponsorise</span></div></a>
-<a class="card" href="https://www.jumia.com.tn/catalog/?q=iphone+15" target="_blank"><img src="https://images.unsplash.com/photo-1592750475338-74b7b21085ab?w=400"><div class="t"><b>Phone Shop - iPhone 15 Dispo!</b><span>Sponsorise</span></div></a>
+<a class="card" href="https://instagram.com/az__yz80" target="_blank"><img src="https://images.unsplash.com/photo-1606144042614-b2417e99c4e3?w=400"><div class="t"><b>Gaming Shop Tunis - Manettes -50%</b><span>Sponsorise</span></div></a>
+<a class="card" href="https://instagram.com/az__yz80" target="_blank"><img src="https://images.unsplash.com/photo-1592750475338-74b7b21085ab?w=400"><div class="t"><b>Phone Shop - iPhone 15 Dispo!</b><span>Sponsorise</span></div></a>
 </div>
 <a href="https://instagram.com/az__yz80" target="_blank" style="display:block;background:#FFC107;color:#000;text-align:center;padding:14px;border-radius:12px;font-weight:bold;margin-top:10px">Je veux une Annonce ici - Contactez-moi!</a></div>
 
@@ -122,5 +128,37 @@ a{text-decoration:none;color:#111}
 
 <div class="sec" style="background:#F8F8F8;border-radius:14px;padding:16px"><h2>Site Mawthou9 - Tunisia Officiel</h2><p style="font-size:14px;line-height:1.6">Tunisia howa site Tounsi officiel. Rap Tounsi, Films, Jeux, GTA 6.<br><b>Proprietaire:</b> Aziz Aziz - Tunis<br><b>Contact:</b> <a href="https://instagram.com/az__yz80" style="color:#E1306C;font-weight:bold">@az__yz80 - Instagram</a><br><b>Depuis:</b> 2026 - Tunis</p><a href="https://instagram.com/az__yz80" target="_blank" style="display:inline-block;background:#000;color:#fff;padding:12px 20px;border-radius:20px;font-weight:bold;margin-top:10px">Verifier sur Instagram</a></div>
 <div class="foot">2026 Tunisia - Tunis<br>Contact: <a href="https://instagram.com/az__yz80">@az__yz80</a> - Instagram</div>
+
+<div id="prodModal" onclick="closeProd()"><div class="box" onclick="event.stopPropagation()">
+<img id="pImg" src="">
+<div style="padding:16px">
+<div style="display:flex;justify-content:space-between;align-items:start"><h2 id="pName" style="font-size:20px"></h2><p style="font-size:13px;color:#666;text-align:center;margin-top:10px">Tiklik 3al bouton -> yet7al Instagram mte3i - ab3athli esm l produit - njawebek w nab3athlek - ma3adch Jumia!</p><button onclick="closeProd()" style="border:0;background:#E70013;color:#fff;border-radius:50%;width:32px;height:32px;font-size:18px">X</button></div>
+<div id="pPrice" style="color:#E70013;font-size:22px;font-weight:bold;margin:8px 0"></div>
+<p id="pDesc" style="font-size:14px;color:#444;line-height:1.6"></p>
+<div id="pSizes" style="display:flex;gap:8px;margin:12px 0"></div>
+<a id="pBuy" href="#" target="_blank" style="display:block;background:#E70013;color:#fff;text-align:center;padding:14px;border-radius:12px;font-weight:bold;text-decoration:none;font-size:16px">ECHRI TAWA - Commander sur Instagram</a>
+<p style="font-size:13px;color:#666;text-align:center;margin-top:10px">Tiklik 3al bouton -> yet7al Instagram mte3i - ab3athli esm l produit - njawebek w nab3athlek - ma3adch Jumia!</p><button onclick="closeProd()" style="width:100%;margin-top:10px;padding:12px;border:1px solid #ddd;background:#fff;border-radius:12px">Retour au site</button>
+</div></div></div>
+<script>
+var PRODS={
+'taekwondo':['Tenue Taekwondo - Dobok','89 TND','Tenue Taekwondo officielle Dobok blanc. Tissu coton epais, ceinture blanche incluse. Tailles S M L XL. Livraison Tunis 24h.','https://images.unsplash.com/photo-1555597673-b21d5c935865?w=600','https://instagram.com/az__yz80'],
+'kick':['Short Kick Boxing','59 TND','Short Kick Boxing pro - leger, sec vite. Elastique large, poche. Tailles S M L XL.','https://images.unsplash.com/photo-1549719386-74dfcbf7dbed?w=600','https://instagram.com/az__yz80'],
+'kora':['Maillot Kora - Football','69 TND','Maillot Football 2026 - tissu respirant, logo brode. Tailles S M L XL XXL. Equipes dispo.','https://images.unsplash.com/photo-1579952363873-27f3bade9f55?w=600','https://instagram.com/az__yz80'],
+'gants':['Gants Boxe','79 TND','Gants Boxe 12 OZ - cuir synth, protection poignet. Pour entrainement + combat.','https://images.unsplash.com/photo-1544113559-31a4b9ab1c9d?w=600','https://instagram.com/az__yz80'],
+'surv':['Survetement Sport','99 TND','Survetement complet veste + pantalon. Coton chaud, zip. Tailles S M L XL.','https://images.unsplash.com/photo-1517836357463-d25dfeac3438?w=600','https://instagram.com/az__yz80'],
+'baskets':['Baskets Sport','129 TND','Baskets Sport running - semelle amorti, leger. Pointures 39 a 45.','https://images.unsplash.com/photo-1542291026-7eec264c27ff?w=600','https://instagram.com/az__yz80'],
+'casquette':['Casquette Sport','35 TND','Casquette Sport reglable - coton, protection soleil. Couleurs: noir, blanc, rouge.','https://images.unsplash.com/photo-1588850561407-ed78c282e89b?w=600','https://instagram.com/az__yz80'],
+'sac':['Sac Sport','79 TND','Sac Sport grand - 40L, poche chaussures, poche bouteille. Noir / bleu.','https://images.unsplash.com/photo-1553062407-98eeb64c6a62?w=600','https://instagram.com/az__yz80'],
+'montre':['Montre Sport','99 TND','Montre Sport - chrono, etanche, bracelet silicone. Garantie 1 an.','https://images.unsplash.com/photo-1523275335684-37898b6baf30?w=600','https://instagram.com/az__yz80'],
+'bnet':['Dbache Bnet Sport','89 TND','Ensemble Bnet Sport - haut + pantalon, tissu stretch. Tailles S M L.','https://images.unsplash.com/photo-1518459031867-a89b6a7a5c57?w=600','https://instagram.com/az__yz80'],
+'legging':['Legging Bnet Sport','49 TND','Legging Bnet Sport - taille haute, ne glisse pas. Noir / gris / rose.','https://images.unsplash.com/photo-1506629082955-511b1aa562c8?w=600','https://instagram.com/az__yz80'],
+'lunettes':['Lunettes Soleil','45 TND','Lunettes Soleil UV400 - protection 100%, monture legere.','https://images.unsplash.com/photo-1572635196237-14b3f281503f?w=600','https://instagram.com/az__yz80'],
+'iphone':['iPhone 15 Pro','2 899 TND','iPhone 15 Pro 128GB - Titane, puce A17 Pro, camera 48MP. Neuf, garantie 1 an. Livraison Tunis.','https://images.unsplash.com/photo-1592750475338-74b7b21085ab?w=600','https://instagram.com/az__yz80'],
+'samsung':['Samsung S24','2 499 TND','Samsung Galaxy S24 256GB - 5G, camera 50MP, ecran 120Hz. Neuf, garantie.','https://images.unsplash.com/photo-1610945415295-d9bbf067e59c?w=600','https://instagram.com/az__yz80'],
+'redmi':['Redmi Note 13','899 TND','Redmi Note 13 256GB - ecran AMOLED, camera 108MP. Neuf, garantie 1 an.','https://images.unsplash.com/photo-1598327105666-5b89351aff97?w=600','https://instagram.com/az__yz80']
+};
+function openProd(id){var p=PRODS[id];if(!p)return;document.getElementById('pImg').src=p[3];document.getElementById('pName').innerText=p[0];document.getElementById('pPrice').innerText=p[1];document.getElementById('pDesc').innerText=p[2];document.getElementById('pBuy').href='https://instagram.com/az__yz80'; document.getElementById('pBuy').innerText='ECHRI TAWA - Message @az__yz80';var s=document.getElementById('pSizes');s.innerHTML='';['S','M','L','XL'].forEach(function(sz){var b=document.createElement('button');b.innerText=sz;b.style.cssText='padding:8px 14px;border:1px solid #ddd;border-radius:20px;background:#fff';b.onclick=function(){this.style.background='#111';this.style.color='#fff'};s.appendChild(b)});document.getElementById('prodModal').style.display='flex';document.body.style.overflow='hidden';}
+function closeProd(){document.getElementById('prodModal').style.display='none';document.body.style.overflow='';}
+</script>
 </body></html>
 
