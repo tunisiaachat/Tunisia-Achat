@@ -1,62 +1,78 @@
 <!DOCTYPE html>
 <html lang="fr"><head><meta charset="UTF-8"><meta name="viewport" content="width=device-width,initial-scale=1">
-<title>Tunisiabet206 - Promo Tunisie</title>
+<meta name="color-scheme" content="light">
+<title>Tunisiabet206</title>
 <style>
+:root{color-scheme:light}
 *{box-sizing:border-box;margin:0;padding:0;font-family:Arial,sans-serif}
-body{background:#f6f6f6;color:#111} a{text-decoration:none;color:inherit}
-.top{background:#111;color:#fff;text-align:center;padding:6px;font-size:13px}
-header{position:sticky;top:0;background:#fff;display:flex;gap:10px;align-items:center;padding:10px;z-index:10}
-.logo{font-weight:900;font-size:22px;white-space:nowrap}.logo span{color:#ff6b00}
-.search{flex:1;display:flex} .search input{flex:1;padding:11px;border:2px solid #ff6b00;border-radius:8px 0 0 8px;outline:none}
-.search button{background:#ff6b00;color:#fff;border:0;padding:0 16px;border-radius:0 8px 8px 0;font-weight:700;cursor:pointer}
-.langs{display:flex;gap:4px}.langs button{border:1px solid #ddd;background:#fff;padding:7px 8px;border-radius:8px;cursor:pointer}
-.cats{display:flex;gap:10px;overflow:auto;padding:12px;background:#fff}.cat{min-width:68px;text-align:center;cursor:pointer}.cat i{display:block;width:56px;height:56px;line-height:56px;background:#fff2e6;border-radius:50%;font-size:26px;margin:0 auto 4px}.cat b{font-size:12px}
-.hero{margin:10px;background:linear-gradient(90deg,#e31e24,#ff6b00);color:#fff;border-radius:14px;padding:18px;display:flex;justify-content:space-between;align-items:center}
+body{background:#f6f6f6!important;color:#111!important}
+.top{background:#111!important;color:#fff!important;text-align:center;padding:6px;font-size:13px}
+header{position:sticky;top:0;background:#fff!important;display:flex;gap:10px;align-items:center;padding:10px}
+.logo{font-weight:900;font-size:22px}.logo span{color:#ff6b00}
+.search{flex:1;display:flex}.search input{flex:1;padding:11px;border:2px solid #ff6b00;border-radius:8px 0 0 8px;outline:none;background:#fff!important;color:#111!important}
+.search button{background:#ff6b00;color:#fff;border:0;padding:0 16px;border-radius:0 8px 8px 0;font-weight:700}
+.cats{display:flex;gap:10px;overflow:auto;padding:12px;background:#fff!important}.cat{min-width:68px;text-align:center;cursor:pointer}.cat i{display:block;width:56px;height:56px;line-height:56px;background:#fff2e6;border-radius:50%;font-size:26px;margin:0 auto 4px}.cat b{font-size:12px;color:#111}
+.hero{margin:10px;background:linear-gradient(90deg,#e31e24,#ff6b00);color:#fff;border-radius:14px;padding:18px}
 .hero h1{font-size:26px}.hero a{background:#fff;color:#e31e24;padding:10px 16px;border-radius:10px;font-weight:800;display:inline-block;margin-top:10px}
 .mini{display:flex;gap:10px;padding:0 10px}.mini div{flex:1;border-radius:12px;padding:14px;color:#fff;font-weight:800}.mini .a{background:#111}.mini .b{background:#0077ff}
-h2{padding:14px 10px 6px;font-size:19px} .grid{display:grid;grid-template-columns:repeat(2,1fr);gap:8px;padding:0 10px}
+h2{padding:14px 10px 6px}.grid{display:grid;grid-template-columns:repeat(2,1fr);gap:8px;padding:0 10px}
 @media(min-width:800px){.grid{grid-template-columns:repeat(4,1fr)}}
-.card{background:#fff;border-radius:12px;padding:10px;position:relative}.card .img{font-size:44px;text-align:center;background:#f9f9f9;border-radius:10px;padding:14px 0}
+.card{background:#fff!important;color:#111!important;border-radius:12px;padding:10px;position:relative}.card .img{font-size:44px;text-align:center;background:#f9f9f9;border-radius:10px;padding:14px 0}
 .badge{position:absolute;top:8px;left:8px;background:#e31e24;color:#fff;font-size:12px;padding:3px 7px;border-radius:20px;font-weight:800}
 .price{color:#e31e24;font-weight:900;font-size:17px}.old{color:#888;text-decoration:line-through;font-size:13px}
 .buy{display:block;text-align:center;background:#ff6b00;color:#fff;padding:9px;border-radius:8px;font-weight:800;margin-top:8px}
-.more{display:block;margin:16px auto;padding:12px 22px;background:#111;color:#fff;border:0;border-radius:10px;font-weight:800;cursor:pointer}
-footer{background:#111;color:#fff;text-align:center;padding:20px;margin-top:10px;font-size:14px}
+.more{display:block;margin:16px auto;padding:12px 22px;background:#111;color:#fff;border:0;border-radius:10px;font-weight:800}
+footer{background:#111;color:#fff;text-align:center;padding:20px;font-size:14px}
+footer a{color:#ffb300}
 </style></head>
 <body>
 <div class="top">Livraison partout en Tunisie | Paiement a la livraison</div>
 <header><div class="logo">Tunisia<span>Bet206</span></div>
-<div class="search"><input id="q" placeholder="Rechercher un produit..."><button onclick="doSearch()">🔍</button></div>
-<div class="langs"><button>🇫🇷</button><button>🇬🇧</button><button>🇹🇳</button></div></header>
+<div class="search"><input id="q" placeholder="Rechercher un produit..."><button onclick="doSearch()">🔍</button></div></header>
 <div class="cats" id="cats"></div>
-<div class="hero"><div><h1>HAPPY FRIDAY - Jusqu'a -70%</h1><p>Les meilleures promos Mytek & Jujma</p><a href="#grid">Voir les promos</a></div><div style="font-size:54px">🔥</div></div>
-<div class="mini"><div class="a">⚡ FLASH OFFRE<br><small>-50% aujourd'hui</small></div><div class="b">🛒 PROMO JUJMA<br><small>Prix bas</small></div></div>
+<div class="hero"><h1>HAPPY FRIDAY - Jusqu'a -70%</h1><p>Les meilleures promos Mytek & Jujma</p><a href="#grid">Voir les promos</a></div>
+<div class="mini"><div class="a">⚡ FLASH OFFRE -50% aujourd'hui</div><div class="b">🛒 PROMO JUJMA - Prix bas</div></div>
 <h2>🔥 Flash Offre</h2>
 <div class="grid" id="grid"></div>
 <button class="more" onclick="voirPlus()" id="moreBtn">Voir Plus +</button>
-<footer>Tunisiabet206 © 2026 - WhatsApp : 26 751 581</footer>
+<footer>Tunisiabet206 © 2026<br>
+<a href="https://mytek.tn" target="_blank">👉 Aller sur Mytek.tn</a> | 
+<a href="https://jujma.tn" target="_blank">👉 Aller sur Jujma.tn</a><br>
+WhatsApp : 26 751 581</footer>
 <script>
 const P=[
-["TV Haier 55","📺",999,1499,"TV"],["Machine a cafe","☕",399,549,"Cafe"],["Trottinette","🛴",899,1199,"Jeux"],["Smartphone","📱",699,899,"Telephone"],
-["Casque Bluetooth","🎧",89,149,"Telephone"],["Montre connectee","⌚",129,199,"Telephone"],["Aspirateur","🧹",249,349,"Maison"],["Mixeur","🥤",119,179,"Cuisine"],
-["Parfum","🧴",69,99,"Beaute"],["Chaussures","👟",99,149,"Vetements"],["Sac","👜",79,119,"Vetements"],["Jouet enfant","🧸",45,69,"Jouets"],
-["Barbecue","🔥",199,299,"Cuisine"],["Cafetiere","☕",159,219,"Cafe"],["Climatiseur","❄️",1199,1599,"Maison"],["Lave-linge","👕",899,1199,"Maison"],
-["Refrigerateur","🧊",1299,1699,"Maison"],["Drone","🚁",349,499,"Jeux"],["Console jeu","🎮",799,999,"Jeux"],["Four electrique","🍕",299,399,"Cuisine"]
+{name:"TV Haier 55",emoji:"📺",price:999,old:1499,cat:"TV",link:"https://mytek.tn"},
+{name:"Machine a cafe",emoji:"☕",price:399,old:549,cat:"Cafe",link:"https://mytek.tn"},
+{name:"Trottinette",emoji:"🛴",price:899,old:1199,cat:"Jeux",link:"https://jujma.tn"},
+{name:"Smartphone",emoji:"📱",price:699,old:899,cat:"Telephone",link:"https://mytek.tn"},
+{name:"Casque Bluetooth",emoji:"🎧",price:89,old:149,cat:"Telephone",link:"https://jujma.tn"},
+{name:"Montre connectee",emoji:"⌚",price:129,old:199,cat:"Telephone",link:"https://jujma.tn"},
+{name:"Aspirateur",emoji:"🧹",price:249,old:349,cat:"Maison",link:"https://mytek.tn"},
+{name:"Mixeur",emoji:"🥤",price:119,old:179,cat:"Cuisine",link:"https://jujma.tn"},
+{name:"Parfum",emoji:"🧴",price:69,old:99,cat:"Beaute",link:"https://jujma.tn"},
+{name:"Chaussures",emoji:"👟",price:99,old:149,cat:"Vetements",link:"https://jujma.tn"},
+{name:"Sac",emoji:"👜",price:79,old:119,cat:"Vetements",link:"https://jujma.tn"},
+{name:"Jouet enfant",emoji:"🧸",price:45,old:69,cat:"Jouets",link:"https://jujma.tn"},
+{name:"Barbecue",emoji:"🔥",price:199,old:299,cat:"Cuisine",link:"https://jujma.tn"},
+{name:"Cafetiere",emoji:"☕",price:159,old:219,cat:"Cafe",link:"https://mytek.tn"},
+{name:"Climatiseur",emoji:"❄️",price:1199,old:1599,cat:"Maison",link:"https://mytek.tn"},
+{name:"Lave-linge",emoji:"👕",price:899,old:1199,cat:"Maison",link:"https://mytek.tn"},
+{name:"Refrigerateur",emoji:"🧊",price:1299,old:1699,cat:"Maison",link:"https://mytek.tn"},
+{name:"Drone",emoji:"🚁",price:349,old:499,cat:"Jeux",link:"https://jujma.tn"},
+{name:"Console jeu",emoji:"🎮",price:799,old:999,cat:"Jeux",link:"https://mytek.tn"},
+{name:"Four electrique",emoji:"🍕",price:299,old:399,cat:"Cuisine",link:"https://jujma.tn"}
 ];
 const CATS=[["Tous","🛍️"],["Telephone","📱"],["TV","📺"],["Cafe","☕"],["Cuisine","🍳"],["Beaute","💄"],["Jeux","🎮"],["Maison","🏠"],["Vetements","👗"],["Jouets","🧸"]];
 let shown=20, curCat="Tous", curQ="";
 function renderCats(){document.getElementById("cats").innerHTML=CATS.map(c=>`<div class="cat" onclick="setCat('${c[0]}')"><i>${c[1]}</i><b>${c[0]}</b></div>`).join("")}
-function setCat(c){curCat=c; shown=20; render()}
-function doSearch(){curQ=document.getElementById("q").value.trim().toLowerCase(); shown=20; render()}
+function setCat(c){curCat=c; render()}
+function doSearch(){curQ=document.getElementById("q").value.trim().toLowerCase(); render()}
 function render(){
- let list=P.filter(p=> (curCat=="Tous"||p[4]==curCat) && (!curQ || p[0].toLowerCase().includes(curQ)));
- let show=list.slice(0,shown);
- document.getElementById("grid").innerHTML=show.map(p=>{
-  let off=Math.round((1-p[2]/p[3])*100);
-  let link=(p[4]=="TV"||p[4]=="Maison")?"https://mytek.tn":"https://jujma.tn";
-  return `<div class="card"><span class="badge">-${off}%</span><div class="img">${p[1]}</div><b>${p[0]}</b><div>⭐⭐⭐⭐⭐</div><div><span class="price">${p[2]} DT</span> <span class="old">${p[3]} DT</span></div><a class="buy" href="${link}" target="_blank">Commander →</a></div>`
+ let list=P.filter(p=> (curCat=="Tous"||p.cat==curCat) && (!curQ || p.name.toLowerCase().includes(curQ)));
+ document.getElementById("grid").innerHTML=list.slice(0,shown).map(p=>{
+  let off=Math.round((1-p.price/p.old)*100);
+  return `<div class="card"><span class="badge">-${off}%</span><div class="img">${p.emoji}</div><b>${p.name}</b><div>⭐⭐⭐⭐⭐</div><div><span class="price">${p.price} DT</span> <span class="old">${p.old} DT</span></div><a class="buy" href="${p.link}" target="_blank">Commander →</a></div>`
  }).join("");
- document.getElementById("moreBtn").style.display=list.length>shown?"block":"none";
 }
 function voirPlus(){shown+=8; render()}
 renderCats(); render();
