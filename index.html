@@ -30,11 +30,10 @@ header{position:sticky;top:0;background:#131921!important;display:flex;gap:10px;
 .price{color:#e31e24;font-weight:900;font-size:18px}.old{color:#888;text-decoration:line-through;font-size:13px}
 .buy{display:block;text-align:center;background:#ff9900;color:#111;padding:10px;border-radius:8px;font-weight:900;margin-top:8px;border:0;width:100%;cursor:pointer}
 .news{background:#131921;color:#fff;margin:10px;border-radius:14px;padding:16px;text-align:center}
-.news input{padding:10px;border-radius:8px;border:0;width:70%}
-.news button{padding:10px 14px;background:#ff9900;border:0;border-radius:8px;font-weight:900}
+.news input{padding:11px;border-radius:8px;border:0;width:70%;color:#111}
+.news button{padding:11px 14px;background:#ff9900;border:0;border-radius:8px;font-weight:900;cursor:pointer}
 footer{background:#111;color:#fff;text-align:center;padding:22px;line-height:2}
 footer a{color:#ffb300}
-/* MODAL PAGE PRODUIT */
 #modal{display:none;position:fixed;inset:0;background:rgba(0,0,0,.7);z-index:99;align-items:center;justify-content:center;padding:16px}
 #modal .box{background:#fff;border-radius:16px;padding:18px;max-width:420px;width:100%;text-align:center}
 </style></head>
@@ -50,7 +49,7 @@ footer a{color:#ffb300}
 <a class="site" href="https://ubleprais-pixel.github.io/Tunisiabet206/" target="_blank">🔗 Mon Site</a>
 </div>
 
-<div class="hero"><h1>🔥 MEGA PROMO MONDIALE - Jusqu'à -80%</h1><p>【entity-Amazon¦canonical_name=Amazon】 • 【entity-AliExpress¦canonical_name=AliExpress】 • 【entity-Shein¦canonical_name=Shein】 • 【entity-Temu¦canonical_name=Temu】 • Mytek • Jujma - Tout en un seul site !</p><a href="#shops">Voir les deals ↓</a></div>
+<div class="hero"><h1>🔥 MEGA PROMO MONDIALE - Jusqu'à -80%</h1><p> 【entity-Amazon¦canonical_name=Amazon】 • 【entity-AliExpress¦canonical_name=AliExpress】 • 【entity-Shein¦canonical_name=Shein】 • 【entity-Temu¦canonical_name=Temu】 • Mytek • Jujma - Tout en un seul site !</p><a href="#shops">Voir les deals ↓</a></div>
 <div class="count">⏰ FLASH DEAL - Il reste : <span id="timer">23:59:59</span> - Dépêche-toi !</div>
 <div class="coupons">
 <div class="coupon">🎟️ <b>-10%</b><br>Code: BET10<br>Sur tout le site</div>
@@ -61,10 +60,15 @@ footer a{color:#ffb300}
 
 <div id="shops"></div>
 
-<div class="news"><h3>📩 Reçois les promos avant tout le monde</h3><p>Mets ton WhatsApp et on t'envoie les deals 【entity-Amazon¦canonical_name=Amazon】 & 【entity-AliExpress¦canonical_name=AliExpress】</p><br><input placeholder="Ton WhatsApp..."><button>S'inscrire</button></div>
-<footer>Tunisiabet206 © 2026 - Le 【entity-Amazon¦canonical_name=Amazon】 Tunisien 🇹🇳🌍<br>📸 Instagram : <a href="https://instagram.com/az__yz80">instagram.com/az__yz80</a><br>🔗 Mon site : ubleprais-pixel.github.io/Tunisiabet206</footer>
+<!-- INSCRIPTION TE5DEM -->
+<div class="news"><h3>📩 Reçois les promos avant tout le monde</h3><p>Mets ton WhatsApp et on t'envoie les deals 【entity-Amazon¦canonical_name=Amazon】 & 【entity-AliExpress¦canonical_name=AliExpress】</p><br>
+<input id="waNum" placeholder="Ton WhatsApp... ex: 48113022">
+<button onclick="inscrire()">S'inscrire</button>
+<p id="msgOk" style="color:#25D366;font-weight:900;margin-top:10px"></p>
+</div>
 
-<!-- PAGE PRODUIT -->
+<footer>Tunisiabet206 © 2026 - Le Amazon Tunisien 🇹🇳🌍<br>📸 Instagram : <a href="https://instagram.com/az__yz80">instagram.com/az__yz80</a><br>🔗 Mon site : ubleprais-pixel.github.io/Tunisiabet206</footer>
+
 <div id="modal"><div class="box">
 <div id="mEmoji" style="font-size:70px"></div>
 <h2 id="mName"></h2><div>⭐⭐⭐⭐⭐ (2.3k avis)</div>
@@ -83,19 +87,19 @@ const SHOPS=[
 {name:"Montre Smart",emoji:"⌚",price:199,old:299,tag:"-33%"},
 {name:"Drone 4K",emoji:"🚁",price:349,old:499,tag:"FLASH"},
 {name:"Robot Aspirateur",emoji:"🤖",price:599,old:899,tag:"-33%"}]},
-{id:"【entity-aliexpress¦canonical_name=AliExpress】",name:"🇨🇳 【entity-ALIEXPRESS¦canonical_name=AliExpress】 - Prix Usine",link:"https://www.aliexpress.com",items:[
+{id:" 【entity-aliexpress¦canonical_name=AliExpress】",name:"🇨🇳 【entity-ALIEXPRESS¦canonical_name=AliExpress】 - Prix Usine",link:"https://www.aliexpress.com",items:[
 {name:"Montre Luxe",emoji:"⌚",price:25,old:89,tag:"-71%"},
 {name:"Casque Bluetooth",emoji:"🎧",price:19,old:59,tag:"-67%"},
 {name:"Lampe LED",emoji:"💡",price:9,old:29,tag:"-68%"},
 {name:"Mini Projecteur",emoji:"📽️",price:89,old:199,tag:"-55%"},
 {name:"Chaussures Sport",emoji:"👟",price:35,old:99,tag:"-64%"}]},
-{id:"【entity-shein¦canonical_name=Shein】",name:"👗 【entity-SHEIN¦canonical_name=Shein】 - Mode",link:"https://www.shein.com",items:[
+{id:" shein",name:"👗 SHEIN - Mode",link:"https://www.shein.com",items:[
 {name:"Robe Tendance",emoji:"👗",price:39,old:89,tag:"-56%"},
 {name:"Veste Homme",emoji:"🧥",price:59,old:119,tag:"-50%"},
 {name:"Sac Tendance",emoji:"👜",price:29,old:69,tag:"-57%"},
 {name:"Sneakers Femme",emoji:"👟",price:49,old:99,tag:"-50%"},
 {name:"Lunettes Soleil",emoji:"🕶️",price:15,old:39,tag:"-61%"}]},
-{id:"temu",name:"🛍️ TEMU - Tout à 1€",link:"https://www.temu.com",items:[
+{id:"【entity-temu¦canonical_name=Temu】",name:"🛍️ 【entity-TEMU¦canonical_name=Temu】 - Tout à 1€",link:"https://www.temu.com",items:[
 {name:"Gadget Cuisine",emoji:"🍳",price:7,old:25,tag:"-72%"},
 {name:"Support Téléphone",emoji:"📱",price:5,old:19,tag:"-73%"},
 {name:"Jouet Enfant",emoji:"🧸",price:12,old:35,tag:"-65%"},
@@ -138,13 +142,22 @@ function openProduct(shopName,shopLink,name,emoji,price,oldPrice){
  if(shopLink.includes("aliexpress")) searchLink="https://www.aliexpress.com/wholesale?SearchText="+encodeURIComponent(name);
  if(shopLink.includes("mytek")) searchLink="https://mytek.tn/catalogsearch/result/?q="+encodeURIComponent(name);
  if(shopLink.includes("jujma")) searchLink="https://jujma.tn/search?q="+encodeURIComponent(name);
- if(shopLink.includes("【entity-shein¦canonical_name=Shein】")) searchLink="https://www.shein.com/search/"+encodeURIComponent(name);
- if(shopLink.includes("【entity-temu¦canonical_name=Temu】")) searchLink="https://www.temu.com/search_result.html?search_key="+encodeURIComponent(name);
+ if(shopLink.includes(" shein")) searchLink="https://www.shein.com/search/"+encodeURIComponent(name);
+ if(shopLink.includes(" temu")) searchLink="https://www.temu.com/search_result.html?search_key="+encodeURIComponent(name);
  document.getElementById("mLink").href=searchLink;
  document.getElementById("mLink").textContent="👉 Voir "+name+" sur "+shopName+" →";
 }
 function closeModal(){document.getElementById("modal").style.display="none";}
 document.getElementById("modal").addEventListener("click",e=>{if(e.target.id=="modal") closeModal()});
+
+// INSCRIPTION TE5DEM - YEB3ATH L WHATSAPP MTE3EK
+function inscrire(){
+  let num=document.getElementById("waNum").value.trim();
+  if(num.length<8){ alert("A3tini numéro s7i7, 8 chiffres au moins"); return; }
+  let msg="Salem! N7eb ninscrit fi promos Tunisiabet206. Mon numéro: "+num;
+  document.getElementById("msgOk").textContent="✅ Merci ! C'est fait, on va te contacter sur WhatsApp ❤️";
+  window.open("https://wa.me/21626751581?text="+encodeURIComponent(msg),"_blank");
+}
 render();
 let sec=23*3600+59*60+59;
 setInterval(()=>{sec--;let h=Math.floor(sec/3600),m=Math.floor(sec%3600/60),s=sec%60;document.getElementById("timer").textContent=h+":"+m+":"+s},1000);
